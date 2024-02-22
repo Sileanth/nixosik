@@ -13,10 +13,10 @@
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
 
-	outputs.homeManagerModules.simple-cli
-	outputs.homeManagerModules.latex
-	outputs.homeManagerModules.nvim
-	outputs.homeManagerModules.shell
+    outputs.homeManagerModules.simple-cli
+    outputs.homeManagerModules.latex
+    outputs.homeManagerModules.nvim
+    outputs.homeManagerModules.shell
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default

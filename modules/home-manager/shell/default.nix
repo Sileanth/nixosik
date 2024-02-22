@@ -1,30 +1,26 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [];
   options = {};
   config = {
+    home = {
+      sessionPath = [
+        "$HOME/.local/bin"
+      ];
 
-  	home = {
-		sessionPath = [
-		  "$HOME/.local/bin"
-		];
+      sessionVariables = {
+        FOO = "Hello";
+        BAR = "$FOO World!";
+      };
 
-		sessionVariables = {
-		  FOO = "Hello";
-		  BAR = "$FOO World!";
-		};
-
-		shellAliases = {
-			lg = "lazygit";
-			g = "git";
-
-		};
-
-	};
-
-
-
+      shellAliases = {
+        lg = "lazygit";
+        g = "git";
+      };
+    };
   };
   # ...
 }
-

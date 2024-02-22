@@ -1,31 +1,28 @@
-{ config, pkgs, ... }:
-let 
-	funny = with pkgs; [
-		cowsay
-		lolcat
-		neofetch
-	];
+{
+  config,
+  pkgs,
+  ...
+}: let
+  funny = with pkgs; [
+    cowsay
+    lolcat
+    neofetch
+  ];
 
-	productive = with pkgs; [
-		lsd
-		bat
-		btop
-		zoxide
-		lazygit
-		glow
-		skate
-
-	];
-
-
+  productive = with pkgs; [
+    lsd
+    bat
+    btop
+    zoxide
+    lazygit
+    glow
+    skate
+  ];
 in {
   imports = [];
   options = {};
   config = {
-  	
-	home.packages = funny ++ productive;
-
+    home.packages = funny ++ productive;
   };
   # ...
 }
-
