@@ -12,6 +12,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     outputs.nixosModules.fonts
+    outputs.nixosModules.nvidia
   ];
 
   # Bootloader.
