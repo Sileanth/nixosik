@@ -43,6 +43,7 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
     base = {
       modules = [
+      	outputs.nixosModules.fonts
       ];
     };
   in {
@@ -74,6 +75,15 @@
             ./nixos/configuration.nix
           ];
       };
+      baza = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules =
+          base.modules
+          ++ [
+            # > Our main nixos configuration file <
+            ./hosts/baza/configuration.nix
+          ];
+      };
       liveIso = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
@@ -90,6 +100,14 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "sileanth@nixos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+        ];
+      };
+	"sileanth@baza" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [

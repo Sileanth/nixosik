@@ -7,4 +7,5 @@
   latex = import ./latex.nix;
   shell = import ./shell;
   nvim = import ./programs/nvim;
+  git = import ./git;
 }

@@ -17,6 +17,7 @@
     outputs.homeManagerModules.latex
     outputs.homeManagerModules.nvim
     outputs.homeManagerModules.shell
+    outputs.homeManagerModules.git
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -62,6 +63,7 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
 	unstable.nh
+	unstable.jetbrains-toolbox
   ];
 
   # Enable home-manager and git
