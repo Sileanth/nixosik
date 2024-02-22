@@ -16,8 +16,6 @@
     # neovim-nighly overlay
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
-
-
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
     nix-colors.url = "github:misterio77/nix-colors";
@@ -43,7 +41,7 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
     base = {
       modules = [
-      	outputs.nixosModules.fonts
+        outputs.nixosModules.fonts
       ];
     };
   in {
@@ -91,7 +89,7 @@
           base.modules
           ++ [
             "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-plasma5.nix"
-	    ./hosts/liveIso.nix
+            ./hosts/liveIso.nix
           ];
       };
     };
@@ -107,7 +105,7 @@
           ./home-manager/home.nix
         ];
       };
-	"sileanth@baza" = home-manager.lib.homeManagerConfiguration {
+      "sileanth@baza" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
