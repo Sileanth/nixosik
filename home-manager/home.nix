@@ -64,6 +64,7 @@
 
 
   home.packages = with pkgs; [
+	unstable.go
 	unstable.nh
 	unstable.jetbrains-toolbox
 	unstable.rustup
