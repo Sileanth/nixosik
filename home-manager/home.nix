@@ -83,6 +83,9 @@
 
     discord
     spotify
+
+
+    unstable.nil # nix lsp
   ];
 
   # Enable home-manager and git
