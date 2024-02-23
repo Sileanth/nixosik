@@ -16,7 +16,7 @@
     zoxide
     lazygit
     tldr
-    fuck
+    thefuck
     glow
     skate
   ];
