@@ -8,4 +8,5 @@
   shell = import ./shell;
   nvim = import ./programs/nvim;
   git = import ./git;
+  kde = import ./kde;
 }

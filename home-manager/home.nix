@@ -18,6 +18,7 @@
     outputs.homeManagerModules.nvim
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.git
+    outputs.homeManagerModules.kde
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
