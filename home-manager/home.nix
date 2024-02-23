@@ -75,6 +75,9 @@
 
     unstable.smlnj
     unstable.millet #sml lsp
+
+
+    libsForQt5.yakuake # dropdown terminal
   ];
 
   # Enable home-manager and git
