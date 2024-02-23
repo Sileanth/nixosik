@@ -76,14 +76,11 @@
     unstable.smlnj
     unstable.millet #sml lsp
 
-
     libsForQt5.yakuake # dropdown terminal
     libsForQt5.plasma-browser-integration
-    
 
     discord
     spotify
-
 
     unstable.nil # nix lsp
   ];

@@ -93,7 +93,6 @@
           ];
       };
     };
-
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {

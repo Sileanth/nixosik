@@ -15,6 +15,8 @@
     btop
     zoxide
     lazygit
+    tldr
+    fuck
     glow
     skate
   ];
