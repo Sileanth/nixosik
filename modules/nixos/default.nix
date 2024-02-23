@@ -5,4 +5,5 @@
   # my-module = import ./my-module.nix;
   fonts = import ./fonts.nix;
   nvidia = import ./nvidia.nix;
+  kde = import ./kde.nix;
 }
