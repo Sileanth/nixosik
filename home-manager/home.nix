@@ -68,6 +68,10 @@
     unstable.jetbrains-toolbox
     unstable.rustup
     unstable.vscode
+    unstable.opam
+
+    unstable.smlnj
+    unstable.millet #sml lsp
   ];
 
   # Enable home-manager and git
