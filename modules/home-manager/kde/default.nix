@@ -12,7 +12,7 @@
       enable = true;
       kwin.titlebarButtons = {
         left = [ "on-all-desktops" "keep-above-windows" "close" ];
-        right = [ "help" "minimize" "maximize" ]
+        right = [ "help" "minimize" "maximize" ];
       };
     };
     
