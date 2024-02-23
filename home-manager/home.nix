@@ -68,7 +68,10 @@
     unstable.jetbrains-toolbox
     unstable.rustup
     unstable.vscode
+
     unstable.opam
+    gnumake
+    gcc
 
     unstable.smlnj
     unstable.millet #sml lsp
