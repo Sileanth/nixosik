@@ -5,15 +5,17 @@
   ...
 }:
 {
-  imports = [ plasma-manager.homeManagerModules.plasma-manager];
+  imports = [  ];
   options = {};
   config = {
     programs.plasma = {
-       kwin.titlebarButtons = {
-        left = [ "on-all-desktops" "keep-above-windows" "minimize"];
-        right = [ "help" "maximize" "close" ];
+      enable = true;
+      kwin.titlebarButtons = {
+        left = [ "on-all-desktops" "keep-above-windows" "close" ];
+        right = [ "help" "minimize" "maximize" ]
       };
     };
+    
 
 
   };

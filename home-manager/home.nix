@@ -1,7 +1,6 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
-  inputs,
   outputs,
   lib,
   config,
@@ -18,6 +17,7 @@
     outputs.homeManagerModules.nvim
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.git
+
     outputs.homeManagerModules.kdecus
 
     # Or modules exported from other flakes (such as nix-colors):

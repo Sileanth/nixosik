@@ -22,6 +22,9 @@
 
     plasma-manager = {
       url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+
 
     };
   };
@@ -112,9 +115,11 @@
       "sileanth@baza" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
+
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
+          inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
       };
     };
