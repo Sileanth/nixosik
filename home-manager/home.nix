@@ -79,6 +79,10 @@
 
     libsForQt5.yakuake # dropdown terminal
     libsForQt5.plasma-browser-integration
+    
+
+    discord
+    spotify
   ];
 
   # Enable home-manager and git
