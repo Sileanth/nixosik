@@ -67,6 +67,7 @@
     unstable.nh
     unstable.jetbrains-toolbox
     unstable.rustup
+    unstable.vscode
   ];
 
   # Enable home-manager and git
