@@ -3,21 +3,17 @@
   outputs,
   pkgs,
   ...
-}:
-{
-  imports = [  ];
+}: {
+  imports = [];
   options = {};
   config = {
     programs.plasma = {
       enable = true;
       kwin.titlebarButtons = {
-        left = [ "on-all-desktops" "keep-above-windows" "close" ];
-        right = [ "help" "minimize" "maximize" ];
+        left = ["on-all-desktops" "keep-above-windows" "close"];
+        right = ["help" "minimize" "maximize"];
       };
     };
-    
-
-
   };
   # ...
 }
