@@ -19,6 +19,8 @@
     thefuck
     glow
     skate
+    mdcat
+    wezterm
   ];
 in {
   imports = [];
