@@ -14,9 +14,6 @@ with lib; {
   config = mkIf config.customModules.kde.enable {
     services.xserver.desktopManager.plasma6 = {
       enable = true;
-      excludePackages = with pkgs.libsForQt5; [
-        elisa
-      ];
     };
   };
 }
