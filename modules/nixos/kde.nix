@@ -12,7 +12,7 @@ with lib; {
     };
   };
   config = mkIf config.customModules.kde.enable {
-    services.xserver.desktopManager.plasma6 = {
+    services.xserver.desktopManager.plasma5 = {
       enable = true;
     };
   };
