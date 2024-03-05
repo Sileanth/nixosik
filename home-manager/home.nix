@@ -72,6 +72,9 @@
 
     unstable.opam
     gnumake
+    coq
+    coqPackages.coqide
+    coqPackages.coq-lsp
     gcc
 
     unstable.smlnj
