@@ -6,5 +6,5 @@
   fonts = import ./fonts.nix;
   nvidia = import ./nvidia.nix;
   kde = import ./kde.nix;
-  virtual = import ./virtual.nix
+  virtual = import ./virtual.nix;
 }
