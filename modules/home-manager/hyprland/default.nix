@@ -1,6 +1,8 @@
 {
   config,
   pkgs,
+  inputs,
+  outputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -8,6 +10,8 @@
     waybar
     kitty
     wofi
+    pavucontrol
+    inputs.pyprland.packages.${pkgs.system}.default
   ];
   home.file."/home/sileanth/.config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
 
@@ -16,6 +20,8 @@
     recursive = true;
   };
 
+  home.file."/home/sileanth/.config/hypr/pyprland.toml".source = ./pyprland.toml;
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -23,6 +29,7 @@
       exec-once = [
         "waybar"
         "hyprpaper"
+	"pypr"
       ];
       input = {
         kb_layout = "pl";
@@ -77,13 +84,16 @@
 
       bind = [
         "$mainMod, Q, exec, kitty"
-        "$mainMod, P, exec, pavucontrol"
         "$mainMod, F, exec, firefox"
         "$mainMod, D, exec, dolphin"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, wofi --show drun"
+
+	# pyprland
+	"$mainMod,P,exec,pypr toggle volume"
+	"$mainMod,A,exec,pypr toggle term"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
