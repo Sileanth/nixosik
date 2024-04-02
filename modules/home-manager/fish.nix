@@ -12,6 +12,7 @@
 		functions = {
 			ll = "lsd -al";
 			g = "git";
+			gm = "git commit -m";
 
 		};
 

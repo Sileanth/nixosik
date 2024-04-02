@@ -14,6 +14,9 @@
 			enableFishIntegration = true;
 
 		};
+		extraConfig = ''
+			shell fish
+		'';
 
 	};
   };
