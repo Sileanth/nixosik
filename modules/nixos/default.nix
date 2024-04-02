@@ -7,4 +7,5 @@
   nvidia = import ./nvidia.nix;
   kde = import ./kde.nix;
   virtual = import ./virtual.nix;
+  flatpak = import ./flatpak.nix;
 }
