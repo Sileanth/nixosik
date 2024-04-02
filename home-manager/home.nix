@@ -17,6 +17,7 @@
     outputs.homeManagerModules.nvim
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.git
+    outputs.homeManagerModules.kitty
     outputs.homeManagerModules.hyprland
     
 

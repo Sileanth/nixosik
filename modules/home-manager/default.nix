@@ -10,4 +10,5 @@
   git = import ./git;
   kdecus = import ./kde;
   hyprland = import ./hyprland;
+  kitty = import ./kitty.nix;
 }
