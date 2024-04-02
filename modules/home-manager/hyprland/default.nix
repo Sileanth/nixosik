@@ -11,6 +11,9 @@
     kitty
     wofi
     pavucontrol
+    cliphist
+    wl-clipboard
+    wl-clip-persist
     inputs.pyprland.packages.${pkgs.system}.default
   ];
   home.file."/home/sileanth/.config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
@@ -30,6 +33,9 @@
         "waybar"
         "hyprpaper"
 	"pypr"
+	"wl-paste --type text --watch cliphist store #Stores only text data"
+	"wl-paste --type image --watch cliphist store #Stores only image data"
+	"wl-clip-persist --clipboard both"
       ];
       input = {
         kb_layout = "pl";
@@ -90,6 +96,9 @@
         "$mainMod, M, exit,"
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, wofi --show drun"
+
+	# clipboard
+	"$mainMod, L, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
 	# pyprland
 	"$mainMod,P,exec,pypr toggle volume"
