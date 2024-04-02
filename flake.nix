@@ -3,10 +3,11 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's an working example:
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
     # Home manager
@@ -88,6 +89,15 @@
             ./hosts/baza/configuration.nix
           ];
       };
+      kronos = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules =
+          base.modules
+          ++ [
+            # > Our main nixos configuration file <
+            ./hosts/kronos/configuration.nix
+          ];
+      };
       liveIso = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
@@ -120,6 +130,17 @@
           inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
       };
+      "sileanth@kronos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+          inputs.plasma-manager.homeManagerModules.plasma-manager
+        ];
+      };
+
     };
   };
 }

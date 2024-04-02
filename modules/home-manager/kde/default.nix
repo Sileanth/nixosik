@@ -10,8 +10,8 @@
     programs.plasma = {
       enable = true;
       kwin.titlebarButtons = {
-        left = ["on-all-desktops" "keep-above-windows" "close"];
-        right = ["help" "minimize" "maximize"];
+        left = ["on-all-desktops" "keep-above-windows" ];
+        right = ["help" "minimize" "maximize" "close"];
       };
     };
   };
