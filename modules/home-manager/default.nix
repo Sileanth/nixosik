@@ -11,4 +11,5 @@
   kdecus = import ./kde;
   hyprland = import ./hyprland;
   kitty = import ./kitty.nix;
+  fish = import ./kitty.nix;
 }
