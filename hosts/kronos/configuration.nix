@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       outputs.nixosModules.nvidia
       outputs.nixosModules.kde
+      outputs.nixosModules.virtual
     ];
 
   # Bootloader.
