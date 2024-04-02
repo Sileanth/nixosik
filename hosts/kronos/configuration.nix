@@ -13,6 +13,7 @@
     ./hardware-configuration.nix
     outputs.nixosModules.nvidia
     outputs.nixosModules.kde
+    outputs.nixosModules.docker
     outputs.nixosModules.hyprland
     outputs.nixosModules.flatpak
     outputs.nixosModules.virtual

@@ -9,4 +9,5 @@
   virtual = import ./virtual.nix;
   flatpak = import ./flatpak.nix;
   hyprland = import ./hyprland.nix;
+  docker = import ./docker.nix;
 }
