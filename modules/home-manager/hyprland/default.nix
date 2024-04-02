@@ -12,8 +12,11 @@
     wofi
     pavucontrol
     cliphist
+    udiskie
     wl-clipboard
     wl-clip-persist
+    grim
+    slurp
     inputs.pyprland.packages.${pkgs.system}.default
   ];
   home.file."/home/sileanth/.config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
@@ -36,6 +39,7 @@
 	"wl-paste --type text --watch cliphist store #Stores only text data"
 	"wl-paste --type image --watch cliphist store #Stores only image data"
 	"wl-clip-persist --clipboard both"
+	"udiskie &"
       ];
       input = {
         kb_layout = "pl";
@@ -99,6 +103,9 @@
 
 	# clipboard
 	"$mainMod, L, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+
+	# screenshots
+	", Print, exec, grim -g "$(slurp -d)" - | wl-copy"
 
 	# pyprland
 	"$mainMod,P,exec,pypr toggle volume"
