@@ -8,6 +8,7 @@
   shell = import ./shell;
   nvim = import ./programs/nvim;
   git = import ./git;
+  waybar = import ./waybar;
   kdecus = import ./kde;
   hyprland = import ./hyprland;
   kitty = import ./kitty.nix;
