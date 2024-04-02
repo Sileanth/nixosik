@@ -18,7 +18,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
 
     settings = {
       exec-once = [
