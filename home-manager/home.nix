@@ -87,8 +87,6 @@
     spotify
 
     unstable.nil # nix lsp
-
-    virtualbox
   ];
 
   # Enable home-manager and git
