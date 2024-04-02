@@ -8,4 +8,5 @@
   kde = import ./kde.nix;
   virtual = import ./virtual.nix;
   flatpak = import ./flatpak.nix;
+  hyprland = import ./hyprland.nix
 }
