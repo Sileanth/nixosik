@@ -8,11 +8,10 @@
   options = {
   };
   config = {
-  	services.flatpak.enable = true;
-	users.users."sileanth" = with pkgs; [
-		gnome.gnome-software
-		kdePackages.discover
-
-	];
+    services.flatpak.enable = true;
+    users.users.sileanth.packages = with pkgs; [
+      gnome.gnome-software
+      kdePackages.discover
+    ];
   };
 }
