@@ -13,8 +13,9 @@
 			ll = "lsd -al";
 			g = "git";
 			ga = " git add -A";
-
-		};
+			fish_greeting = ''  
+				echo 󰄛 󰩃 󰄛
+			'';
 
 	};
   };
