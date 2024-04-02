@@ -15,10 +15,6 @@
       };
     };
 
-    programs.gh = {
-	enable = true;
-
-    };
   };
   # ...
 }
