@@ -19,6 +19,7 @@
     outputs.homeManagerModules.git
     outputs.homeManagerModules.kitty
     outputs.homeManagerModules.fish
+    outputs.homeManagerModules.starship
     outputs.homeManagerModules.hyprland
     
 
