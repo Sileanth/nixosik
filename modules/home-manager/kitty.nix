@@ -6,18 +6,16 @@
   imports = [];
   options = {};
   config = {
-  	programs.kitty = {
-		enable = true;
-		theme = "Everforest Dark Hard";
-		shellIntegration = {
-			enableZshIntegration = true;
-			enableFishIntegration = true;
-
-		};
-		extraConfig = ''
-			shell fish
-		'';
-
-	};
+    programs.kitty = {
+      enable = true;
+      theme = "Everforest Dark Hard";
+      shellIntegration = {
+        enableZshIntegration = true;
+        enableFishIntegration = true;
+      };
+      extraConfig = ''
+        shell fish
+      '';
+    };
   };
 }

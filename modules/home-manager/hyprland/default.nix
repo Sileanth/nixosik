@@ -35,11 +35,11 @@
       exec-once = [
         "waybar"
         "hyprpaper"
-	"pypr"
-	"wl-paste --type text --watch cliphist store #Stores only text data"
-	"wl-paste --type image --watch cliphist store #Stores only image data"
-	"wl-clip-persist --clipboard both"
-	"udiskie &"
+        "pypr"
+        "wl-paste --type text --watch cliphist store #Stores only text data"
+        "wl-paste --type image --watch cliphist store #Stores only image data"
+        "wl-clip-persist --clipboard both"
+        "udiskie &"
       ];
       input = {
         kb_layout = "pl";
@@ -99,17 +99,17 @@
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, V, togglefloating,"
-        "$mainMod, R, exec, wofi --show drun"
+        "$mainMod, R, exec, wofi --show drun --width=400px --height=300px"
 
-	# clipboard
-	"$mainMod, L, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+        # clipboard
+        "$mainMod, L, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
-	# screenshots
-	", Print, exec, grim -g \"\$(slurp -d)\" - | wl-copy"
+        # screenshots
+        ", Print, exec, grim -g \"\$(slurp -d)\" - | wl-copy"
 
-	# pyprland
-	"$mainMod,P,exec,pypr toggle volume"
-	"$mainMod,A,exec,pypr toggle term"
+        # pyprland
+        "$mainMod,P,exec,pypr toggle volume"
+        "$mainMod,A,exec,pypr toggle term"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"

@@ -11,10 +11,9 @@
       userName = "sileanth";
       userEmail = "lukasz.magnuszewski@gmail.com";
       aliases = {
-	cm = "commit -m";
+        cm = "commit -m";
       };
     };
-
   };
   # ...
 }

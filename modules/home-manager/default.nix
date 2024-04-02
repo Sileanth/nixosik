@@ -13,4 +13,5 @@
   kitty = import ./kitty.nix;
   fish = import ./fish.nix;
   starship = import ./starship.nix;
+  wofi = import ./wofi.nix;
 }

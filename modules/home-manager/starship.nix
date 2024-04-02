@@ -6,10 +6,8 @@
   imports = [];
   options = {};
   config = {
-  	programs.starship = {
-		enable = true;
-
-	};
-
+    programs.starship = {
+      enable = true;
+    };
   };
 }
