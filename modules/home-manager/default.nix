@@ -9,4 +9,5 @@
   nvim = import ./programs/nvim;
   git = import ./git;
   kdecus = import ./kde;
+  hyprland = import ./hyprland;
 }

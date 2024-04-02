@@ -17,6 +17,8 @@
     outputs.homeManagerModules.nvim
     outputs.homeManagerModules.shell
     outputs.homeManagerModules.git
+    outputs.homeManagerModules.hyprland
+    
 
     outputs.homeManagerModules.kdecus
 
