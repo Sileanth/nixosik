@@ -6,10 +6,11 @@
   imports = [];
   options = {};
   config = {
+    home.packages = with pkgs; [ ripgrep fzf fd lua-language-server ];
     programs.neovim = {
       enable = true;
       defaultEditor = true;
-      package = pkgs.neovim-nightly;
+      # package = pkgs.neovim-nightly; telescope bug
     };
     xdg.configFile.nvim = {
       source = ./nvim;
