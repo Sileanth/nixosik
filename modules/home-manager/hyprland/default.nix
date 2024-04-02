@@ -105,7 +105,7 @@
 	"$mainMod, L, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
 	# screenshots
-	", Print, exec, grim -g "$(slurp -d)" - | wl-copy"
+	", Print, exec, grim -g \"\$(slurp -d)\" - | wl-copy"
 
 	# pyprland
 	"$mainMod,P,exec,pypr toggle volume"
