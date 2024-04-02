@@ -1,154 +1,83 @@
 {
-  description = "Your new nix config";
 
-  inputs = {
-    # Nixpkgs
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    # You can access packages and modules from different nixpkgs revs
-    # at the same time. Here's an working example:
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
+	description = "Sileanth's NixOs Flake";
 
-    # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+	inputs = {
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # neovim-nighly overlay
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    nix-colors.url = "github:misterio77/nix-colors";
-
-    plasma-manager = {
-      url = "github:pjones/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
+		home-manager = {
+			url = "github:nix-community/home-manager";
+	      		inputs.nixpkgs.follows = "nixpkgs";
+	    	};
+	};
 
 
-
-  };
-
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-    # Supported systems for your flake packages, shell, etc.
-    systems = [
-      "aarch64-linux"
-      "i686-linux"
-      "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
-    ];
-    # This is a function that generates an attribute by calling a function you
-    # pass to it, with each system as an argument
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-    base = {
-      modules = [
-        outputs.nixosModules.fonts
-      ];
-    };
-  in {
-    # Your custom packages
-    # Accessible through 'nix build', 'nix shell', etc
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    # Formatter for your nix files, available through 'nix fmt'
-    # Other options beside 'alejandra' include 'nixpkgs-fmt'
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-
-    # Your custom packages and modifications, exported as overlays
-    overlays = import ./overlays {inherit inputs;};
-    # Reusable nixos modules you might want to export
-    # These are usually stuff you would upstream into nixpkgs
-    nixosModules = import ./modules/nixos;
-    # Reusable home-manager modules you might want to export
-    # These are usually stuff you would upstream into home-manager
-    homeManagerModules = import ./modules/home-manager;
-
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./nixos/configuration.nix
-          ];
-      };
-      baza = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./hosts/baza/configuration.nix
-          ];
-      };
-      kronos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./hosts/kronos/configuration.nix
-          ];
-      };
-      liveIso = nixpkgs.lib.nixosSystem {
+	outputs = { self, nixpkgs, home-manager,  ...}@inputs: {
+		nixosConfigurations = {
+      kitek = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-plasma5.nix"
-            ./hosts/liveIso.nix
-          ];
-      };
-    };
-    # Standalone home-manager configuration entrypoint
-    # Available through 'home-manager --flake .#your-username@your-hostname'
-    homeConfigurations = {
-      "sileanth@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
         modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-        ];
-      };
-      "sileanth@baza" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+          ./modules/steam
+          ./modules/lutris
+          ./modules/flatpak 
+          ./modules/nerdfonts 
+          ./modules/sway 
+          ./modules/hyprland 
+          ./modules/kernel 
+          ./modules/audio
+          ./modules/gnome
+          
+          ./hosts/kitek
 
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.sileanth = import ./home;
+          }
         ];
-      };
-      "sileanth@kronos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+          };
+			kotek = nixpkgs.lib.nixosSystem {
+				system = "x86_64-linux";
+				modules = [
+					./modules/flatpak
+          ./modules/nas
+          ./overlays
+          ./modules/nerdfonts
+          ./modules/virtualisation
+          ./modules/nvidia
+          ./modules/audio
+          ./modules/sway
+          ./modules/plasma
+          ./modules/kernel 
 
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
-        ];
-      };
-    };
-  };
+					./hosts/kotek
+					./modules/hyprland
+					home-manager.nixosModules.home-manager
+					  {
+					    home-manager.useGlobalPkgs = true;
+					    home-manager.useUserPackages = true;
+					    home-manager.users.sileanth = import ./home;
+					  }
+				];
+
+
+			};
+			
+
+
+		};
+	
+
+
+
+
+
+
+
+
+
+
+	};
+
+
 }
