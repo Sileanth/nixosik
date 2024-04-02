@@ -11,11 +11,11 @@
 
 
     };
-    xdg.configFile."config" = {
+    xdg.configFile."waybar/config" = {
       enable = true;
       source = ./config;
     };
-    xdg.configFile."style.css" = {
+    xdg.configFile."waybar/style.css" = {
       enable = true;
       source = ./style.css;
     };
