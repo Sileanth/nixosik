@@ -1,6 +1,12 @@
 {pkgs, lib, config, ...} :
 
 {
+    users.users.sileanth.packages = with pkgs; [
+      pgadmin4-desktopmode
+      pgadmin4
+
+
+    ];
     services.postgresql = {
       enable = true;
       enableTCPIP = true;

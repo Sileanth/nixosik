@@ -6,6 +6,11 @@
   imports = [];
   options = {};
   config = {
+    home.packages = with pkgs; [
+      gh
+      gitkraken
+
+    ];
     programs.git = {
       enable = true;
       userName = "sileanth";
