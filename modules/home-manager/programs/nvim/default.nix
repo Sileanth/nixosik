@@ -12,6 +12,8 @@
       fd 
       lua-language-server
       tree-sitter
+      bottom
+      gdu
     ];
     programs.neovim = {
       enable = true;
