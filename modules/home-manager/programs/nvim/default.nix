@@ -6,7 +6,13 @@
   imports = [];
   options = {};
   config = {
-    home.packages = with pkgs; [ ripgrep fzf fd lua-language-server ];
+    home.packages = with pkgs; [ 
+      ripgrep 
+      fzf 
+      fd 
+      lua-language-server
+      tree-sitter
+    ];
     programs.neovim = {
       enable = true;
       viAlias = true;
