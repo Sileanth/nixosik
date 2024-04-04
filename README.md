@@ -1,6 +1,6 @@
 
 
-# dd
+# Nixos config
 
 
 ## gg

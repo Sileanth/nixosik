@@ -13,8 +13,10 @@
         ll = "lsd -al";
         g = "git";
         ga = " git add -A";
+        lazy-vim = 'NVIM_APPNAME="lazyvim" nvim';
         fish_greeting = ''
-          echo 󰄛  󰩃  󰄛
+          echo "󰄛 󰩃 "
+          echo elo
         '';
       };
     };
