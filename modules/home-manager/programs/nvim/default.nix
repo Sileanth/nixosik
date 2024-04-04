@@ -13,6 +13,8 @@
       lua-language-server
       tree-sitter
       bottom
+      nodejs
+      python3
       gdu
     ];
     programs.neovim = {

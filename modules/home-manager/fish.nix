@@ -14,6 +14,8 @@
         g = "git";
         ga = " git add -A";
         lazy-vim = ''NVIM_APPNAME="lazyvim" nvim'';
+        astro-vim = ''NVIM_APPNAME="astro-vim" nvim'';
+        
         fish_greeting = ''
           echo "󰄛 󰩃 "
           echo elo
