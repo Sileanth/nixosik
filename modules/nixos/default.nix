@@ -10,4 +10,5 @@
   flatpak = import ./flatpak.nix;
   hyprland = import ./hyprland.nix;
   docker = import ./docker.nix;
+  postgres = import ./postgres.nix;
 }
