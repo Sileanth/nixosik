@@ -8,7 +8,7 @@
       git commit -m "update"
       git push
 
-      sudo nh os switch .
+      nh os switch .
       nh home switch .
 
 
