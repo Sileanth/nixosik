@@ -30,7 +30,6 @@ return {
     local lspconfig = require('lspconfig')
     lspconfig.pyright.setup { on_attach = on_attach }
     lspconfig.lua_ls.setup { on_attach = on_attach }
-    lspconfig.sqlls.setup {}
     lspconfig.ccls.setup { on_attach = on_attach }
     lspconfig.cmake.setup { on_attach = on_attach }
     lspconfig.rust_analyzer.setup {
@@ -42,6 +41,13 @@ return {
     }
     lspconfig.ocamllsp.setup { on_attach = on_attach }
 
+
+    require("lvim.lsp.manager").setup("sqlls", {
+      cmd = { "sql-language-server", "up", "--method", "stdio" },
+      filetypes = { "sql", "mysql" },
+      root_dir = function() return vim.loop.cwd() end,
+      on_attach = on_attach,
+    })
 
 
 
