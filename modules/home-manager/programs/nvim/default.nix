@@ -23,7 +23,7 @@
       enable = true;
       viAlias = true;
       defaultEditor = true;
-      package = pkgs.neovim-nightly; telescope bug
+      package = pkgs.neovim-nightly;  #telescope bug
     };
     xdg.configFile.nvim = {
       source = ./nvim;
