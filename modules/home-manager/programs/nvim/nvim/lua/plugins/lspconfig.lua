@@ -3,12 +3,7 @@ return {
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     "lukas-reineke/lsp-format.nvim",
-    "folke/neodev.nvim",
-    {
-      'mrcjkb/rustaceanvim',
-      version = '^4', -- Recommended
-      ft = { 'rust' },
-    }
+    "folke/neodev.nvim"
   },
 
 
@@ -47,12 +42,12 @@ return {
     lspconfig.ocamllsp.setup { on_attach = on_attach }
 
 
-    lspconfig.setup("sqlls", {
+    lspconfig.sqlls.setup {
       cmd = { "sql-language-server", "up", "--method", "stdio" },
       filetypes = { "sql", "mysql" },
       root_dir = function() return vim.loop.cwd() end,
       on_attach = on_attach,
-    })
+    }
 
 
 

@@ -12,7 +12,7 @@
       fd 
       lua-language-server
       tree-sitter
-      rust-analyzer
+#      rust-analyzer
       bottom
       nodejs
       python3
