@@ -3,7 +3,12 @@ return {
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     "lukas-reineke/lsp-format.nvim",
-    "folke/neodev.nvim"
+    "folke/neodev.nvim",
+    {
+      'mrcjkb/rustaceanvim',
+      version = '^4', -- Recommended
+      ft = { 'rust' },
+    }
   },
 
 
@@ -32,17 +37,17 @@ return {
     lspconfig.lua_ls.setup { on_attach = on_attach }
     lspconfig.ccls.setup { on_attach = on_attach }
     lspconfig.cmake.setup { on_attach = on_attach }
-    lspconfig.rust_analyzer.setup {
-      on_attach = on_attach,
-      -- Server-specific settings. See `:help lspconfig-setup`
-      settings = {
-        ['rust-analyzer'] = {},
-      },
-    }
+    -- lspconfig.rust_analyzer.setup {
+    --   on_attach = on_attach,
+    --   -- Server-specific settings. See `:help lspconfig-setup`
+    --   settings = {
+    --     ['rust-analyzer'] = {},
+    --   },
+    -- }
     lspconfig.ocamllsp.setup { on_attach = on_attach }
 
 
-    require("lvim.lsp.manager").setup("sqlls", {
+    lspconfig.setup("sqlls", {
       cmd = { "sql-language-server", "up", "--method", "stdio" },
       filetypes = { "sql", "mysql" },
       root_dir = function() return vim.loop.cwd() end,
