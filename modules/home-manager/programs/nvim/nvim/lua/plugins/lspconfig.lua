@@ -4,7 +4,8 @@ return {
     'hrsh7th/cmp-nvim-lsp',
     "lukas-reineke/lsp-format.nvim",
     "folke/neodev.nvim",
-    "williamboman/mason.nvim"
+    "williamboman/mason.nvim",
+    'nanotee/sqls.nvim',
   },
 
 
@@ -36,17 +37,14 @@ return {
     lspconfig.cmake.setup { on_attach = on_attach }
     lspconfig.ocamllsp.setup { on_attach = on_attach }
     lspconfig.nil_ls.setup { on_attach = on_attach }
-    lspconfig.sqls.setup {}   -- sqls formating is broken
+    lspconfig.sqls.setup {
+      on_attach = function(client, bufnr)
+        require('sqls').on_attach(client, bufnr)
+        -- formatter is broken
+        -- require("lsp-format").on_attach(client, bufnr)
+      end
+    }
 
-
-
-    -- lspconfig.sqlls.setup {
-    --   cmd = { "sql-language-server", "up", "--method", "stdio" },
-    --   filetypes = { "sql", "mysql" },
-    --   root_dir = function() return vim.loop.cwd() end,
-    --   on_attach = on_attach,
-    -- }
-    --
 
 
 
