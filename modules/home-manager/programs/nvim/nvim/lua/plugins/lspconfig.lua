@@ -36,7 +36,7 @@ return {
     lspconfig.cmake.setup { on_attach = on_attach }
     lspconfig.ocamllsp.setup { on_attach = on_attach }
     lspconfig.nil_ls.setup { on_attach = on_attach }
-    lspconfig.sqls.setup { on_attach = on_attach }
+    lspconfig.sqls.setup {}   -- sqls formating is broken
 
 
 
