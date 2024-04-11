@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [];
@@ -12,12 +13,13 @@
       fd 
       lua-language-server
       tree-sitter
-#      rust-analyzer
+      # rust-analyzer
       bottom
       nodejs
       python3
       gdu
-      vscode-extensions.vadimcn.vscode-lldb
+      inputs.rustaceanvim.packages.${pkgs.system}
+.codelldb # better debuger
     ];
     programs.neovim = {
       enable = true;
