@@ -43,4 +43,5 @@ for k, v in pairs(options) do
 end
 
 --  disable disable mice info
-vim.cmd "aunmenu PopUp.-1- "
+vim.cmd "aunmenu PopUp.How-to\ disable\ mouse"
+vim.cmd "aunmenu PopUp.-1-"
