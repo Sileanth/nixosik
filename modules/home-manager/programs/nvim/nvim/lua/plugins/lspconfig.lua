@@ -3,7 +3,8 @@ return {
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     "lukas-reineke/lsp-format.nvim",
-    "folke/neodev.nvim"
+    "folke/neodev.nvim",
+    "williamboman/mason.nvim"
   },
 
 
@@ -17,6 +18,7 @@ return {
         end
       end,
     })
+
 
     -- formatting on save, add on attach function to each lsp
     require("lsp-format").setup {}
@@ -32,14 +34,10 @@ return {
     lspconfig.lua_ls.setup { on_attach = on_attach }
     lspconfig.ccls.setup { on_attach = on_attach }
     lspconfig.cmake.setup { on_attach = on_attach }
-    -- lspconfig.rust_analyzer.setup {
-    --   on_attach = on_attach,
-    --   -- Server-specific settings. See `:help lspconfig-setup`
-    --   settings = {
-    --     ['rust-analyzer'] = {},
-    --   },
-    -- }
     lspconfig.ocamllsp.setup { on_attach = on_attach }
+    lspconfig.nil_ls.setup { on_attach = on_attach }
+    lspconfig.sqls.setup { on_attach = on_attach }
+
 
 
     -- lspconfig.sqlls.setup {

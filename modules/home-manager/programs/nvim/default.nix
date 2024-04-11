@@ -18,6 +18,8 @@
       nodejs
       python3
       gdu
+      sqls
+      nil
       inputs.rustaceanvim.packages.${pkgs.system}
 .codelldb # better debuger
     ];
