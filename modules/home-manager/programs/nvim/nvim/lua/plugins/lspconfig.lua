@@ -42,13 +42,13 @@ return {
     lspconfig.ocamllsp.setup { on_attach = on_attach }
 
 
-    lspconfig.sqlls.setup {
-      cmd = { "sql-language-server", "up", "--method", "stdio" },
-      filetypes = { "sql", "mysql" },
-      root_dir = function() return vim.loop.cwd() end,
-      on_attach = on_attach,
-    }
-
+    -- lspconfig.sqlls.setup {
+    --   cmd = { "sql-language-server", "up", "--method", "stdio" },
+    --   filetypes = { "sql", "mysql" },
+    --   root_dir = function() return vim.loop.cwd() end,
+    --   on_attach = on_attach,
+    -- }
+    --
 
 
 
