@@ -82,6 +82,7 @@
     coq
     coqPackages.coqide
     coqPackages.coq-lsp
+    warp-terminal
     gcc
 
     unstable.smlnj
