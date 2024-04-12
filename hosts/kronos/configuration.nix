@@ -18,6 +18,7 @@
     outputs.nixosModules.hyprland
     outputs.nixosModules.flatpak
     outputs.nixosModules.virtual
+    outputs.nixosModules.steam
   ];
 
   # Bootloader.

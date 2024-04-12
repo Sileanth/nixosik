@@ -11,4 +11,5 @@
   hyprland = import ./hyprland.nix;
   docker = import ./docker.nix;
   postgres = import ./postgres.nix;
+  steam = import ./steam.nix;
 }

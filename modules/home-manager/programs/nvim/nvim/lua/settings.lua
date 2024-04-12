@@ -42,6 +42,4 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
---  disable disable mice info
-vim.cmd "aunmenu PopUp.How-to\ disable\ mouse"
-vim.cmd "aunmenu PopUp.-1-"
+

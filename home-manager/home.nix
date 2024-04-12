@@ -88,6 +88,7 @@
     unstable.smlnj
     unstable.millet #sml lsp
 
+    chromium
     libsForQt5.yakuake # dropdown terminal
     libsForQt5.plasma-browser-integration
 
