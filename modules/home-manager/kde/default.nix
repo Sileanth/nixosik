@@ -7,6 +7,9 @@
   imports = [];
   options = {};
   config = {
+    home.packages = with pkgs; [
+      kdePackages.kdeconnect-kde
+    ];
     programs.plasma = {
       enable = true;
       kwin.titlebarButtons = {
