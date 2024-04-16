@@ -21,7 +21,7 @@
     # everything match nicely? Try nix-colors!
     nix-colors.url = "github:misterio77/nix-colors";
 
-    # nvim plugin for rust, and vscode debugger wrapped for nvim 
+    # nvim plugin for rust, and vscode debugger wrapped for nvim
     rustaceanvim.url = "github:mrcjkb/rustaceanvim";
 
     plasma-manager = {
@@ -36,12 +36,8 @@
       inputs.hyprland.follows = "hyprland";
     };
     pyprland = {
-	url = "github:hyprland-community/pyprland";
-
+      url = "github:hyprland-community/pyprland";
     };
-
-
-
   };
 
   outputs = {

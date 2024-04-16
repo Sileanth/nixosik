@@ -23,7 +23,6 @@
     outputs.homeManagerModules.wofi
     outputs.homeManagerModules.starship
     outputs.homeManagerModules.hyprland
-    
 
     outputs.homeManagerModules.kdecus
 

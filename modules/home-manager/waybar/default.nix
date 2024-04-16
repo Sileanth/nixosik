@@ -8,8 +8,6 @@
   config = {
     programs.waybar = {
       enable = true;
-
-
     };
     xdg.configFile."waybar/config" = {
       enable = true;
