@@ -25,6 +25,7 @@
     outputs.homeManagerModules.hyprland
 
     outputs.homeManagerModules.kdecus
+    outputs.homeManagerModules.emacs
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default

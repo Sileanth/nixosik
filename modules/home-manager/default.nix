@@ -10,6 +10,7 @@
   git = import ./git;
   waybar = import ./waybar;
   kdecus = import ./kde;
+  emacs = import ./emacs;
   hyprland = import ./hyprland;
   kitty = import ./kitty.nix;
   fish = import ./fish.nix;
