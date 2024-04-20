@@ -1,11 +1,11 @@
-{pkgs, lib, config, inputs, ...}: 
-
 {
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}: {
   programs.emacs = {
     enable = true;
-
-
   };
-
-  
 }
