@@ -80,6 +80,7 @@
     unstable.opam
     gnumake
     coq
+    smlnj
     coqPackages.coqide
     coqPackages.coq-lsp
     warp-terminal
