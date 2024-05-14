@@ -79,6 +79,7 @@
 
     unstable.opam
     gnumake
+    gparted
     coq
     smlnj
     coqPackages.coqide
@@ -89,7 +90,6 @@
     unstable.smlnj
     unstable.millet #sml lsp
 
-    chromium
     libsForQt5.yakuake # dropdown terminal
     libsForQt5.plasma-browser-integration
 
