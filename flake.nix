@@ -92,13 +92,13 @@
             ./nixos/configuration.nix
           ];
       };
-      baza = nixpkgs.lib.nixosSystem {
+      kronos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
           base.modules
           ++ [
             # > Our main nixos configuration file <
-            ./hosts/baza/configuration.nix
+            ./hosts/kronos/configuration.nix
           ];
       };
 
