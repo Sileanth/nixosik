@@ -62,6 +62,8 @@
     base = {
       modules = [
         outputs.nixosModules.fonts
+        outputs.nixosModules.docker
+        outputs.nixosModules.flatpak
       ];
     };
   in {
@@ -101,6 +103,7 @@
             # > Our main nixos configuration file <
             ./hosts/delik/configuration.nix
             outputs.nixosModules.kde
+	    outputs.nixosModules.hyprland
           ];
       };
       liveIso = nixpkgs.lib.nixosSystem {
