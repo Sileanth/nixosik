@@ -4,7 +4,14 @@
   inputs,
   outputs,
   ...
-}: {
+}: 
+  let cfg = config.homeHyprland;
+in {
+  options = {
+    homeHyprland.low-power = lib.mkEnableOption = "Enable low power options, disable eye candy";
+
+  };
+  config = {
   home.packages = with pkgs; [
     hyprpaper
     waybar
@@ -59,19 +66,23 @@
       decoration = {
         rounding = 2;
         blur = {
-          enabled = true;
+          enabled = lib.mkIf cfg.low-power false;
+          enabled = lib.mkIf (! cfg.low-power) true;
           size = 3;
           passes = 1;
         };
 
-        drop_shadow = true;
+        drop_shadow = lib.mkIf cfg.low-power false;
+        drop_shadow = lib.mkIf (! cfg.low-power) true;
+;
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {
-        enabled = true;
+        enabled = lib.mkIf cfg.low-power false;
+        enabled = lib.mkIf (! cfg.low-power) true;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
         animation = [
           "windows, 1, 7, myBezier"
@@ -154,4 +165,5 @@
       ];
     };
   };
+};
 }

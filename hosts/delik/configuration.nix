@@ -11,6 +11,9 @@
     ./hardware-configuration.nix
   ];
 
+
+  config.homeHyprland.low-power = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -52,9 +55,9 @@
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "pl";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Configure console keymap
