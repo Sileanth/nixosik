@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     outputs.nixosModules.low-power
+    outputs.nixosModules.ssd
   ];
 
   

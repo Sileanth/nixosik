@@ -13,4 +13,5 @@
   postgres = import ./postgres.nix;
   steam = import ./steam.nix;
   low-power = import ./low-power.nix;
+  ssd = import ./ssd.nix;
 }
