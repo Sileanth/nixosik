@@ -32,7 +32,6 @@ in {
   ];
 
 
-  services.power-profiles-daemon.enable = true;
 
   home.file."/home/sileanth/.config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
 
