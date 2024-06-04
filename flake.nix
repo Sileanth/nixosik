@@ -84,30 +84,12 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./nixos/configuration.nix
-          ];
-      };
-      kronos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./hosts/kronos/configuration.nix
-          ];
-      };
-
       inspir = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
           base.modules
           ++ [
+
             # > Our main nixos configuration file <
             ./hosts/inspir/configuration.nix
           ];
@@ -119,6 +101,7 @@
 		  ++ [
 		    # > Our main nixos configuration file <
 		    ./hosts/delik/configuration.nix
+		outputs.nixosModules.kde
           ];
       };
       liveIso = nixpkgs.lib.nixosSystem {
@@ -135,24 +118,6 @@
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      "sileanth@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-        ];
-      };
-      "sileanth@baza" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
-        ];
-      };
       "sileanth@inspir" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
@@ -173,16 +138,6 @@
           inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
       };
-      "sileanth@kronos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
-        ];
-      };
-    };
+          };
   };
 }
