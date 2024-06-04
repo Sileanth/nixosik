@@ -112,7 +112,15 @@
             ./hosts/inspir/configuration.nix
           ];
       };
-
+	delik = nixpkgs.lib.nixosSystem {
+		specialArgs = {inherit inputs outputs;};
+		modules =
+		  base.modules
+		  ++ [
+		    # > Our main nixos configuration file <
+		    ./hosts/delik/configuration.nix
+          ];
+      };
       liveIso = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
@@ -155,7 +163,16 @@
           inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
       };
+	"sileanth@delik" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
 
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+          inputs.plasma-manager.homeManagerModules.plasma-manager
+        ];
+      };
       "sileanth@kronos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
