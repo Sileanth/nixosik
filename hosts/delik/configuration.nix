@@ -4,15 +4,16 @@
 {
   config,
   pkgs,
+  outputs,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    outputs.nixosModules.low-power
   ];
 
-
-  config.homeHyprland.low-power = true;
+  
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
