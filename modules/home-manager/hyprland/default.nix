@@ -30,6 +30,10 @@ in {
     slurp
     inputs.pyprland.packages.${pkgs.system}.default
   ];
+
+
+  services.power-profiles-daemon.enable = true;
+
   home.file."/home/sileanth/.config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
 
   home.file."/home/sileanth/.config/hypr/wallpapers" = {
@@ -51,6 +55,7 @@ in {
         "wl-paste --type image --watch cliphist store #Stores only image data"
         "wl-clip-persist --clipboard both"
         "udiskie &"
+        "powerprofilesctl set power-saver"
       ];
       input = {
         kb_layout = "pl";

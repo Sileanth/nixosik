@@ -12,7 +12,6 @@
     # });
   };
 
-  nvim-nightly = inputs.neovim-nightly-overlay.overlay;
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will
   # be accessible through 'pkgs.unstable'

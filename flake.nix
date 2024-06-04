@@ -14,8 +14,6 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # neovim-nighly overlay
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
