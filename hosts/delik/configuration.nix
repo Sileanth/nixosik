@@ -20,10 +20,12 @@
     "i915.enable_psr=2"
   ];
 
+services.power-profiles-daemon.enable = true;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  
   networking.hostName = "delik"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

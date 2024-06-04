@@ -78,6 +78,7 @@
     gnumake
     gparted
     coq
+    foot
     smlnj
     coqPackages.coqide
     coqPackages.coq-lsp
