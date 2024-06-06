@@ -5,8 +5,7 @@
   ...
 }: {
   users.users.sileanth.packages = with pkgs; [
-    pgadmin4-desktopmode
-    pgadmin4
+    pgcli
   ];
   services.postgresql = {
     enable = true;
@@ -18,5 +17,15 @@
             host all       all     ::1/128        trust
         local all      all     trust
     '';
+    ensureDatabases = [ "sileanth" ];
+    ensureUsers = [ {
+      name = "sileanth";
+      ensureDBOwnership = true;
+      ensureClauses = {
+        createdb = true;
+        createrole = true;
+      };
+    } ];
+
   };
 }
