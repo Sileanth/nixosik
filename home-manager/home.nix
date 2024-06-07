@@ -84,6 +84,7 @@
     warp-terminal
     gcc
 
+    calibre
     unstable.smlnj
     unstable.millet #sml lsp
 
