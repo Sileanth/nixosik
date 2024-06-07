@@ -42,7 +42,6 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
 
-
       # Or define it inline, for example:
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {
