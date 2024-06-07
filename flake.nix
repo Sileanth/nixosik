@@ -13,7 +13,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
     nix-colors.url = "github:misterio77/nix-colors";
@@ -83,7 +82,7 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-	biurko = nixpkgs.lib.nixosSystem {
+      biurko = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
           base.modules
@@ -109,7 +108,7 @@
             # > Our main nixos configuration file <
             ./hosts/delik/configuration.nix
             outputs.nixosModules.kde
-	    outputs.nixosModules.hyprland
+            outputs.nixosModules.hyprland
           ];
       };
       liveIso = nixpkgs.lib.nixosSystem {

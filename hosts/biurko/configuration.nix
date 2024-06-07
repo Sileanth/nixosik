@@ -1,15 +1,16 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, outputs, ... }:
-
 {
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  config,
+  pkgs,
+  outputs,
+  ...
+}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
     outputs.nixosModules.ssd
     outputs.nixosModules.postgres
     outputs.nixosModules.ssd
@@ -19,9 +20,7 @@
     outputs.nixosModules.flatpak
     outputs.nixosModules.hyprland
     outputs.nixosModules.fonts
-
-
-    ];
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -98,13 +97,13 @@
   users.users.sileanth = {
     isNormalUser = true;
     description = "sileanth";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-     neovim
-	gh
-	git
- kdePackages.kate
-    #  thunderbird
+      neovim
+      gh
+      git
+      kdePackages.kate
+      #  thunderbird
     ];
   };
 
@@ -117,9 +116,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-	vim 
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -148,5 +147,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

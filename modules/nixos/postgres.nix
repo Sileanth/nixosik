@@ -17,15 +17,16 @@
             host all       all     ::1/128        trust
         local all      all     trust
     '';
-    ensureDatabases = [ "sileanth" ];
-    ensureUsers = [ {
-      name = "sileanth";
-      ensureDBOwnership = true;
-      ensureClauses = {
-        createdb = true;
-        createrole = true;
-      };
-    } ];
-
+    ensureDatabases = ["sileanth"];
+    ensureUsers = [
+      {
+        name = "sileanth";
+        ensureDBOwnership = true;
+        ensureClauses = {
+          createdb = true;
+          createrole = true;
+        };
+      }
+    ];
   };
 }
