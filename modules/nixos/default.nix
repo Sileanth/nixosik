@@ -14,4 +14,5 @@
   steam = import ./steam.nix;
   low-power = import ./low-power.nix;
   ssd = import ./ssd.nix;
+  minegrub = import ./minegrub.nix;
 }

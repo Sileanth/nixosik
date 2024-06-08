@@ -20,11 +20,12 @@
     outputs.nixosModules.flatpak
     outputs.nixosModules.hyprland
     outputs.nixosModules.fonts
+    outputs.nixosModules.minegrub
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "biurko"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
