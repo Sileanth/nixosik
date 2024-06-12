@@ -60,9 +60,9 @@ in {
         };
 
         general = {
-          gaps_in = 5;
+          gaps_in = 0;
           gaps_out = 0;
-          border_size = 2;
+          border_size = 3;
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
           "col.inactive_border" = "rgba(595959aa)";
           layout = "dwindle";
@@ -91,6 +91,7 @@ in {
             "border, 1, 10, default"
             "borderangle, 1, 8, default"
             "fade, 1, 7, default"
+
             "workspaces, 1, 6, default"
           ];
         };
@@ -114,7 +115,7 @@ in {
           "$mainMod, R, exec, wofi --show drun --width=400px --height=300px"
 
           # clipboard
-          "$mainMod, L, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+          "$mainMod, O, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
           # screenshots
           ", Print, exec, grim -g \"\$(slurp -d)\" - | wl-copy"
@@ -142,6 +143,7 @@ in {
           "SUPER,6,workspace,6"
           "SUPER,7,workspace,7"
           "SUPER,8,workspace,8"
+          "SUPER,9,workspace,9"
 
           # move client to worpskace
           "SUPER $mainMod SHIFT, 1, movetoworkspacesilent, 1"
@@ -152,11 +154,12 @@ in {
           "SUPER $mainMod SHIFT, 6, movetoworkspacesilent, 6"
           "SUPER $mainMod SHIFT, 7, movetoworkspacesilent, 7"
           "SUPER $mainMod SHIFT, 8, movetoworkspacesilent, 8"
+          "SUPER $mainMod SHIFT, 9, movetoworkspacesilent, 9"
 
-          "SUPER SHIFT, left, movewindow, l"
-          "SUPER SHIFT, right, movewindow, r"
-          "SUPER SHIFT, up, movewindow, u"
-          "SUPER SHIFT, down, movewindow, d"
+          "SUPER SHIFT, H, movewindow, l"
+          "SUPER SHIFT, L, movewindow, r"
+          "SUPER SHIFT, K, movewindow, u"
+          "SUPER SHIFT, J, movewindow, d"
         ];
 
         bindm = [
