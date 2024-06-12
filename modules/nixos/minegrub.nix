@@ -5,7 +5,7 @@
   inputs,
   ...
 }: {
-  imports = [ inputs.minegrub-theme.nixosModules.default ];
+  imports = [  ];
   options = {
   };
   config = {
@@ -15,12 +15,7 @@
         enable = true;
         efiSupport = true;
         useOSProber = true;
-        minegrub-theme = {
-          enable = true;
-          splash = "I Use NixOS btw!";
-          boot-options-count = 5;
-
-        };
+        device =  "nodev" ;
       };
 
     };
