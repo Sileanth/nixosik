@@ -92,7 +92,6 @@
     libsForQt5.plasma-browser-integration
 
     discord
-    spotify
     obsidian
 
     unstable.nil # nix lsp
