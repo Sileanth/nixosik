@@ -84,6 +84,9 @@
     warp-terminal
     gcc
 
+
+    vlc
+
     calibre
     unstable.smlnj
     unstable.millet #sml lsp

@@ -67,6 +67,9 @@ in {
           "col.inactive_border" = "rgba(595959aa)";
           layout = "dwindle";
         };
+        # disable ghost monitor from nvidia
+        monitor = "Unknown-1,disable";
+
 
         decoration = {
           rounding = 2;
