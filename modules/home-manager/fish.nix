@@ -13,8 +13,8 @@
         ll = "lsd -al";
         g = "git";
         ga = " git add -A";
-        lazy-vim = ''NVIM_APPNAME="lazyvim" nvim'';
-        astro-vim = ''NVIM_APPNAME="astro-vim" nvim'';
+
+        serwer-ssh = "ssh ubuntu@158.178.144.114 -i ~/.ssh/main";
 
         fish_greeting = ''
           echo "󰄛 󰩃 "
