@@ -73,6 +73,9 @@
     unstable.rustup
     unstable.vscode
 
+  
+    helix 
+
     unstable.opam
     gnumake
     gparted
