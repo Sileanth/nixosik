@@ -75,6 +75,7 @@
 
     helix
     zellij
+    tmux
 
     unstable.opam
     gnumake
