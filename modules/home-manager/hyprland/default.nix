@@ -70,7 +70,6 @@ in {
         # disable ghost monitor from nvidia
         monitor = "Unknown-1,disable";
 
-
         decoration = {
           rounding = 2;
           blur = {

@@ -5,7 +5,7 @@
   inputs,
   ...
 }: {
-  imports = [  ];
+  imports = [];
   options = {
   };
   config = {
@@ -15,9 +15,8 @@
         enable = true;
         efiSupport = true;
         useOSProber = true;
-        device =  "nodev" ;
+        device = "nodev";
       };
-
     };
   };
 }

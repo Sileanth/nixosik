@@ -17,7 +17,6 @@
     # everything match nicely? Try nix-colors!
     nix-colors.url = "github:misterio77/nix-colors";
 
-
     # minecraft grub theme
     minegrub-theme.url = "github:Lxtharia/minegrub-theme";
 

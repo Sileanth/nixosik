@@ -73,8 +73,7 @@
     unstable.rustup
     unstable.vscode
 
-  
-    helix 
+    helix
 
     unstable.opam
     gnumake
@@ -86,7 +85,6 @@
     coqPackages.coq-lsp
     warp-terminal
     gcc
-
 
     vlc
 
