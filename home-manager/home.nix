@@ -74,6 +74,7 @@
     unstable.vscode
 
     helix
+    zellij
 
     unstable.opam
     gnumake
