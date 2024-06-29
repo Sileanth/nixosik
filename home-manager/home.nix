@@ -75,6 +75,7 @@
 
     helix
     zellij
+    zed-editor
     tmux
 
     unstable.opam
