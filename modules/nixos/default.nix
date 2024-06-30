@@ -17,4 +17,5 @@
   minegrub = import ./minegrub.nix;
   calibre-server = import ./server/calibre-server.nix;
   freshrss = import ./server/freshrss.nix;
+  ssh = import ./server/ssh.nix;
 }
