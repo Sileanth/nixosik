@@ -7,6 +7,7 @@
     # at the same time. Here's an working example:
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
     # Home manager
@@ -65,6 +66,11 @@
         outputs.nixosModules.flatpak
       ];
     };
+    base_server = {
+      modules =  [ 
+        outputs.nixosModules.docker
+      ];
+    };
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
@@ -97,7 +103,7 @@
       inspir = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
-          base.modules
+          base_server.modules
           ++ [
             # > Our main nixos configuration file <
             ./hosts/inspir/configuration.nix
@@ -134,8 +140,7 @@
 
         modules = [
           # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
+          # ./home-manager/home.nix
         ];
       };
       "sileanth@biurko" = home-manager.lib.homeManagerConfiguration {
