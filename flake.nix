@@ -140,7 +140,7 @@
 
         modules = [
           # > Our main home-manager configuration file <
-          # ./home-manager/home.nix
+          ./home-manager/home-server.nix
         ];
       };
       "sileanth@biurko" = home-manager.lib.homeManagerConfiguration {

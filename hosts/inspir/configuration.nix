@@ -13,6 +13,8 @@
     # outputs.nixosModules.nvidia
     outputs.nixosModules.ssd
     outputs.nixosModules.virtual
+    outputs.nixosModules.freshrss
+    outputs.nixosModules.calibre-server
   ];
 
   # Bootloader.
