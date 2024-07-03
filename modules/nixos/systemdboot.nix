@@ -14,10 +14,7 @@
       efi.efiSysMountPoint = "/efi/";
       systemd-boot = {
         enable = true;
-
       };
-      
-
     };
   };
 }
