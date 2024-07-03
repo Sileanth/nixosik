@@ -13,7 +13,7 @@
     # outputs.nixosModules.nvidia
     outputs.nixosModules.ssd
     outputs.nixosModules.ssh
-     outputs.nixosModules.freshrss
+    outputs.nixosModules.freshrss
     outputs.nixosModules.calibre-server
   ];
 

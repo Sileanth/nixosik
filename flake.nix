@@ -67,7 +67,7 @@
       ];
     };
     base_server = {
-      modules =  [ 
+      modules = [
         outputs.nixosModules.docker
       ];
     };
