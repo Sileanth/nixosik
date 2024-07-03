@@ -31,7 +31,7 @@
   };
 
   fileSystems."/efi" = {
-    devive = "/dev/disk/by-uuid/7C30-1BC2";
+    device = "/dev/disk/by-uuid/7C30-1BC2";
     fsType = "vfat";
   };
 
