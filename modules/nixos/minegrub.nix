@@ -15,7 +15,7 @@
       grub = {
         enable = true;
         efiSupport = true;
-        useOSProber = true;
+        default = "saved";
         device = "nodev";
         extraEntries = ''
           menuentry "Windows" {
@@ -25,6 +25,14 @@
             insmod chain
             search --fs-uuid --set=root 7C30-1BC2
             chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+          }
+        '' + ''
+           menuentry "Reboot" {
+              reboot
+          }
+
+          menuentry "Shut Down" {
+              halt
           }
         '';
       };
