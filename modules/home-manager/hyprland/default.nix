@@ -131,6 +131,12 @@ in {
           "$mainMod, up, movefocus, u"
           "$mainMod, down, movefocus, d"
 
+          # Move focus with vim like bindings
+          "$mainMod, H, movefocus, l"
+          "$mainMod, L, movefocus, r"
+          "$mainMod, K, movefocus, u"
+          "$mainMod, J, movefocus, d"
+
           # Scroll through existing workspaces with mainMod + scroll
           "$mainMod, mouse_down, workspace, e+1"
           "$mainMod, mouse_up, workspace, e-1"
