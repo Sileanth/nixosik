@@ -100,6 +100,7 @@
 
     discord
     obsidian
+    spotify
 
     unstable.nil # nix lsp
   ];
