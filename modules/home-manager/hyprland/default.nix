@@ -99,7 +99,6 @@ in {
         };
 
         master = {
-          new_is_master = false;
         };
 
         # keybindings names
