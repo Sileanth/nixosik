@@ -20,8 +20,8 @@
     outputs.nixosModules.flatpak
     outputs.nixosModules.hyprland
     outputs.nixosModules.fonts
-    # outputs.nixosModules.minegrub
-    outputs.nixosModules.systemdboot
+    outputs.nixosModules.minegrub
+    # outputs.nixosModules.systemdboot
   ];
 
   # Bootloader.
