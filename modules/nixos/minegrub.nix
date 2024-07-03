@@ -17,6 +17,7 @@
         efiSupport = true;
         default = "saved";
         device = "nodev";
+        generationLimit = 5;
         extraEntries = ''
           menuentry "Windows" {
             insmod part_gpt
