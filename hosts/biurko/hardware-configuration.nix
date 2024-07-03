@@ -30,6 +30,11 @@
     options = ["fmask=0022" "dmask=0022"];
   };
 
+  fileSystems."/efi" = {
+    devive = "/dev/disk/by-uuid/7C30-1BC2";
+    fsType = "vfat";
+  };
+
   swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
