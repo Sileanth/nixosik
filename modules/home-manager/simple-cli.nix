@@ -15,7 +15,6 @@
     zoxide
     lazygit
     tldr
-    thefuck
     glow
     skate
     mdcat
