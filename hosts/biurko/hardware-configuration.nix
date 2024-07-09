@@ -17,7 +17,7 @@
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
   # fixing nvidia ghost monitor
-  boot.kernelParams = [ "nvidia_drm.fbdev=1" ];
+  boot.kernelParams = ["nvidia_drm.fbdev=1"];
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   fileSystems."/" = {

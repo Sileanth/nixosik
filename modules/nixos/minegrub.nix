@@ -17,24 +17,26 @@
         efiSupport = true;
         default = "saved";
         device = "nodev";
-        extraEntries = ''
-          menuentry "Windows" {
-            insmod part_gpt
-            insmod fat
-            insmod search_fs_uuid
-            insmod chain
-            search --fs-uuid --set=root 7C30-1BC2
-            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-          }
-        '' + ''
-           menuentry "Reboot" {
-              reboot
-          }
+        extraEntries =
+          ''
+            menuentry "Windows" {
+              insmod part_gpt
+              insmod fat
+              insmod search_fs_uuid
+              insmod chain
+              search --fs-uuid --set=root 7C30-1BC2
+              chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+            }
+          ''
+          + ''
+             menuentry "Reboot" {
+                reboot
+            }
 
-          menuentry "Shut Down" {
-              halt
-          }
-        '';
+            menuentry "Shut Down" {
+                halt
+            }
+          '';
       };
     };
   };
