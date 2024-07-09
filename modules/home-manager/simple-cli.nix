@@ -6,7 +6,6 @@
   funny = with pkgs; [
     cowsay
     lolcat
-    neofetch
   ];
 
   productive = with pkgs; [
