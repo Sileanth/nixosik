@@ -5,6 +5,8 @@
 }: let
   funny = with pkgs; [
     cowsay
+    fastfetch
+    macchina
     lolcat
   ];
 
