@@ -33,7 +33,8 @@ return {
     local lspconfig = require('lspconfig')
     lspconfig.pyright.setup { on_attach = on_attach }
     lspconfig.lua_ls.setup { on_attach = on_attach }
-    lspconfig.ccls.setup { on_attach = on_attach }
+    -- lspconfig.ccls.setup { on_attach = on_attach }
+    lspconfig.clangd.setup { on_attach = on_attach }
     lspconfig.cmake.setup { on_attach = on_attach }
     lspconfig.ocamllsp.setup { on_attach = on_attach }
     lspconfig.nil_ls.setup { on_attach = on_attach }
