@@ -29,7 +29,7 @@
     programs.neovim = {
       enable = true;
       viAlias = true;
-      package = pkgs.unstable.neovim;
+      # package = pkgs.unstable.neovim;
       defaultEditor = true;
     };
     xdg.configFile.nvim = {
