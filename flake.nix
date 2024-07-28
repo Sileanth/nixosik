@@ -130,6 +130,15 @@
             ./hosts/delik/configuration.nix
             outputs.nixosModules.kde
             outputs.nixosModules.hyprland
+
+            {
+              nix.settings = {
+                substituters = ["https://cosmic.cachix.org/"];
+                trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
+              };
+            }
+ 
+            nixos-cosmic.nixosModules.default
           ];
       };
       liveIso = nixpkgs.lib.nixosSystem {

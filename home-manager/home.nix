@@ -110,6 +110,7 @@
 
     erlang
     elixir
+    inotify-tools
 
 
     unstable.nil # nix lsp
