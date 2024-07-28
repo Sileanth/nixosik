@@ -76,7 +76,7 @@
     zellij
     zed-editor
     tmux
-    # youtube-dl
+    yt-dlp
 
     mpv
 
