@@ -76,12 +76,13 @@
     zellij
     zed-editor
     tmux
-    youtube-dlp
+    # youtube-dl
 
     mpv
 
     floorp
     librewolf
+    palemoon-bin
 
     unstable.opam
     gnumake
