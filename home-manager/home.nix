@@ -97,8 +97,13 @@
     libsForQt5.plasma-browser-integration
 
     discord
+
     obsidian
     spotify
+
+    erlang
+    elixir
+
 
     unstable.nil # nix lsp
   ];
