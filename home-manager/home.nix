@@ -76,6 +76,12 @@
     zellij
     zed-editor
     tmux
+    youtube-dlp
+
+    mpv
+
+    floorp
+    librewolf
 
     unstable.opam
     gnumake
