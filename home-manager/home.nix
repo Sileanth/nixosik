@@ -72,6 +72,9 @@
     unstable.rustup
     unstable.vscode
 
+
+    nodePackages.typescript-language-server
+
     helix
     zellij
     zed-editor
