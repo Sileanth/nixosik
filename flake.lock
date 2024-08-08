@@ -450,11 +450,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722630065,
-        "narHash": "sha256-QfM/9BMRkCmgWzrPDK+KbgJOUlSJnfX4OvsUupEUZvA=",
+        "lastModified": 1723015306,
+        "narHash": "sha256-jQnFEtH20/OsDPpx71ntZzGdRlpXhUENSQCGTjn//NA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "afc892db74d65042031a093adb6010c4c3378422",
+        "rev": "b3d5ea65d88d67d4ec578ed11d4d2d51e3de525e",
         "type": "github"
       },
       "original": {
@@ -504,11 +504,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1722880701,
-        "narHash": "sha256-hAGsRq9YIuT6lC8p1ukd5uDRjgpjCcVb9PxrdNeO3jE=",
+        "lastModified": 1723110881,
+        "narHash": "sha256-VqQuxeai86PP/Vh1r6AqOi2pPllqBi68HVJKEk72Z0E=",
         "ref": "refs/heads/main",
-        "rev": "0e86808e5912823f1c6bea1b6d5fcae297fc9f57",
-        "revCount": 5052,
+        "rev": "83a334f97df4389ca30cb63e50317a66a82562b9",
+        "revCount": 5070,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/hyprwm/Hyprland"
@@ -536,11 +536,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722719004,
-        "narHash": "sha256-Qxu2g1Ay15g2EJE184i06tlRdoODEG+YuUvWKRQRKcQ=",
+        "lastModified": 1723060205,
+        "narHash": "sha256-aPzAbDgAyxJlUjyaFPDhjcL7WnyDP5uDZKOqlQRD8eM=",
         "owner": "hyprwm",
         "repo": "hyprland-plugins",
-        "rev": "4fcb4038f23e5273af9a5684f3ee10b0652b3bab",
+        "rev": "7a28245e5a8d30e520bc6ce8bc9b7ee177d9f2b6",
         "type": "github"
       },
       "original": {
@@ -767,11 +767,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1722913682,
-        "narHash": "sha256-7KX4YDBpWJFtoWGA/rSRGoc7PfOyshrmyxlhSM2ApAw=",
+        "lastModified": 1723080973,
+        "narHash": "sha256-p7kQ4yxruANLz0FLnqYdSvqyYGwBaT9nWs2J/nrVKA4=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "b32bb5899e83d45a8f518cc6b8c8fb28ed104f8b",
+        "rev": "d8b2b9aee034c10ca67848653171f576f87434a8",
         "type": "github"
       },
       "original": {
@@ -849,11 +849,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1722791413,
-        "narHash": "sha256-rCTrlCWvHzMCNcKxPE3Z/mMK2gDZ+BvvpEVyRM4tKmU=",
+        "lastModified": 1722869614,
+        "narHash": "sha256-7ojM1KSk3mzutD7SkrdSflHXEujPvW1u7QuqWoTLXQU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8b5b6723aca5a51edf075936439d9cd3947b7b2c",
+        "rev": "883180e6550c1723395a3a342f830bfc5c371f6b",
         "type": "github"
       },
       "original": {
@@ -1049,11 +1049,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722804745,
-        "narHash": "sha256-l6N3QaiDqN2QmHDAxjczQPLPCTv+Kp7PsrtJBltmhTo=",
+        "lastModified": 1723036961,
+        "narHash": "sha256-GLrZ8CE2FlWbeJFFcO+J5nphbOG8d0eslpy8Uv+AHoY=",
         "owner": "pjones",
         "repo": "plasma-manager",
-        "rev": "61d9342fb471cd3c45a047406428fba7b6fb49ad",
+        "rev": "b6e7a2ed7b22effe1395416adf527935c4b3dc9b",
         "type": "github"
       },
       "original": {
@@ -1151,11 +1151,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722824458,
-        "narHash": "sha256-2k3/geD5Yh8JT1nrGaRycje5kB0DkvQA/OUZoel1bIU=",
+        "lastModified": 1722997267,
+        "narHash": "sha256-8Pncp8IKd0f0N711CRrCGTC4iLfBE+/5kaMqyWxnYic=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "a8a937c304e62a5098c6276c9cdf65c19a43b1a5",
+        "rev": "d720bf3cebac38c2426d77ee2e59943012854cb8",
         "type": "github"
       },
       "original": {
@@ -1173,11 +1173,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1722888872,
-        "narHash": "sha256-iM9GzcTrRW/zbP0rvnPVH+FSfgMRkyyGt9QWMrQvpVo=",
+        "lastModified": 1723016032,
+        "narHash": "sha256-UVF+Mb30Q4x4/yvrZxdEx4RAidHy6tgxRzfQgby0mRk=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "678ff9dbd6546849475c0df21de7666310aa2d76",
+        "rev": "b3de2d10dd351756022b77aa8a305ddc1e72a5ba",
         "type": "github"
       },
       "original": {
