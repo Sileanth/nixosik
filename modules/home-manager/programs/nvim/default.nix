@@ -33,6 +33,11 @@
       black
       isort
       taplo
+
+
+      # ocaml dev setup
+      ocamlPackages.ocaml-lsp
+      ocamlPackages.ocamlformat
     ];
     programs.neovim = {
       enable = true;
