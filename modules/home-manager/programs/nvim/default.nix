@@ -18,7 +18,6 @@
       nodejs
       python3
       gdu
-      pyright
       sqls
       nil
       inputs
@@ -26,6 +25,16 @@
       .packages
       .${pkgs.system}
       .codelldb # better debuger
+
+
+
+      # python setup deps
+      pyright
+      ruff
+      python312Packages.debugpy
+      black
+      isort
+      taplo
     ];
     programs.neovim = {
       enable = true;
