@@ -26,8 +26,6 @@
       .${pkgs.system}
       .codelldb # better debuger
 
-
-
       # python setup deps
       pyright
       ruff

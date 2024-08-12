@@ -72,7 +72,6 @@
     unstable.rustup
     unstable.vscode
 
-
     nodePackages.typescript-language-server
 
     helix
@@ -114,7 +113,6 @@
     erlang
     elixir
     inotify-tools
-
 
     unstable.nil # nix lsp
   ];
