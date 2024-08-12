@@ -56,6 +56,8 @@
     LC_TIME = "pl_PL.UTF-8";
   };
 
+
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
@@ -68,9 +70,9 @@
   services.displayManager.cosmic-greeter.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "pl";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Configure console keymap
