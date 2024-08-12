@@ -18,6 +18,7 @@
       nodejs
       python3
       gdu
+      pyright
       sqls
       nil
       inputs
