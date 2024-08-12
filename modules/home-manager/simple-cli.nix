@@ -13,6 +13,8 @@
   productive = with pkgs; [
     lsd
     bat
+    jq
+    poetry
     btop
     zoxide
     lazygit
