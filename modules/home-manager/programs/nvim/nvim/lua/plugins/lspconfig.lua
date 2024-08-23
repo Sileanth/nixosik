@@ -36,7 +36,7 @@ return {
     -- lspconfig.ccls.setup { on_attach = on_attach }
     lspconfig.clangd.setup { on_attach = on_attach }
     lspconfig.cmake.setup { on_attach = on_attach }
-    lspconfig.ocamllsp.setup { on_attach = on_attach }
+    lspconfig.ocamllsp.setup {}
     lspconfig.nil_ls.setup { on_attach = on_attach }
     lspconfig.sqls.setup {
       on_attach = function(client, bufnr)
