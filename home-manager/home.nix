@@ -73,6 +73,16 @@
     unstable.rustup
     unstable.vscode
 
+
+      inputs
+      .opam2nix
+      .packages
+      .${pkgs.system}
+      .opam2nix# better debuger
+
+
+
+
     nodePackages.typescript-language-server
 
     helix
