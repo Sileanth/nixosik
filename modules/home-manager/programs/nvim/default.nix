@@ -34,7 +34,6 @@
       isort
       taplo
 
-
       # ocaml dev setup
       # ocamlPackages.ocaml-lsp
       # ocamlPackages.ocamlformat
