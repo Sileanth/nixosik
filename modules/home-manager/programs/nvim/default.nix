@@ -36,8 +36,8 @@
 
 
       # ocaml dev setup
-      ocamlPackages.ocaml-lsp
-      ocamlPackages.ocamlformat
+      # ocamlPackages.ocaml-lsp
+      # ocamlPackages.ocamlformat
     ];
     programs.neovim = {
       enable = true;

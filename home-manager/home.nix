@@ -82,11 +82,9 @@
 
     mpv
 
-    floorp
-    librewolf
-    palemoon-bin
 
     unstable.opam
+    pkg-config
     gnumake
     gparted
     coq
