@@ -11,7 +11,7 @@
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
 
-    opam2nix.url = "https://github.com/johnyob/opam2nix";
+    opam2nix.url = "github:johnyob/opam2nix";
 
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";

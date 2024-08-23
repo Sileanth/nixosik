@@ -2,6 +2,7 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
   outputs,
+  inputs,
   lib,
   config,
   pkgs,
@@ -74,13 +75,7 @@
     unstable.vscode
 
 
-      inputs
-      .opam2nix
-      .packages
-      .${pkgs.system}
-      .opam2nix# better debuger
-
-
+      
 
 
     nodePackages.typescript-language-server
