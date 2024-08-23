@@ -82,12 +82,7 @@
 
     mpv
 
-    unstable.opam
-    pkg-config
-    openssl
-    libev
-
-
+    
     gnumake
     gparted
     coq
