@@ -17,4 +17,6 @@
   starship = import ./starship.nix;
   wofi = import ./wofi.nix;
   ocaml = import ./ocaml.nix;
+  yazi = import ./yazi.nix;
+  zoxide = import ./zoxide.nix;
 }
