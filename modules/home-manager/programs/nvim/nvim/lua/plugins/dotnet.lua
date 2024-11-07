@@ -3,7 +3,10 @@ return { {
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
-  version = '^4', -- Recommended
-  lazy = false,
+  branch = '2.x.x', -- Recommended
+  ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
 },
+
+
+
 }

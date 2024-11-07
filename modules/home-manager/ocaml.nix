@@ -13,15 +13,15 @@
       enableFishIntegration = true;
     };
     home.packages = with pkgs; [
-      pkg-config
-      openssl
-      libev
-inputs
-      .opam2nix
-      .packages
-      .${pkgs.system}
-      .opam2nix# better debuger
-
+#       pkg-config
+#       openssl
+#       libev
+# inputs
+#       .opam2nix
+#       .packages
+#       .${pkgs.system}
+#       .opam2nix# better debuger
+#
 
     ];
   };

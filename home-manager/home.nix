@@ -27,7 +27,7 @@
 
     outputs.homeManagerModules.kdecus
     outputs.homeManagerModules.emacs
-    # outputs.homeManagerModules.ocaml
+    outputs.homeManagerModules.ocaml
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -112,13 +112,21 @@
     discord
 
     obsidian
-    # spotify
+    
+    spotify-qt
+    librespot
+    spotifyd
+    spotify-player
 
     erlang
     elixir
     inotify-tools
 
     unstable.nil # nix lsp
+
+
+    dotnet-sdk_8
+    # dotnet-aspnetcore_8
   ];
 
   # Enable home-manager and git

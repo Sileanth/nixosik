@@ -5,7 +5,7 @@ return {
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
 
-    
+
     -- Adds LSP completion capabilities
     'hrsh7th/cmp-nvim-lsp',
 
@@ -14,11 +14,11 @@ return {
 
     -- path completion
     'hrsh7th/cmp-path',
-  
+
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
   },
-  config = function() 
+  config = function()
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     require('luasnip.loaders.from_vscode').lazy_load()
@@ -63,7 +63,7 @@ return {
         { name = 'path' },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-        { name = 'buffer', option = {  keyword_length = 8 }, },
+        { name = 'buffer',  option = { keyword_length = 8 }, },
       },
     }
   end
