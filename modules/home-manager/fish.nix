@@ -14,11 +14,10 @@
       '';
       functions = {
         ll = "lsd -al";
+        lg = "lazygit";
         g = "git";
         ga = " git add -A";
-
-        serwer-ssh = "ssh ubuntu@158.178.144.114 -i ~/.ssh/main";
-
+    
         fish_greeting = ''
           echo "󰄛 󰩃 "
           echo elo
