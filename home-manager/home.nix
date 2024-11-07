@@ -62,6 +62,8 @@
     };
   };
 
+  # tempory TODO FIX
+   # home.enableNixpkgsReleaseCheck = false;
   home = {
     username = "sileanth";
     homeDirectory = "/home/sileanth";
@@ -86,7 +88,6 @@
 
     helix
     zellij
-    zed-editor
     tmux
     yt-dlp
 
@@ -120,6 +121,9 @@
     spotifyd
     spotify-player
 
+
+    haskellPackages.ghcup
+
     erlang
     elixir
     inotify-tools
@@ -139,5 +143,5 @@
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 }
