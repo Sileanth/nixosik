@@ -112,7 +112,7 @@
     discord
 
     obsidian
-    spotify
+    # spotify
 
     erlang
     elixir

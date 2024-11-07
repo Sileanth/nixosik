@@ -8,7 +8,7 @@
   config = {
     programs.kitty = {
       enable = true;
-      theme = "Everforest Dark Hard";
+      themeFile = "Catppuccin-Latte";
       shellIntegration = {
         enableZshIntegration = true;
         enableFishIntegration = true;

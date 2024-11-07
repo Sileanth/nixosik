@@ -115,6 +115,22 @@
             nixos-cosmic.nixosModules.default
           ];
       };
+     fenix = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules =
+          base.modules
+          ++ [
+            # > Our main nixos configuration file <
+            ./hosts/fenix/configuration.nix
+            {
+              nix.settings = {
+                substituters = ["https://cosmic.cachix.org/"];
+                trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
+              };
+            }
+            nixos-cosmic.nixosModules.default
+          ];
+      };
       inspir = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
@@ -168,6 +184,16 @@
         ];
       };
       "sileanth@biurko" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+          inputs.plasma-manager.homeManagerModules.plasma-manager
+        ];
+      };
+     "sileanth@fenix" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
 
