@@ -121,6 +121,9 @@
     spotifyd
     spotify-player
 
+    gnum4
+    xspim
+
 
     haskellPackages.ghcup
 
