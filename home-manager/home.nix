@@ -125,7 +125,6 @@
     xspim
 
 
-    haskellPackages.ghcup
 
     erlang
     elixir
