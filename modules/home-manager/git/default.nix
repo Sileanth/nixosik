@@ -6,9 +6,13 @@
   imports = [];
   options = {};
   config = {
-    home.packages = with pkgs; [
-      gh
-    ];
+    programs.gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+      settings = {
+        rc = "repo clone";
+      };
+    };
     programs.git = {
       enable = true;
       userName = "sileanth";
