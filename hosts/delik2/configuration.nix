@@ -15,13 +15,14 @@
     outputs.nixosModules.postgres
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [
+    "i915.enable_fbc=1"
+    "i915.enable_psr=2"
+  ];
 
   services.power-profiles-daemon.enable = true;
-  nix.settings.experimental-features = ["nix-command" "flakes" ];
-	services.thermald.enable = true;
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
 
   networking.hostName = "delik"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -52,18 +53,15 @@
   };
 
   # Enable the X11 windowing system.
+  # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.desktopManager.gnome.enable = true;
-
+  # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 
   # services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-
-
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -100,13 +98,16 @@
   users.users.sileanth = {
     isNormalUser = true;
     description = "sileanth";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-	git neovim
-    #  thunderbird
+      kdePackages.kate
+      git
+      gh
+      neovim
+      #  thunderbird
     ];
   };
-
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -116,8 +117,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -146,5 +148,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
