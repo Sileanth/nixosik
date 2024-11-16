@@ -147,7 +147,7 @@
           ++ [
             # > Our main nixos configuration file <
             ./hosts/delik/configuration.nix
-            outputs.nixosModules.kde
+            # outputs.nixosModules.kde
             outputs.nixosModules.hyprland
 
             {
