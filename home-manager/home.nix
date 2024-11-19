@@ -108,7 +108,11 @@
       librespot
       spotifyd
       spotify-player
+
+
       nil
+      
+
       ghc
       haskell-language-server
 

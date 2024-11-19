@@ -20,4 +20,5 @@
   ssh = import ./server/ssh.nix;
   systemdboot = import ./systemdboot.nix;
   nixpkgs = import ./nixpkgs.nix;
+  nix-lsp = import ./nix_lsp.nix;
 }

@@ -21,6 +21,7 @@
     outputs.nixosModules.hyprland
     outputs.nixosModules.fonts
     outputs.nixosModules.nixpkgs
+    outputs.nixosModules.nix-lsp
     #    outputs.nixosModules.systemdboot
   ];
 
