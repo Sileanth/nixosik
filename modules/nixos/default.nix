@@ -19,4 +19,5 @@
   freshrss = import ./server/freshrss.nix;
   ssh = import ./server/ssh.nix;
   systemdboot = import ./systemdboot.nix;
+  nixpkgs = import ./nixpkgs.nix;
 }
