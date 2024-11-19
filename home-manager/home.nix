@@ -130,6 +130,13 @@
     elixir
     inotify-tools
 
+   # ghcup deps
+   ghc
+   haskell-language-server
+
+
+   wireguard-tools
+
     unstable.nil # nix lsp
 
 
