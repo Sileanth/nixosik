@@ -51,7 +51,28 @@ return {
     lspconfig.ocamllsp.setup {
       on_attach = on_attach,
     }
-    lspconfig.nil_ls.setup { on_attach = on_attach }
+    -- lspconfig.nil_ls.setup { on_attach = on_attach }
+    lspconfig.nixd.setup({
+      cmd = { "nixd" },
+      settings = {
+        nixd = {
+          nixpkgs = {
+            expr = "import <nixpkgs> { }",
+          },
+          formatting = {
+            command = { "nix fmt" }, -- or nixfmt or nixpkgs-fmt
+          },
+          -- options = {
+          --   nixos = {
+          --       expr = '(builtins.getFlake "/PATH/TO/FLAKE").nixosConfigurations.CONFIGNAME.options',
+          --   },
+          --   home_manager = {
+          --       expr = '(builtins.getFlake "/PATH/TO/FLAKE").homeConfigurations.CONFIGNAME.options',
+          --   },
+          -- },
+        },
+      },
+    })
     lspconfig.sqls.setup {
       on_attach = function(client, bufnr)
         require('sqls').on_attach(client, bufnr)
@@ -70,7 +91,7 @@ return {
 
     -- trouble nvim replaced
     -- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
-    
+
 
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer
@@ -97,7 +118,6 @@ return {
         vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, opts)
         vim.keymap.set({ 'n', 'v' }, '<space>a', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-        
       end,
     })
   end
