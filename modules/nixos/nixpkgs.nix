@@ -7,7 +7,7 @@
 }:
 {
   nixpkgs = {
-    overlays = with outputs; [
+    overlays = with outputs.overlays; [
       additions
       modifications
       unstable-packages
