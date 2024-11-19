@@ -45,6 +45,7 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
+      outputs.overlays.stable-packages
 
       # Or define it inline, for example:
       # (final: prev: {
@@ -70,79 +71,61 @@
   };
 
   # Add stuff for your user as you see fit:
-
-  home.packages = with pkgs; [
-    unstable.go
-    unstable.nh
-    unstable.jetbrains-toolbox
-    unstable.rustup
-    unstable.vscode
-
-
-    sysstat
-
-      
-
-
-    nodePackages.typescript-language-server
-
-    helix
-    zellij
-    tmux
-    yt-dlp
-
-    mpv
-
-    
+  home.packages = 
+  let 
+    stable_packages = with pkgs.stable; [
+      go
+      jetbrains-toolbox
+      sysstat
+      tmux
+      yt-dlp
+      mpv 
     gnumake
     gparted
     coq
     foot
     coqPackages.coqide
     coqPackages.coq-lsp
-    warp-terminal
-    gcc
-
-    vlc
-
+   gcc
     calibre
-    unstable.smlnj
-    unstable.millet #sml lsp
-
-    libsForQt5.yakuake # dropdown terminal
-    libsForQt5.plasma-browser-integration
-
-    discord
-
+    vlc
     obsidian
-    
-    spotify-qt
-    librespot
-    spotifyd
-    spotify-player
-
-    gnum4
-    xspim
-
-    authenticator
+    dotnet-sdk_8
+    wireguard-tools
 
     erlang
     elixir
     inotify-tools
-
-   # ghcup deps
-   ghc
-   haskell-language-server
+    gnum4
+    xspim
 
 
-   wireguard-tools
 
-    unstable.nil # nix lsp
+    ];
+    unstable_packages = with pkgs.unstable; [
+      vscode
+      discord
+      helix
+      zellij
+     
+    spotify-qt
+    librespot
+    spotifyd
+    spotify-player
+      nil
+        ghc
+     haskell-language-server
 
 
-    dotnet-sdk_8
-    # dotnet-aspnetcore_8
-  ];
+
+      authenticator
+
+      nh
+      rustup
+      nodePackages.typescript-language-server
+    ];
+  in stable_packages ++ unstable_packages;
+
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
