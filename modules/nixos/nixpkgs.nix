@@ -4,8 +4,7 @@
   inputs,
   outputs,
   ...
-}:
-{
+}: {
   nixpkgs = {
     overlays = with outputs.overlays; [
       additions
@@ -15,8 +14,6 @@
     ];
     config = {
       allowUnfree = true;
-
     };
-
   };
 }

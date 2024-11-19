@@ -20,8 +20,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   services.power-profiles-daemon.enable = true;
-  nix.settings.experimental-features = ["nix-command" "flakes" ];
-	services.thermald.enable = true;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+  services.thermald.enable = true;
 
   networking.hostName = "delik"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -63,8 +63,6 @@
   # services.displayManager.sddm.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
-
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";
@@ -100,10 +98,11 @@
   users.users.sileanth = {
     isNormalUser = true;
     description = "sileanth";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-	git neovim
-    #  thunderbird
+      git
+      neovim
+      #  thunderbird
     ];
   };
 
@@ -116,8 +115,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -146,5 +145,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

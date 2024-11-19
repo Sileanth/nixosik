@@ -64,59 +64,53 @@
   };
 
   # tempory TODO FIX
-   # home.enableNixpkgsReleaseCheck = false;
+  # home.enableNixpkgsReleaseCheck = false;
   home = {
     username = "sileanth";
     homeDirectory = "/home/sileanth";
   };
 
   # Add stuff for your user as you see fit:
-  home.packages = 
-  let 
+  home.packages = let
     stable_packages = with pkgs.stable; [
       go
       jetbrains-toolbox
       sysstat
       tmux
       yt-dlp
-      mpv 
-    gnumake
-    gparted
-    coq
-    foot
-    coqPackages.coqide
-    coqPackages.coq-lsp
-   gcc
-    calibre
-    vlc
-    obsidian
-    dotnet-sdk_8
-    wireguard-tools
+      mpv
+      gnumake
+      gparted
+      coq
+      foot
+      coqPackages.coqide
+      coqPackages.coq-lsp
+      gcc
+      calibre
+      vlc
+      obsidian
+      dotnet-sdk_8
+      wireguard-tools
 
-    erlang
-    elixir
-    inotify-tools
-    gnum4
-    xspim
-
-
-
+      erlang
+      elixir
+      inotify-tools
+      gnum4
+      xspim
     ];
     unstable_packages = with pkgs.unstable; [
       vscode
       discord
       helix
       zellij
-     
-    spotify-qt
-    librespot
-    spotifyd
-    spotify-player
+
+      spotify-qt
+      librespot
+      spotifyd
+      spotify-player
       nil
-        ghc
-     haskell-language-server
-
-
+      ghc
+      haskell-language-server
 
       authenticator
 
@@ -124,8 +118,8 @@
       rustup
       nodePackages.typescript-language-server
     ];
-  in stable_packages ++ unstable_packages;
-
+  in
+    stable_packages ++ unstable_packages;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

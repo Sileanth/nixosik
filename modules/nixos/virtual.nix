@@ -15,9 +15,8 @@
         # enableKvm = true;
         package = pkgs.stable.virtualbox;
       };
-
     };
-    
+
     users.extraGroups.vboxusers.members = ["sileanth"];
   };
 }

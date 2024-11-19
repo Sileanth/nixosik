@@ -10,7 +10,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
-
     opam2nix.url = "github:johnyob/opam2nix";
 
     nixos-cosmic = {
@@ -115,7 +114,7 @@
             nixos-cosmic.nixosModules.default
           ];
       };
-     fenix = nixpkgs.lib.nixosSystem {
+      fenix = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
           base.modules
@@ -193,7 +192,7 @@
           inputs.plasma-manager.homeManagerModules.plasma-manager
         ];
       };
-     "sileanth@fenix" = home-manager.lib.homeManagerConfiguration {
+      "sileanth@fenix" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
 

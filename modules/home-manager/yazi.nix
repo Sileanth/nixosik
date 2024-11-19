@@ -13,6 +13,5 @@
       enableZshIntegration = true;
       shellWrapperName = "y";
     };
-   
   };
 }
