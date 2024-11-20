@@ -45,7 +45,7 @@ in {
 
       settings = {
         exec-once = [
-          "waybar"
+          "uwsm app -- waybar"
           "hyprpaper"
           "pypr"
           "wl-paste --type text --watch cliphist store #Stores only text data"
