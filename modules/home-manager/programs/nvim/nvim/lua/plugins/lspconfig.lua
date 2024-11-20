@@ -51,28 +51,28 @@ return {
     lspconfig.ocamllsp.setup {
       on_attach = on_attach,
     }
-    lspconfig.nil_ls.setup { on_attach = on_attach }
-    -- lspconfig.nixd.setup({
-    --   cmd = { "nixd" },
-    --   settings = {
-    --     nixd = {
-    --       nixpkgs = {
-    --         expr = "import <nixpkgs> { }",
-    --       },
-    --       formatting = {
-    --         command = { "nix fmt" }, -- or nixfmt or nixpkgs-fmt
-    --       },
-    --       -- options = {
-    --       --   nixos = {
-    --       --       expr = '(builtins.getFlake "/PATH/TO/FLAKE").nixosConfigurations.CONFIGNAME.options',
-    --       --   },
-    --       --   home_manager = {
-    --       --       expr = '(builtins.getFlake "/PATH/TO/FLAKE").homeConfigurations.CONFIGNAME.options',
-    --       --   },
-    --       -- },
-    --     },
-    --   },
-    -- })
+    -- lspconfig.nil_ls.setup { on_attach = on_attach }
+    lspconfig.nixd.setup({
+      cmd = { "nixd" },
+      settings = {
+        nixd = {
+          nixpkgs = {
+            expr = "import <nixpkgs> { }",
+          },
+          formatting = {
+            command = { "nix fmt" }, -- or nixfmt or nixpkgs-fmt
+          },
+          options = {
+            nixos = {
+              expr = '(builtins.getFlake "/PATH/TO/FLAKE").nixosConfigurations.fenix.options',
+            },
+            home_manager = {
+              expr = '(builtins.getFlake "/PATH/TO/FLAKE").homeConfigurations."sileanth@fenix".options',
+            },
+          },
+        },
+      },
+    })
     lspconfig.sqls.setup {
       on_attach = function(client, bufnr)
         require('sqls').on_attach(client, bufnr)

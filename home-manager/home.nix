@@ -103,7 +103,6 @@
       discord
       helix
       zellij
-
       spotify-qt
       librespot
       spotifyd
