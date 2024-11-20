@@ -7,6 +7,11 @@
 }:
 
 {
+    home.file."/home/sileanth/.config/hypr/wallpapers" = {
+      source = ./wallpapers;
+      recursive = true;
+    };
+
 
   services.hyprpaper = {
     enable = true;

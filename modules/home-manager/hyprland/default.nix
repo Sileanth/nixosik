@@ -28,17 +28,12 @@ in {
       udiskie
       wl-clipboard
       wl-clip-persist
+      hyprpolkitagent
       grim
       slurp
       inputs.pyprland.packages.${pkgs.system}.default
     ];
 
-    home.file."/home/sileanth/.config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
-
-    home.file."/home/sileanth/.config/hypr/wallpapers" = {
-      source = ./wallpapers;
-      recursive = true;
-    };
 
     home.file."/home/sileanth/.config/hypr/pyprland.toml".source = ./pyprland.toml;
 
@@ -49,11 +44,12 @@ in {
       settings = {
         exec-once = [
           "uwsm app -- waybar"
-          "pypr"
+          "systemctl --user start hyprpolkitagent"
+          "uwsm app -- pypr"
           "wl-paste --type text --watch cliphist store #Stores only text data"
           "wl-paste --type image --watch cliphist store #Stores only image data"
           "wl-clip-persist --clipboard both"
-          "udiskie &"
+          "uwsm app -- udiskie"
           "powerprofilesctl set power-saver"
         ];
         input = {
@@ -85,16 +81,6 @@ in {
 
         animations = {
           enabled = ! cfg.low-power;
-          bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-          animation = [
-            "windows, 1, 7, myBezier"
-            "windowsOut, 1, 7, default, popin 80%"
-            "border, 1, 10, default"
-            "borderangle, 1, 8, default"
-            "fade, 1, 7, default"
-
-            "workspaces, 1, 6, default"
-          ];
         };
 
         master = {
