@@ -1,5 +1,6 @@
 return {
   {
+    -- bb
     'echasnovski/mini.nvim',
     version = false,
     config = function()
@@ -8,6 +9,8 @@ return {
       require('mini.pairs').setup()
       require('mini.operators').setup()
       require('mini.cursorword').setup()
+      require('mini.bracketed').setup()
+      -- aa
     end
 
 
