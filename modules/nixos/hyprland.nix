@@ -14,7 +14,14 @@
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
-
+programs.uwsm = {
+  enable = false;
+  waylandCompositors.hyprland = {
+    binPath = "/run/current-system/sw/bin/Hyprland";
+    comment = "Hyprland session managed by uwsm";
+    prettyName = "Hyprland";
+  };
+};
   # fix invisible cursor
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";

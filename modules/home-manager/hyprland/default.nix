@@ -28,28 +28,89 @@ in {
       udiskie
       wl-clipboard
       wl-clip-persist
+      brightnessctl
       hyprpolkitagent
       grim
       slurp
       inputs.pyprland.packages.${pkgs.system}.default
     ];
 
+    services.hypridle = {
+      enable = true;
+      settings = {
+        general = {
+          lock_cmd = "pidof hyprlock || hyprlock";
+          before_sleep_cmd = "loginctl lock-session";
+          after_sleep_cmd = "hyprctl dispatch dpms on";
+
+        };
+        listener = [
+          # must have keybord backlickt
+          # {
+          #   timeout = 150;
+          #   on-timeout = "brightnessctl -sd rgb:kbd_backlight set 0";
+          #   on-resume = "brightnessctl -rd rgb:kbd_backlight";
+          # }
+          {
+            timeout = 300;
+            on-timeout = "loginctl lock-session";
+          }
+          {
+            timeout = 500;
+            on-timeout = "hyprctl dispatch dpms off";
+            on-resume = "hyprctl dispatch dpms on";
+          }
+           {
+            timeout = 1800;
+            on-timeout = "systemctl suspend";
+          }
+
+        ];
+
+      };
+    };
+
+    programs.hyprlock = {
+      enable = true;
+      settings = {
+        general = {
+          disable_loading_bar = false;
+          grace = 0;
+          hide_cursor = true;
+          no_fade_in = false;
+        };
+        input-field =  {
+          size = "200, 50";
+          position = "0, -80";
+          monitor = "";
+          dots_center = true;
+          fade_on_empty = false;
+          font_color = "rgb(202, 211, 245)";
+          inner_color = "rgb(91, 96, 120)";
+          outer_color = "rgb(24, 25, 38)";
+          outline_thickness = 5;
+          placeholder_text = "Password...";
+          shadow_passes = 2;
+        };
+      };
+
+    };
+
 
     home.file."/home/sileanth/.config/hypr/pyprland.toml".source = ./pyprland.toml;
-
     wayland.windowManager.hyprland = {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
       settings = {
         exec-once = [
-          "uwsm app -- waybar"
+          "waybar"
           "systemctl --user start hyprpolkitagent"
-          "uwsm app -- pypr"
+          "pypr"
           "wl-paste --type text --watch cliphist store #Stores only text data"
           "wl-paste --type image --watch cliphist store #Stores only image data"
           "wl-clip-persist --clipboard both"
-          "uwsm app -- udiskie"
+          "udiskie"
           "powerprofilesctl set power-saver"
         ];
         input = {
@@ -83,8 +144,20 @@ in {
           enabled = ! cfg.low-power;
         };
 
+        windowrulev2 = [
+          "float, title:(.*Bitwarden Password Manager.*)"
+          "float, class:(.*pavucontrol.*)"
+
+        ];
+
+
         master = {
         };
+
+        # Programs
+        "$browser" = "firefox";
+        "$terminal" = "kitty";
+        "$editor" = "nvim";
 
         # keybindings names
         "$mainMod" = "SUPER";
@@ -92,16 +165,17 @@ in {
         "$right" = "mouse:273";
 
         bind = [
-          "$mainMod, Q, exec, kitty"
-          "$mainMod, F, exec, firefox"
+          "$mainMod, Return, exec, $terminal"
+          "$mainMod, Q, killactive"
+          "$mainMod, F, exec, $browser"
           "$mainMod, D, exec, dolphin"
-          "$mainMod, C, killactive,"
           "$mainMod, M, exit,"
           "$mainMod, V, togglefloating,"
           "$mainMod, R, exec, wofi --show drun --width=400px --height=300px"
+          "$mainMod, B, exec, hyprlock"
 
           # clipboard
-          "$mainMod, O, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+          "$mainMod, C, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
           # screenshots
           ", Print, exec, grim -g \"\$(slurp -d)\" - | wl-copy"
