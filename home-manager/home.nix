@@ -101,6 +101,7 @@
     unstable_packages = with pkgs.unstable; [
       vscode
       discord
+      webcord
       helix
       zellij
       spotify-qt
