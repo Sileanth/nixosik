@@ -22,6 +22,7 @@
     outputs.nixosModules.fonts
     outputs.nixosModules.nixpkgs
     outputs.nixosModules.nix-lsp
+    outputs.nixosModules.wireguard
     #    outputs.nixosModules.systemdboot
   ];
 
