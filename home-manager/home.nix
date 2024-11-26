@@ -83,6 +83,9 @@
       gparted
       coq
       foot
+      openvpn
+      iodine
+      dig
       coqPackages.coqide
       coqPackages.coq-lsp
       gcc
