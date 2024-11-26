@@ -71,6 +71,7 @@
         outputs.nixosModules.fonts
         outputs.nixosModules.docker
         outputs.nixosModules.flatpak
+        outputs.nixosModules.zsh
       ];
     };
     base_server = {

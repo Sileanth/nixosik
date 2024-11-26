@@ -1,6 +1,5 @@
-{config, pkgs, inputs, outputs}:
+{config, pkgs, inputs, outputs, ...}:
 {
-  environment.pathsToLink = [ "/share/zsh" ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;

@@ -22,4 +22,5 @@
   nixpkgs = import ./nixpkgs.nix;
   nix-lsp = import ./nix_lsp.nix;
   wireguard = import ./wireguard.nix;
+  zsh = import ./zsh.nix;
 }
