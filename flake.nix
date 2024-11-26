@@ -17,6 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -99,23 +100,7 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      biurko = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./hosts/biurko/configuration.nix
-            {
-              nix.settings = {
-                substituters = ["https://cosmic.cachix.org/"];
-                trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
-              };
-            }
-            nixos-cosmic.nixosModules.default
-          ];
-      };
-      fenix = nixpkgs.lib.nixosSystem {
+     fenix = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules =
           base.modules
@@ -129,15 +114,6 @@
               };
             }
             nixos-cosmic.nixosModules.default
-          ];
-      };
-      inspir = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base_server.modules
-          ++ [
-            # > Our main nixos configuration file <
-            ./hosts/inspir/configuration.nix
           ];
       };
       delik = nixpkgs.lib.nixosSystem {
@@ -160,39 +136,10 @@
             nixos-cosmic.nixosModules.default
           ];
       };
-      liveIso = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
-        modules =
-          base.modules
-          ++ [
-            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-plasma5.nix"
-            ./hosts/liveIso.nix
-          ];
-      };
     };
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      "sileanth@inspir" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home-server.nix
-        ];
-      };
-      "sileanth@biurko" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
-        ];
-      };
       "sileanth@fenix" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};

@@ -10,7 +10,7 @@
     };
     dotDir = ".config/zsh";
     defaultKeymap = "vicmd";
-    # shellAliases = {}; # use Shell aliases
+    # shellAliases = {}; # use non standard shell alias
     initExtra = "[[ ! -r '/home/sileanth/.opam/opam-init/init.zsh' ]] || source '/home/sileanth/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null";
   };
 

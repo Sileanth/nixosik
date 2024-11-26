@@ -6,6 +6,7 @@
   lib,
   config,
   pkgs,
+  nix-colors,
   ...
 }: {
   # You can import other home-manager modules here
@@ -31,9 +32,10 @@
     outputs.homeManagerModules.yazi
     outputs.homeManagerModules.zoxide
     outputs.homeManagerModules.zsh
+    outputs.homeManagerModules.color_schemes
 
     # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
+    inputs.nix-colors.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
