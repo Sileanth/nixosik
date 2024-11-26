@@ -9,6 +9,8 @@
       enable = true;
     };
     dotDir = ".config/zsh";
+    defaultKeymap = "vicmd";
+    # shellAliases = {}; # use Shell aliases
   };
 
 }

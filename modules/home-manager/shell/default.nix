@@ -18,6 +18,8 @@
 
       shellAliases = {
         lg = "lazygit";
+        ll = "lsd -al";
+        ga = "git add -A";
         g = "git";
       };
     };
