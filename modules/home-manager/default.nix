@@ -19,4 +19,6 @@
   ocaml = import ./ocaml.nix;
   yazi = import ./yazi.nix;
   zoxide = import ./zoxide.nix;
+  zsh = import ./zsh.nix;
+
 }
