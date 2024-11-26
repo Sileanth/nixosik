@@ -114,7 +114,6 @@
 
 
       nil
-      
 
       ghc
       haskell-language-server

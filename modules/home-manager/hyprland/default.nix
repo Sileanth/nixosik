@@ -100,7 +100,7 @@ in {
     home.file."/home/sileanth/.config/hypr/pyprland.toml".source = ./pyprland.toml;
     wayland.windowManager.hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
       settings = {
         exec-once = [
