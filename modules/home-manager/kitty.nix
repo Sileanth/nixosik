@@ -14,7 +14,7 @@
         enableFishIntegration = true;
       };
       extraConfig = ''
-        shell fish
+        shell zsh
       '';
     };
   };
