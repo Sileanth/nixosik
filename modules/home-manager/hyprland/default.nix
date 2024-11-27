@@ -32,7 +32,7 @@ in {
       hyprpolkitagent
       grim
       slurp
-      inputs.pyprland.packages.${pkgs.system}.default
+      pyprland
     ];
 
     services.hypridle = {
