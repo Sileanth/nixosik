@@ -9,15 +9,6 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
-
-    opam2nix.url = "github:johnyob/opam2nix";
-
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -52,7 +43,6 @@
     self,
     nixpkgs,
     home-manager,
-    nixos-cosmic,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -107,13 +97,6 @@
           ++ [
             # > Our main nixos configuration file <
             ./hosts/fenix/configuration.nix
-            {
-              nix.settings = {
-                substituters = ["https://cosmic.cachix.org/"];
-                trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
-              };
-            }
-            nixos-cosmic.nixosModules.default
           ];
       };
       delik = nixpkgs.lib.nixosSystem {
