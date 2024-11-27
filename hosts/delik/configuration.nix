@@ -56,9 +56,8 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
 
-  services.desktopManager.cosmic.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
 
   # services.displayManager.sddm.enable = true;
   # services.desktopManager.plasma6.enable = true;
