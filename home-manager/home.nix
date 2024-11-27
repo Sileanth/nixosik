@@ -32,7 +32,7 @@
     outputs.homeManagerModules.yazi
     outputs.homeManagerModules.zoxide
     outputs.homeManagerModules.zsh
-    outputs.homeManagerModules.color_schemes
+    outputs.homeManagerModules.color_scheme
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default

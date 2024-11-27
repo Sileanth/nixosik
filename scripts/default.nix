@@ -4,6 +4,8 @@
   config,
 }: let
   cfg = config.myNix.scripts;
+
+
   global_update = writeShellApplication {
     name = os-update;
     runtimeInputs = [github flatpak];

@@ -14,7 +14,7 @@
 
       };
       dark-theme.configuration = {
-        colorScheme = inputs.nix-colors.colorScheme.catppuccin-mocha;
+        colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
       };
     };
