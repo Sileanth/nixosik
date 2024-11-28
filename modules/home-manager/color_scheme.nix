@@ -1,4 +1,4 @@
-{pkgs, config, inputs, outputs, options, stylix, ...}: 
+{pkgs, config, inputs, lib, outputs, options, stylix, ...}: 
 {
   imports = [];
 
@@ -6,8 +6,15 @@
 
 
   };
+   config = {
+     stylix = lib.mkDefault {
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+        enable = true;
+        autoEnable = true;
+        image = ./joanna-kobierska-dinusie.jpg;
+      };
 
-  config = {
+
     specialisation = {
       light-theme.configuration = {
         stylix = {
