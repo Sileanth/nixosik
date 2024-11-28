@@ -1,4 +1,4 @@
-{pkgs, config, inputs, outputs, options, ...}: 
+{pkgs, config, inputs, outputs, options, stylix, ...}: 
 {
   imports = [];
 
@@ -10,12 +10,19 @@
   config = {
     specialisation = {
       light-theme.configuration = {
-        colorScheme = inputs.nix-colors.colorSchemes.catppuccin-latte;
+        stylix = {
+          base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+          enable = true;
+          autoEnable = true;
+        };
 
       };
       dark-theme.configuration = {
-        colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
-
+         stylix = {
+          base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+          enable = true;
+          autoEnable = true;
+        };
       };
     };
 

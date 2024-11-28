@@ -8,7 +8,7 @@
   config = {
     programs.kitty = {
       enable = true;
-      themeFile = "Catppuccin-Mocha";
+      # themeFile = "Catppuccin-Mocha";
       shellIntegration = {
         enableZshIntegration = true;
         enableFishIntegration = true;

@@ -28,6 +28,9 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    # managing styles
+    stylix.url = "github:danth/stylix";
+
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {
@@ -40,6 +43,7 @@
     self,
     nixpkgs,
     home-manager,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -120,6 +124,7 @@
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
           inputs.plasma-manager.homeManagerModules.plasma-manager
+          stylix.homeManagerModules.stylix
         ];
       };
       "sileanth@delik" = home-manager.lib.homeManagerConfiguration {
@@ -130,6 +135,7 @@
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
           inputs.plasma-manager.homeManagerModules.plasma-manager
+          stylix.homeManagerModules.stylix
         ];
       };
     };
