@@ -85,9 +85,9 @@ in {
           monitor = "";
           dots_center = true;
           fade_on_empty = false;
-          font_color = "rgb(202, 211, 245)";
-          inner_color = "rgb(91, 96, 120)";
-          outer_color = "rgb(24, 25, 38)";
+          # font_color = "rgb(202, 211, 245)";
+          # inner_color = "rgb(91, 96, 120)";
+          # outer_color = "rgb(24, 25, 38)";
           outline_thickness = 5;
           placeholder_text = "Password...";
           shadow_passes = 2;
@@ -123,8 +123,8 @@ in {
           gaps_in = 0;
           gaps_out = 0;
           border_size = 3;
-          "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-          "col.inactive_border" = "rgba(595959aa)";
+          # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+          # "col.inactive_border" = "rgba(595959aa)";
           layout = "dwindle";
         };
         # disable ghost monitor from nvidia

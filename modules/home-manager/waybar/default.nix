@@ -13,9 +13,9 @@
       enable = true;
       source = ./config;
     };
-    xdg.configFile."waybar/style.css" = {
-      enable = true;
-      source = ./style.css;
-    };
+    # xdg.configFile."waybar/style.css" = {
+    #   enable = true;
+    #   source = ./style.css;
+    # };
   };
 }
