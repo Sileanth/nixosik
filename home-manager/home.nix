@@ -97,7 +97,6 @@
       obsidian
       dotnet-sdk_8
       wireguard-tools
-
       erlang
       elixir
       inotify-tools
@@ -115,6 +114,7 @@
       spotifyd
       spotify-player
 
+      godot_4
 
       nil
 

@@ -2,7 +2,6 @@
   imports = [];
 
   fonts.packages = with pkgs; [
-    nerdfonts
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
