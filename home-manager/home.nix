@@ -122,6 +122,9 @@
       haskell-language-server
 
       authenticator
+      bitwarden-desktop
+      zed-editor
+      zotero
 
       nh
       rustup
