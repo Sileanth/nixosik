@@ -119,6 +119,7 @@
       nil
 
       ghc
+      stack
       haskell-language-server
 
       authenticator
