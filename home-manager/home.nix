@@ -120,6 +120,7 @@
 
       ghc
       stack
+      cabal
       haskell-language-server
 
       authenticator
