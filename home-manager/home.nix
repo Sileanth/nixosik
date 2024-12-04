@@ -120,7 +120,6 @@
 
       ghc
       stack
-      haskellPackages.cabal
       haskell-language-server
 
       authenticator
