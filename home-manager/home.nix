@@ -94,7 +94,6 @@
       gcc
       calibre
       vlc
-      obsidian
       dotnet-sdk_8
       wireguard-tools
       erlang
@@ -121,6 +120,8 @@
       ghc
       stack
       haskell-language-server
+      elan
+      cabal-install
 
       authenticator
       bitwarden-desktop
