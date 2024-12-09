@@ -112,6 +112,7 @@
       librespot
       spotifyd
       spotify-player
+      gnome-decoder
 
       godot_4
 
