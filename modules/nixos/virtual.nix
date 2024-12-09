@@ -18,6 +18,5 @@
     };
 
     users.extraGroups.vboxusers.members = ["sileanth"];
-    virtualisation.waydroid.enable = true;
   };
 }

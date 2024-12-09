@@ -12,6 +12,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     outputs.nixosModules.ssd
+    outputs.nixosModules.waydroid
     outputs.nixosModules.postgres
     outputs.nixosModules.ssd
     outputs.nixosModules.nvidia

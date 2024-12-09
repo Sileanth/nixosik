@@ -13,6 +13,7 @@
     outputs.nixosModules.low-power
     outputs.nixosModules.ssd
     outputs.nixosModules.postgres
+    outputs.nixosModules.waydroid
   ];
 
   # Bootloader.
