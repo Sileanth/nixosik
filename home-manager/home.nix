@@ -106,7 +106,14 @@
       agda
       agdaPackages.standard-library
       idris2
-      coursier
+
+
+      scala
+      metals
+      ammonite
+      sbt
+      mill
+      jdk
 
 
 

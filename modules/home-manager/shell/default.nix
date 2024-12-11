@@ -9,7 +9,7 @@
     home = {
       sessionPath = [
         "$HOME/.local/bin"
-        "$HOME/.local/share/coursier/bin"
+        # "$HOME/.local/share/coursier/bin"
       ];
 
       sessionVariables = {
