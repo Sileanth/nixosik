@@ -103,6 +103,12 @@
       xspim
     ];
     unstable_packages = with pkgs.unstable; [
+      agda
+      agdaPackages.standard-library
+      idris2
+
+
+
       vscode
       discord
       webcord
