@@ -38,6 +38,8 @@ return {
 
       cmd = { "/usr/bin/elixir-ls" },
     }
+
+    lspconfig.coq_lsp.setup {}
     lspconfig.pyright.setup { on_attach = on_attach }
     lspconfig.lua_ls.setup { on_attach = on_attach }
     -- lspconfig.ccls.setup { on_attach = on_attach }
