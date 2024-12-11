@@ -89,16 +89,26 @@
       openvpn
       iodine
       dig
+
+
       coqPackages.coqide
       coqPackages.coq-lsp
+
       gcc
       calibre
       vlc
+
       dotnet-sdk_8
+      roslyn
+      roslyn-ls
+
+
       wireguard-tools
       erlang
       elixir
       inotify-tools
+
+
       gnum4
       xspim
     ];
