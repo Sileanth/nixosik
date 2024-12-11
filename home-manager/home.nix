@@ -108,12 +108,13 @@
       idris2
 
 
-      scala
-      metals
-      ammonite
-      sbt
-      mill
+      # scala
+      # metals
+      # ammonite
+      # sbt
+      # mill
       jdk
+      coursier
 
 
 
