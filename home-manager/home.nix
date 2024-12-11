@@ -106,6 +106,7 @@
       agda
       agdaPackages.standard-library
       idris2
+      coursier
 
 
 
