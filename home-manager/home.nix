@@ -107,6 +107,7 @@
       erlang
       elixir
       inotify-tools
+      chromium
 
 
       gnum4
