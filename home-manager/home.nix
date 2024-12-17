@@ -106,6 +106,7 @@
       elixir
       inotify-tools
       chromium
+      libreoffice
 
 
       gnum4
