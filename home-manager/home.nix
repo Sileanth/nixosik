@@ -97,8 +97,6 @@
       gcc
       calibre
       vlc
-
-      dotnet-sdk_8
       roslyn
       roslyn-ls
 
@@ -119,6 +117,7 @@
       idris2
 
 
+      dotnet-sdk_9
       # scala
       # metals
       # ammonite
