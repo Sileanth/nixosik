@@ -107,8 +107,7 @@
       inotify-tools
       chromium
       libreoffice
-peazip
-xdot
+      xdot
 
       gnum4
       xspim
