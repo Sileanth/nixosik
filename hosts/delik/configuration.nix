@@ -14,6 +14,7 @@
     outputs.nixosModules.ssd
     outputs.nixosModules.postgres
     outputs.nixosModules.waydroid
+    outputs.nixosModules.steam
   ];
 
   # Bootloader.
