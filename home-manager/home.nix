@@ -33,6 +33,10 @@
     outputs.homeManagerModules.zoxide
     outputs.homeManagerModules.zsh
     outputs.homeManagerModules.color_scheme
+    outputs.homeManagerModules.hyprpanel
+
+
+     inputs.hyprpanel.overlay
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default

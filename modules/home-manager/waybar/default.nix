@@ -10,7 +10,7 @@
       enable = true;
     };
     xdg.configFile."waybar/config" = {
-      enable = true;
+      enable = false;
       source = ./config;
     };
     # xdg.configFile."waybar/style.css" = {

@@ -33,7 +33,10 @@
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
-
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {

@@ -21,5 +21,5 @@
   zoxide = import ./zoxide.nix;
   zsh = import ./zsh.nix;
   color_scheme = import ./color_scheme.nix;
-
+  hyprpanel = import ./hyprpanel.nix;
 }
