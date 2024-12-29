@@ -38,6 +38,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "fenix"; # Define your hostname.
+
+  networking.interfaces.enp5s0 = {
+    wakeOnLan.enable = true;
+  };
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
