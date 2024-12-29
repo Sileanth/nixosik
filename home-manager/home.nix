@@ -159,8 +159,11 @@
       rustup
       nodePackages.typescript-language-server
     ];
+    extra_packages = [
+      inputs.ghostty.packages.x86_64-linux.default
+    ];
   in
-    stable_packages ++ unstable_packages;
+    stable_packages ++ unstable_packages ++ extra_packages;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

@@ -30,6 +30,9 @@
 
     # managing styles
     stylix.url = "github:danth/stylix";
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
 
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # # hyprland.url = "github:hyprwm/Hyprland";
@@ -44,6 +47,7 @@
     nixpkgs,
     home-manager,
     stylix,
+    ghostty,
     ...
   } @ inputs: let
     inherit (self) outputs;
