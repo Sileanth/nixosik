@@ -10,7 +10,7 @@
   config = {
     virtualisation.virtualbox = {
       host = {
-        enable = true;
+        enable = false;
         enableExtensionPack = true;
         # enableKvm = true;
         package = pkgs.stable.virtualbox;
