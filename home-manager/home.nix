@@ -35,8 +35,8 @@
     outputs.homeManagerModules.color_scheme
     outputs.homeManagerModules.hyprpanel
 
-
-     inputs.hyprpanel.overlay
+  
+     inputs.hyprpanel.homeManagerModules.hyprpanel
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
@@ -54,6 +54,7 @@
       outputs.overlays.unstable-packages
       outputs.overlays.stable-packages
 
+      # inputs.hyprpanel.overlay
       # Or define it inline, for example:
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {
