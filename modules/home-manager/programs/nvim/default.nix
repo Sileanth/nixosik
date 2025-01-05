@@ -20,12 +20,6 @@
       gdu
       sqls
       nil
-      inputs
-      .rustaceanvim
-      .packages
-      .${pkgs.system}
-      .codelldb # better debuger
-
       # python setup deps
       pyright
       ruff

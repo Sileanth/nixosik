@@ -6,7 +6,6 @@
   lib,
   config,
   pkgs,
-  nix-colors,
   ...
 }: {
   # You can import other home-manager modules here
@@ -35,13 +34,6 @@
     outputs.homeManagerModules.color_scheme
     outputs.homeManagerModules.hyprpanel
 
-  
-
-    # Or modules exported from other flakes (such as nix-colors):
-    inputs.nix-colors.homeManagerModules.default
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
   ];
 
   nixpkgs = {
@@ -100,8 +92,6 @@
       gcc
       calibre
       vlc
-      roslyn
-      roslyn-ls
 
 
       wireguard-tools
@@ -123,7 +113,6 @@
 
 
 
-      dotnet-sdk_9
       # scala
       # metals
       # ammonite
