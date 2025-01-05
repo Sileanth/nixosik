@@ -134,7 +134,7 @@
 
 
       vscode
-      discord
+      discord-canary
       webcord
       helix
       zellij
