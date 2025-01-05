@@ -121,6 +121,8 @@
       idris2
 
 
+
+
       dotnet-sdk_9
       # scala
       # metals
@@ -132,6 +134,7 @@
 
 
 
+      code-cursor
       vscode
       discord-canary
       webcord
@@ -156,6 +159,7 @@
       authenticator
       bitwarden-desktop
       zed-editor
+      neovide
       zotero
 
       nh
