@@ -5,6 +5,7 @@
   config,
   pkgs,
   outputs,
+  lib,
   ...
 }: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -76,8 +77,11 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.gnome.gnome-remote-desktop.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xrdp.enable = true;
+services.xrdp.defaultWindowManager = "startplasma-x11";
+services.xrdp.openFirewall = true;
+
+
 
 
   # Configure keymap in X11
@@ -150,7 +154,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   networking.firewall.allowedUDPPorts = [
