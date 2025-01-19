@@ -11,21 +11,18 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
     # Home manager
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    plasma-manager = {
-      url = "github:pjones/plasma-manager";
+    home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
+      url = "github:nix-community/home-manager";  # this selects the unstable-branch and needs to match Nixpkgs
+      # url = "github:nix-community/home-manager/release-23.11";  # this selects the release-branch and needs to match Nixpkgs
+      };
 
     # managing styles
     stylix.url = "github:danth/stylix";
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
-         };
+   };
 
   outputs = {
     self,
@@ -112,7 +109,6 @@
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
           stylix.homeManagerModules.stylix
         ];
       };
@@ -123,7 +119,6 @@
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
           stylix.homeManagerModules.stylix
         ];
       };

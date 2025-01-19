@@ -113,11 +113,6 @@
 
 
 
-      # scala
-      # metals
-      # ammonite
-      # sbt
-      # mill
       jdk
       coursier
 
@@ -137,7 +132,7 @@
 
       godot_4
 
-      nil
+      # nil
 
       ghc
       stack
@@ -169,5 +164,5 @@
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 }
