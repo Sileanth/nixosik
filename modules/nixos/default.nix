@@ -24,4 +24,5 @@
   wireguard = import ./wireguard.nix;
   zsh = import ./zsh.nix;
   waydroid = import ./waydroid.nix;
+  ollama = import ./ollama.nix;
 }

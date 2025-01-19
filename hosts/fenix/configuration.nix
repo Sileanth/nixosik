@@ -25,6 +25,7 @@
     outputs.nixosModules.nixpkgs
     outputs.nixosModules.nix-lsp
     outputs.nixosModules.steam
+    outputs.nixosModules.ollama
     # outputs.nixosModules.wireguard
     #    outputs.nixosModules.systemdboot
   ];
