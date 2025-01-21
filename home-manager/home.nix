@@ -97,13 +97,21 @@
       wireguard-tools
       erlang
       elixir
+ttyper
+tt
       inotify-tools
+      openssl
       chromium
       libreoffice
       xdot
-
+      python312Packages.jinja2
+python312Packages.python-frontmatter
+sass
       gnum4
       xspim
+      
+
+      vial # keyboard managment
     ];
     unstable_packages = with pkgs.unstable; [
       agda

@@ -17,7 +17,6 @@
   minegrub = import ./minegrub.nix;
   calibre-server = import ./server/calibre-server.nix;
   freshrss = import ./server/freshrss.nix;
-  ssh = import ./server/ssh.nix;
   systemdboot = import ./systemdboot.nix;
   nixpkgs = import ./nixpkgs.nix;
   nix-lsp = import ./nix_lsp.nix;
@@ -25,4 +24,6 @@
   zsh = import ./zsh.nix;
   waydroid = import ./waydroid.nix;
   ollama = import ./ollama.nix;
+  ssh = import ./ssh.nix;
+  keyboard = import ./keyboard.nix;
 }
