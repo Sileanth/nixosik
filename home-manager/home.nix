@@ -101,6 +101,7 @@ ttyper
 tt
       inotify-tools
       openssl
+      just
       chromium
       libreoffice
       xdot
