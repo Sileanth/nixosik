@@ -28,6 +28,7 @@
     outputs.nixosModules.ollama
     outputs.nixosModules.ssh
     outputs.nixosModules.keyboard
+    outputs.nixosModules.wireguard
     # outputs.nixosModules.wireguard
     #    outputs.nixosModules.systemdboot
   ];
@@ -84,6 +85,7 @@
 services.xrdp.defaultWindowManager = "startplasma-x11";
 services.xrdp.openFirewall = true;
 
+  services.xserver.displayManager.sddm.theme = "sddm-astronaut" ;
 
 
 
@@ -140,11 +142,14 @@ services.xrdp.openFirewall = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+      sddm-themes.sddm-astronaut
     vim
-  ];
+    ]) ++ [
+
+    ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

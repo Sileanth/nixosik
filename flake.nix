@@ -43,7 +43,13 @@
     ];
     # This is a function that generates an attribute by calling a function you
     # pass to it, with each system as an argument
+      lib = nixpkgs.lib // home-manager.lib;
     forAllSystems = nixpkgs.lib.genAttrs systems;
+  pkgsFor = lib.genAttrs systems (system: import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      });
+      forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
     base = {
       modules = [
         outputs.nixosModules.fonts
@@ -60,7 +66,7 @@
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
     # Formatter for your nix files, available through 'nix fmt'
     # Other options beside 'alejandra' include 'nixpkgs-fmt'
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);

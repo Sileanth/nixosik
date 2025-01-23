@@ -102,6 +102,10 @@ tt
       inotify-tools
       openssl
       just
+      # gnupg
+nix-prefetch-github
+      # pinentry-all
+      thunderbird
       chromium
       libreoffice
       xdot

@@ -18,6 +18,10 @@ with lib; {
 
     # Enable the KDE Plasma Desktop Environment.
     services.xserver.displayManager.sddm.enable = true;
+    services.xserver.displayManager.sddm.theme = "sddm-astronaut" ;
+     environment.systemPackages = with pkgs; [
+    sddm-themes.sddm-astronaut
+    ];
     services.xserver.displayManager.sddm.wayland.enable = true;
   };
 }
