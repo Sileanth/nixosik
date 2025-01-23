@@ -42,7 +42,7 @@
   # };
   networking.wg-quick.interfaces = { 
     wg0 = {
-      autostart = true;
+      autostart = false;
       address =   [ "10.8.0.2/24" "fd09:fb6a:9381::2/64" ];
       dns = ["2001:4860:4860::8888" "1.1.1.1" "8.8.8.8" ];
       # dns =  [ "10.8.0.1/24" "fd09:fb6a:9381::1/64" ];

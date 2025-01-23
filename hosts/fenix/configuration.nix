@@ -147,9 +147,13 @@ services.xrdp.openFirewall = true;
     #  wget
       sddm-themes.sddm-astronaut
     vim
-    ]) ++ [
 
-    ];
+    ]) ++ (with pkgs.kdePackages;[
+ qt5compat
+    qtsvg
+    qtmultimedia
+    qtvirtualkeyboard
+    ]);
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
