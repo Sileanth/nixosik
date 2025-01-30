@@ -114,6 +114,8 @@ python312Packages.python-frontmatter
 sass
       gnum4
       xspim
+      prefetch-npm-deps
+      typescript-language-server
       
 
       vial # keyboard managment
