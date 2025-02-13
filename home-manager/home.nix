@@ -115,7 +115,7 @@ sass
       gnum4
       xspim
       prefetch-npm-deps
-      typescript-language-server
+      lutris
       
 
       vial # keyboard managment
