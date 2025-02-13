@@ -26,4 +26,5 @@
   ollama = import ./ollama.nix;
   ssh = import ./ssh.nix;
   keyboard = import ./keyboard.nix;
+  windows = import ./windows.nix;
 }

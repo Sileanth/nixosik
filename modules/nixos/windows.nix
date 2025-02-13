@@ -1,0 +1,3 @@
+{pkgs, ...}: {
+  boot.supportedFilesystems = [ "ntfs" ];
+}

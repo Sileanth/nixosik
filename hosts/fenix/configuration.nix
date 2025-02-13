@@ -29,6 +29,7 @@
     outputs.nixosModules.ssh
     outputs.nixosModules.keyboard
     outputs.nixosModules.wireguard
+    outputs.nixosModules.windows
     # outputs.nixosModules.wireguard
     #    outputs.nixosModules.systemdboot
   ];
