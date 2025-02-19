@@ -86,7 +86,7 @@
 services.xrdp.defaultWindowManager = "startplasma-x11";
 services.xrdp.openFirewall = true;
 
-  services.xserver.displayManager.sddm.theme = "sddm-astronaut" ;
+  services.displayManager.sddm.theme = "sddm-astronaut" ;
 
 
 
@@ -103,7 +103,7 @@ services.xrdp.openFirewall = true;
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
