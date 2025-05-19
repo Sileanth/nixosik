@@ -40,6 +40,44 @@
 			];
 
 	in {
+
+		helios = nixpkgs.lib.nixosSystem rec {
+			system = "x86_64-linux";
+			specialArgs = { 
+				inherit outputs inputs; 
+				pkgs-unstable = import nixpkgs-unstable {
+					config.allowUnfree = true;
+					inherit system;
+
+				};
+			}; # are passed to modules
+			modules = default_modules ++ [
+				./hosts/helios/configuration.nix
+				{
+					mc = {
+						disko_default = {
+							enable = true;
+							efi_size = "1024";
+							swap_size = "16";
+						};
+						hyprland.enable = true;
+						fonts.enable = true;
+						tailscale.enable = true;
+						uwsm_display_manager = {
+							enable = true;
+							skip_choice = false;
+							auto_login = {
+								enable = true;
+								user = "sileanth";
+							};
+						};
+					};
+
+				}
+			];
+
+
+		};
 		athena = nixpkgs.lib.nixosSystem rec {
 			system = "x86_64-linux";
 			specialArgs = { 

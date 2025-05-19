@@ -200,7 +200,7 @@ settings = {
 	"$terminal" = "kitty";
 	"$fileManager" = "dolphin";
 	"$browser" = "firefox";
-	"$menu" = "wofi -- show drun";
+	"$menu" = "wofi --show drun";
 	"$mod"= "SUPER";
 
 	bind = [
