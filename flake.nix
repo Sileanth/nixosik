@@ -64,7 +64,7 @@
 						tailscale.enable = true;
 						uwsm_display_manager = {
 							enable = true;
-							skip_choice = false;
+							skip_choice = true;
 							auto_login = {
 								enable = true;
 								user = "sileanth";
