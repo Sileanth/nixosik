@@ -24,6 +24,9 @@
 			sqlite
 
 			mpv
+			btop
+			lazygit
+			bat
 
 			swi-prolog
 
