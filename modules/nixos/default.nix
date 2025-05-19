@@ -3,17 +3,17 @@ let
 	hyprland = import ./hyprland.nix;
 	fonts = import ./fonts.nix;
 	tailscale = import ./tailscale.nix;
-	uwsm_runner = import ./uwsm_runner.nix;
+	uwsm_display_manager = import ./uwsm_display_manager.nix;
 in {
 
 
 	inherit disko_default;	
 	inherit hyprland;
 	inherit fonts;
-	inherit uwsm_runner;
+	inherit uwsm_display_manager;
 	inherit tailscale;
 	all = [
-		uwsm_runner 
+		uwsm_display_manager 
 		disko_default
 		hyprland
 		fonts
