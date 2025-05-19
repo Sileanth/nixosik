@@ -207,12 +207,13 @@ settings = {
 	"$mod, Q, exec, uwsm-app -- $terminal"
 	"$mod, V, exec, uwsm-app -- $terminal --class clipse -e 'clipse'"
 	"$mod, B, exec, uwsm-app -- $browser"
+	"$mod, P, exec, uwsm-app -- pavucontrol"
 	"$mod, R, exec, uwsm-app -- $menu"
 	"$mod, E, exec, uwsm-app -- $fileManager"
-	"$mod, L, exec, uwsm-app -- hyprlock"
 
 	"$mod, C, killactive"
 	"$mod, M, exit"
+	"$mod, N, exec, uwsm-app -- hyprlock"
 	"$mod, F, togglefloating"
 
 	"$mod, left, movefocus, l"
@@ -220,6 +221,11 @@ settings = {
 	"$mod, up, movefocus, u"
 	"$mod, down, movefocus, d"
 
+
+	"$mod, H, movefocus, l"
+	"$mod, L, movefocus, r"
+	"$mod, J, movefocus, u"
+	"$mod, K, movefocus, d"
 
 	"$mod, 1, workspace, 1"
 	"$mod, 2, workspace, 2"
@@ -285,6 +291,10 @@ settings = {
 		# Fix some dragging issues with XWayland
 		"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"	
 		
+	"float,class:(org.pulseaudio.pavucontrol)" # ensure you have a floating window class set if you want this behavior
+	"size 622 652,class:(org.pulseaudio.pavucontrol)" # set the size of the window as necessary
+	"stayfocused, class:(org.pulseaudio.pavucontrol)"
+
 	"float,class:(clipse)" # ensure you have a floating window class set if you want this behavior
 	"size 622 652,class:(clipse)" # set the size of the window as necessary
 	"stayfocused, class:(clipse)"
