@@ -1,28 +1,27 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  imports = [];
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
+{lib, config, disko, ...}: let
+	cfg = config.mc.hyprland;
+in {
 
-  programs.hyprland = {
-    enable = true;
-    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
-programs.uwsm = {
-  enable = false;
-  waylandCompositors.hyprland = {
-    binPath = "/run/current-system/sw/bin/Hyprland";
-    comment = "Hyprland session managed by uwsm";
-    prettyName = "Hyprland";
-  };
+imports = [
+];
+
+options = {
+	mc.hyprland = {
+		enable = lib.mkEnableOption "enable hyprland";
+	};
+
+
 };
-  # fix invisible cursor
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
+config = lib.mkIf cfg.enable {
+	programs.hyprland = {
+		withUWSM = true;
+		enable = true;
+		xwayland.enable = true;
+
+	};
+	programs.uwsm.enable = true;
+	environment.sessionVariables.NIXOS_OZONE_WL = "1";
+	security.pam.services.hyprlock = {};
+};
 }
+

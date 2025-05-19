@@ -1,16 +1,21 @@
-{pkgs, ...}: {
-  imports = [];
+{lib, config, pkgs, ...}: let
+	cfg = config.mc.fonts;
+in {
 
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    mplus-outline-fonts.githubRelease
-    dina-font
-    proggyfonts
+imports = [
+];
 
-  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+options = {
+	mc.fonts = {
+		enable = lib.mkEnableOption "enable fonts";
+	};
+
+
+};
+config = lib.mkIf cfg.enable {
+	fonts.packages = with pkgs; [
+		nerdfonts
+	];
+};
 }
+

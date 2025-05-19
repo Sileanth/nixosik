@@ -1,6 +1,0 @@
-
-
-# Nixos config
-
-
-## gg
