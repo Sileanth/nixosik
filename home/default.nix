@@ -39,7 +39,6 @@
 			nodejs_23
 			eslint
 			
-			vial
 
 		];
 

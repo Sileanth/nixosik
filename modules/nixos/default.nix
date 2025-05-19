@@ -1,12 +1,13 @@
 let
 	disko_default = import ./disko_default.nix;
+	keyboard = import ./keyboard.nix;
 	hyprland = import ./hyprland.nix;
 	fonts = import ./fonts.nix;
 	tailscale = import ./tailscale.nix;
 	uwsm_display_manager = import ./uwsm_display_manager.nix;
 in {
 
-
+	inherit keyboard;
 	inherit disko_default;	
 	inherit hyprland;
 	inherit fonts;
@@ -18,6 +19,7 @@ in {
 		hyprland
 		fonts
 		tailscale
+		keyboard
 	];
 
 

@@ -63,6 +63,7 @@
 						hyprland.enable = true;
 						fonts.enable = true;
 						tailscale.enable = true;
+						keyboard.enable = true;
 						uwsm_display_manager = {
 							enable = true;
 							skip_choice = false;
