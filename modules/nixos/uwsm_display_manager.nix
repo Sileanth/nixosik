@@ -15,7 +15,7 @@ options = {
 		};
 		default_option = lib.mkOption {
 			type = lib.types.str;
-			default = "hyprland.desktop";
+			default = "hyprland-uwsm.desktop";
 			description = "which window manager to run by default";
 		};
 		auto_login = {
