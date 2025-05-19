@@ -6,7 +6,7 @@
 home-manager.users.sileanth = {
 	home.packages = with pkgs; [
 		wofi
-		pavucontrol
+		pulsemixer
 		wl-clipboard
 		clipse
 
@@ -206,8 +206,8 @@ settings = {
 	bind = [
 	"$mod, Q, exec, uwsm-app -- $terminal"
 	"$mod, V, exec, uwsm-app -- $terminal --class clipse -e 'clipse'"
+	"$mod, P, exec, uwsm-app -- $terminal --class pulsemixer -e 'pulsemixer'"
 	"$mod, B, exec, uwsm-app -- $browser"
-	"$mod, P, exec, uwsm-app -- pavucontrol"
 	"$mod, R, exec, uwsm-app -- $menu"
 	"$mod, E, exec, uwsm-app -- $fileManager"
 
@@ -291,9 +291,9 @@ settings = {
 		# Fix some dragging issues with XWayland
 		"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"	
 		
-	"float,class:(org.pulseaudio.pavucontrol)" # ensure you have a floating window class set if you want this behavior
-	"size 622 652,class:(org.pulseaudio.pavucontrol)" # set the size of the window as necessary
-	"stayfocused, class:(org.pulseaudio.pavucontrol)"
+	"float,class:(pulsemixer)" # ensure you have a floating window class set if you want this behavior
+	"size 622 652,class:(pulsemixer)" # set the size of the window as necessary
+	"stayfocused, class:(pulsemixer)"
 
 	"float,class:(clipse)" # ensure you have a floating window class set if you want this behavior
 	"size 622 652,class:(clipse)" # set the size of the window as necessary
