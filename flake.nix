@@ -62,6 +62,7 @@
 						hyprland.enable = true;
 						fonts.enable = true;
 						tailscale.enable = true;
+						uwsm_runner.enable = true;
 					};
 
 				}
