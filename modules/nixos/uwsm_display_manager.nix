@@ -14,14 +14,14 @@ options = {
 			type = lib.types.bool;
 		};
 		default_option = lib.mkOption {
-			type = lib.types.string;
+			type = lib.types.str;
 			default = "hyprland.desktop";
 			description = "which window manager to run by default";
 		};
 		auto_login = {
 			enable = lib.mkEnableOption "enable tty autologin";
-			user = lib.mkoption {
-				type = lib.types.string;
+			user = lib.mkOption {
+				type = lib.types.str;
 				default = "sileanth";
 				description = "user to automaitcly login to tty";
 			};
@@ -31,7 +31,7 @@ options = {
 
 };
 config = lib.mkIf cfg.enable {
-	services.getty.autoLoginUser = lib.mkIf cfg.auto_login.enable cfg.auto_login.user;
+	services.getty.autologinUser = lib.mkIf cfg.auto_login.enable cfg.auto_login.user;
 	programs.bash = {
 		shellInit = if cfg.skip_choice 
 		then 
