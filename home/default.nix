@@ -32,6 +32,7 @@
 
 
 			dotnet-sdk
+			csharp-ls
 
 			python312
 			python312Packages.sqlalchemy
