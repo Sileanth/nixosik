@@ -19,6 +19,7 @@
 
 		home.packages = with pkgs; [
 			obsidian
+			discord
 			spotify
 			tailscale
 			sqlite
