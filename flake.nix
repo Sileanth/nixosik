@@ -100,7 +100,10 @@
 						};
 						hyprland.enable = true;
 						fonts.enable = true;
-						tailscale.enable = true;
+						tailscale = {
+							enable = true;
+							enable_homelab = true;
+						};
 						uwsm_display_manager = {
 							enable = true;
 							skip_choice = true;
