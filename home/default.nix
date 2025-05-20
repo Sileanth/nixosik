@@ -27,6 +27,7 @@
 			btop
 			lazygit
 			bat
+			unrar
 
 			swi-prolog
 
