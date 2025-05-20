@@ -42,6 +42,9 @@
 			typescript-language-server
 			nodejs_23
 			eslint
+
+
+			efibootmgr
 			
 
 		];
