@@ -39,6 +39,9 @@
 			python312Packages.sqlalchemy
 
 
+			calibre
+
+
 
 			typescript-language-server
 			nodejs_23
