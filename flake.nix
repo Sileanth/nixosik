@@ -2,7 +2,7 @@
   description = "nixos config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
 
@@ -14,7 +14,7 @@
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
       # url = "github:nix-community/home-manager";  # this selects the unstable-branch and needs to match Nixpkgs
-      url = "github:nix-community/home-manager/release-24.11";  # this selects the release-branch and needs to match Nixpkgs
+      url = "github:nix-community/home-manager/release-25.05";  # this selects the release-branch and needs to match Nixpkgs
       };
   };
 
