@@ -45,7 +45,7 @@
 
 
 			typescript-language-server
-			nodejs_23
+			nodejs_24
 			eslint
 
 

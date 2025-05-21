@@ -14,7 +14,7 @@ options = {
 };
 config = lib.mkIf cfg.enable {
 	fonts.packages = with pkgs; [
-		nerdfonts
+		nerd-fonts.symbols-only
 	];
 };
 }
