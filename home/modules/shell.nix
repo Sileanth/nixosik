@@ -26,8 +26,10 @@ home-manager.users.sileanth = {
 		enableBashIntegration = false;
 		enableZshIntegration = true;
 		enableFishIntegration = true;
-    filetype = {
-      "justfile" = "";
+    icons = {
+      filetype = {
+        "justfile" = "";
+      };
     };
 	};
 
