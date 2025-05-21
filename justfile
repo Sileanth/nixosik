@@ -1,3 +1,8 @@
+# first recipe is run for just without command
+
+default:
+	just --list
+
 update:
 	nix flake update
 
