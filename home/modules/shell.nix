@@ -18,7 +18,9 @@ home-manager.users.sileanth = {
 
 	programs.lsd = {
 		enable = true;
-		enableAliases = true;
+		enableBashIntegration = false;
+		enableZshIntegration = true;
+		enableFishIntegration = true;
 	};
 
 	programs.yazi = {
