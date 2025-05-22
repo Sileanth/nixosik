@@ -20,10 +20,19 @@
 		home.packages = with pkgs; [
 			obsidian
 			discord
-			just
 			spotify
+
+			just
 			tailscale
 			sqlite
+
+
+      helix
+      zeditor
+      vscode
+      windsurf
+      code-cursor
+
 
 			mpv
 			btop
