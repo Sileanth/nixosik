@@ -47,6 +47,7 @@
 
 			typescript-language-server
 			nodejs_24
+      svelte-language-server
 			eslint
 
 
