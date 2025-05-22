@@ -18,14 +18,20 @@ config = lib.mkIf cfg.enable {
 		enable = true;
 	};
 
-	networking.extraHosts = lib.mkIf cfg.enable_homelab 
+	networking.extraHosts = if cfg.enable_homelab then 
 	''
 	100.81.52.31 calibre.home	
 	100.81.52.31 miniflux.home
 	100.81.52.31 mealie.home
 	100.81.52.31 paperless.home
-
-	'';
+	'' 
+  else
+	''
+	192.168.1.222 calibre.home	
+	192.168.1.222 miniflux.home
+	192.168.1.222 mealie.home
+	192.168.1.222 paperless.home
+	'' 
 };
 }
 
