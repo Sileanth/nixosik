@@ -23,6 +23,7 @@ config = lib.mkIf cfg.enable {
 	100.81.52.31 calibre.home	
 	100.81.52.31 miniflux.home
 	100.81.52.31 mealie.home
+	100.81.52.31 paperless.home
 
 	'';
 };
