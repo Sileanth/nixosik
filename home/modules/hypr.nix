@@ -62,8 +62,8 @@ enable = true;
 xwayland.enable = true;
 settings = {
 	exec-once = [
-		"uwsm-app -- clipse -listen"
-		"uwsm-app -- waybar"
+		"uwsm app -- clipse -listen"
+		"uwsm app -- waybar"
 
 	];
 	monitor = [
