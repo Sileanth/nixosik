@@ -60,6 +60,7 @@
 							efi_size = "1024";
 							swap_size = "16";
 						};
+            windows.enable = true;
 						hyprland.enable = true;
 						fonts.enable = true;
 						tailscale.enable = true;
