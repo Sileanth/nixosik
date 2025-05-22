@@ -28,7 +28,7 @@
 
 
       helix
-      zeditor
+      zed-editor
       vscode
       windsurf
       code-cursor
