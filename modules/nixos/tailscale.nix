@@ -31,7 +31,7 @@ config = lib.mkIf cfg.enable {
 	192.168.1.222 miniflux.home
 	192.168.1.222 mealie.home
 	192.168.1.222 paperless.home
-	'' 
+	'';
 };
 }
 
