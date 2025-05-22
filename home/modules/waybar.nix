@@ -30,6 +30,7 @@ home-manager.users.sileanth = {
 		height = 30;
 		output = [
 			"eDP-1"
+      "HDMI-A-1"
 		];
 
 
