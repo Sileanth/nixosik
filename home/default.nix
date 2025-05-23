@@ -39,6 +39,7 @@
 			lazygit
 			bat
 			unrar
+      tldr
 
 			swi-prolog
 
