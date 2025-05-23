@@ -24,13 +24,14 @@ config = lib.mkIf cfg.enable {
 	100.81.52.31 miniflux.home
 	100.81.52.31 mealie.home
 	100.81.52.31 paperless.home
+	100.81.52.31 chomik.home
 	'' 
   else
 	''
 	192.168.1.222 calibre.home	
 	192.168.1.222 miniflux.home
 	192.168.1.222 mealie.home
-	192.168.1.222 paperless.home
+	192.168.1.222 chomik.home
 	'';
 };
 }
