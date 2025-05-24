@@ -60,6 +60,10 @@
 							efi_size = "1024";
 							swap_size = "16";
 						};
+            bootloader = {
+              enable = true;
+              type = "grub";
+            };
             windows.enable = true;
 						hyprland.enable = true;
 						fonts.enable = true;

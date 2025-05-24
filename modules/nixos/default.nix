@@ -6,6 +6,7 @@ let
 	tailscale = import ./tailscale.nix;
 	uwsm_display_manager = import ./uwsm_display_manager.nix;
   windows = import ./windows.nix;
+  bootloader = import ./bootloader.nix;
 in {
 
 	inherit keyboard;
@@ -15,7 +16,9 @@ in {
 	inherit uwsm_display_manager;
 	inherit tailscale;
   inherit windows;
+  inherit bootloader;
 	all = [
+    bootloader
     windows
 		uwsm_display_manager 
 		disko_default
