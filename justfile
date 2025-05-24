@@ -10,7 +10,7 @@ build:
 	sudo nixos-rebuild switch --flake .#
 
 build-boot:
-	sudo nixos-rebuild switch --flake .# --instal-bootloader
+	sudo nixos-rebuild switch --flake .# --install-bootloader
 
 clean:
 	sudo nix-collect-garbage -d
