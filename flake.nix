@@ -69,6 +69,7 @@
 						fonts.enable = true;
 						tailscale.enable = true;
 						keyboard.enable = true;
+            kdeconnect.enable = true;
 						uwsm_display_manager = {
 							enable = true;
 							skip_choice = false;

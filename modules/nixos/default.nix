@@ -7,8 +7,9 @@ let
 	uwsm_display_manager = import ./uwsm_display_manager.nix;
   windows = import ./windows.nix;
   bootloader = import ./bootloader.nix;
+  kdeconnect = import ./kdeconnect.nix;
 in {
-
+  inherit kdeconnect;
 	inherit keyboard;
 	inherit disko_default;	
 	inherit hyprland;
@@ -18,6 +19,7 @@ in {
   inherit windows;
   inherit bootloader;
 	all = [
+    kdeconnect
     bootloader
     windows
 		uwsm_display_manager 
