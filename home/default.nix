@@ -59,6 +59,7 @@
 			nodejs_24
       svelte-language-server
 			eslint
+      gcc
 
 
 			efibootmgr
