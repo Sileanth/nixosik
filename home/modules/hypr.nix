@@ -19,6 +19,21 @@ home-manager.users.sileanth = {
 
 	];
 
+services.hyprpaper = {
+    enable = true;
+    settings = {
+    ipc = "on";
+    splash = false;
+    splash_offset = 2.0;
+
+    preload =
+      [ "~/nixosik/assets/dinusie.jpg" ];
+
+    wallpaper = [
+       ",~/nixosik/assets/dinusie.jpg"
+    ];
+  };
+};
 programs.hyprlock = {
 	enable = true;
 	settings = {
