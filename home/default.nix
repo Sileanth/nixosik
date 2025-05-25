@@ -1,4 +1,4 @@
-{home-manager, pkgs, lib, ...}: {
+{home-manager, pkgs, lib, pkgs-unstable ...}: {
 	home-manager.useGlobalPkgs = true;
 	home-manager.useUserPackages = true;
 
@@ -31,7 +31,6 @@
       zed-editor
       vscode
       windsurf
-      code-cursor
 
 
 			mpv
@@ -65,7 +64,9 @@
 			efibootmgr
 			
 
-		];
+		] ++ with pkgs-unstable [
+              code-cursor
+    ];
 
 
 
