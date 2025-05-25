@@ -1,4 +1,4 @@
-{home-manager, pkgs, lib, pkgs-unstable ...}: {
+{home-manager, pkgs, lib, pkgs-unstable, ...}: {
 	home-manager.useGlobalPkgs = true;
 	home-manager.useUserPackages = true;
 
@@ -17,7 +17,7 @@
 		home.stateVersion = "25.05";
 
 
-		home.packages = with pkgs; [
+		home.packages = (with pkgs; [
 			obsidian
 			discord
 			spotify
@@ -64,9 +64,8 @@
 			efibootmgr
 			
 
-		] ++ with pkgs-unstable [
-              code-cursor
-    ];
+		]) ++ (with pkgs-unstable; [
+    ]);
 
 
 
