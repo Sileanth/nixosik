@@ -2,8 +2,8 @@ return {
   'stevearc/oil.nvim',
   config = function()
     vim.keymap.set('n', '<leader>o', function()
-      vim.cmd('Oil --')
-    end, { desc = 'Open Oil (file explorer' }
+      vim.cmd('Oil')
+    end, { desc = 'Open Oil (file explorer' })
 
     ---@module 'oil'
     ---@type oil.SetupOpts
@@ -11,7 +11,7 @@ return {
     require("oil").setup(opts)
 
 
-  end
+  end,
   -- Optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
