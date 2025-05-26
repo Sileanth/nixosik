@@ -22,15 +22,17 @@
 			discord
 			spotify
 
-			just
 			tailscale
 			sqlite
-
 
       helix
       zed-editor
       vscode
       windsurf
+
+      nh
+      nil
+			just
 
 
 			mpv
@@ -42,22 +44,14 @@
 
 			swi-prolog
 
-
 			dotnet-sdk
 			csharp-ls
-
-			python312
-			python312Packages.sqlalchemy
-
-
-			calibre
-
-
 
 			typescript-language-server
 			nodejs_24
       svelte-language-server
 			eslint
+
       gcc
 
 
@@ -65,6 +59,7 @@
 			
 
 		]) ++ (with pkgs-unstable; [
+              code-cursor
     ]);
 
 
