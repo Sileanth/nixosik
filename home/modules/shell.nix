@@ -5,6 +5,7 @@ home-manager.users.sileanth = {
 		lsd
 	];
 	home.shellAliases = {
+      lg = "lazygit";
 	};
 
 
