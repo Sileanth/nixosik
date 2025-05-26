@@ -25,6 +25,7 @@ config = lib.mkIf cfg.enable {
 	100.81.52.31 mealie.home
 	100.81.52.31 paperless.home
 	100.81.52.31 chomik.home
+	100.81.52.31 paperless.home
 	'' 
   else
 	''
