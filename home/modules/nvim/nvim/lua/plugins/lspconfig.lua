@@ -8,8 +8,8 @@ return {
 		vim.lsp.enable('ts_ls')
 		vim.lsp.enable('csharp_ls')
     vim.lsp.enable('svelte')
-    -- wim.lsp.enable('nil_ls')
-    wim.lsp.enable('nixd')
+    vim.lsp.enable('nil_ls')
+    -- vim.lsp.enable('nixd')
 		vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
 
 
