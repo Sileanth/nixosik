@@ -32,6 +32,7 @@
 
       nh
       nil
+      nixd
 			just
 
 
