@@ -26,6 +26,7 @@ config = lib.mkIf cfg.enable {
 	100.81.52.31 paperless.home
 	100.81.52.31 chomik.home
 	100.81.52.31 paperless.home
+	100.81.52.31 portainer.home
 	'' 
   else
 	''
@@ -34,6 +35,7 @@ config = lib.mkIf cfg.enable {
 	192.168.1.222 mealie.home
 	192.168.1.222 chomik.home
 	192.168.1.222 paperless.home
+	192.168.1.222 portainer.home
 	'';
 };
 }
