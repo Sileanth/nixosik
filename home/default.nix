@@ -1,4 +1,4 @@
-{home-manager, pkgs, lib, pkgs-unstable, ...}: {
+{pkgs, pkgs-unstable, ...}: {
 	home-manager.useGlobalPkgs = true;
 	home-manager.useUserPackages = true;
 
@@ -61,7 +61,34 @@
 
 		]) ++ (with pkgs-unstable; [
               code-cursor
-    ]);
+    ]) ++ [
+  (pkgs.writeShellScriptBin "epower" ''
+CHOICE=$(${pkgs.gum}/bin/gum choose \
+  "Shutdown" \
+  "Reboot" \
+  "Suspend" \
+  "Hibernate")
+
+case "$CHOICE" in
+  "Shutdown")
+    systemctl poweroff
+    ;;
+  "Reboot")
+    systemctl reboot
+    ;;
+  "Suspend")
+    systemctl suspend
+    ;;
+  "Hibernate")
+    systemctl hibernate
+    ;;
+  *)
+    echo "No action selected or invalid choice."
+    ;;
+esac
+  '')
+
+      ];
 
 
 
