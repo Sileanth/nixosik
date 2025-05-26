@@ -25,6 +25,7 @@
 			tailscale
 			sqlite
       ansible
+      python3
 
       helix
       zed-editor
