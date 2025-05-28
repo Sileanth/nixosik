@@ -6,7 +6,6 @@
 	imports = [
 		./modules/git.nix
 		./modules/shell.nix
-		./modules/nvim.nix
 		./modules/hypr.nix
 		./modules/waybar.nix
 		./modules/nvim
