@@ -56,6 +56,7 @@
 
       elan
 
+
       gcc
 
 
@@ -63,7 +64,7 @@
 			
 
 		]) ++ (with pkgs-unstable; [
-              code-cursor
+              # code-cursor
     ]) ++ [
   (pkgs.writeShellScriptBin "epower" ''
 CHOICE=$(${pkgs.gum}/bin/gum choose \
