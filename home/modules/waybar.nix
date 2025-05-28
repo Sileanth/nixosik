@@ -94,6 +94,12 @@
           border-radius: 10px; /* Explicitly keep rounded corners */
         }
 
+
+        #workspaces button.active {
+
+          background: @pink; /* Primary blue for workspaces */
+        }
+
         #clock {
           padding: 0 10px;
           margin: 3px 5px;
