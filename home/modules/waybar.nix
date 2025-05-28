@@ -97,7 +97,7 @@
 
         #workspaces button.active {
 
-          background: @pink; /* Primary blue for workspaces */
+          background: @cyan; /* Primary blue for workspaces */
         }
 
         #clock {
