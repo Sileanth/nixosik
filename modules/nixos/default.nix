@@ -8,7 +8,7 @@ let
   windows = import ./windows.nix;
   bootloader = import ./bootloader.nix;
   kdeconnect = import ./kdeconnect.nix;
-  steam = import ./steam.nix;
+  gaming = import ./gaming.nix;
 in {
   inherit kdeconnect;
 	inherit keyboard;
@@ -19,9 +19,9 @@ in {
 	inherit tailscale;
   inherit windows;
   inherit bootloader;
-  inherit steam;
+  inherit gaming;
 	all = [
-    steam
+    gaming
     kdeconnect
     bootloader
     windows
