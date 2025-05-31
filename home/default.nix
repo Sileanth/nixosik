@@ -35,6 +35,7 @@
       nil
       nixd
 			just
+      zathura
 
 
 			mpv
