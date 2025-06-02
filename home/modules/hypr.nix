@@ -228,9 +228,10 @@ settings = {
 	"$mod, E, exec, uwsm-app -- $fileManager"
 
 	"$mod, C, killactive"
-	"$mod, M, exit"
+	"$mod, M, exec, uwsm stop"
 	"$mod, N, exec, uwsm-app -- hyprlock"
 	"$mod, F, togglefloating"
+	"$mod, G, fullscreen"
 
 	"$mod, left, movefocus, l"
 	"$mod, right, movefocus, r"
