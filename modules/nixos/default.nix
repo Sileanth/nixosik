@@ -9,8 +9,10 @@ let
   bootloader = import ./bootloader.nix;
   kdeconnect = import ./kdeconnect.nix;
   gaming = import ./gaming.nix;
+  virt = import ./virt.nix;
 in {
   inherit kdeconnect;
+  inherit virt;
 	inherit keyboard;
 	inherit disko_default;	
 	inherit hyprland;
@@ -21,6 +23,7 @@ in {
   inherit bootloader;
   inherit gaming;
 	all = [
+    virt
     gaming
     kdeconnect
     bootloader
