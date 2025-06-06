@@ -64,6 +64,7 @@
               enable = true;
               type = "grub";
             };
+            postgres.enable = true;
             windows.enable = true;
 						hyprland.enable = true;
 						fonts.enable = true;

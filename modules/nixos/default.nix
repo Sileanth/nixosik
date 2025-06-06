@@ -10,6 +10,7 @@ let
   kdeconnect = import ./kdeconnect.nix;
   gaming = import ./gaming.nix;
   virt = import ./virt.nix;
+  postgres = import ./postgres.nix;
 in {
   inherit kdeconnect;
   inherit virt;
@@ -22,8 +23,10 @@ in {
   inherit windows;
   inherit bootloader;
   inherit gaming;
+  inherit postgres;
 	all = [
     virt
+    postgres
     gaming
     kdeconnect
     bootloader
