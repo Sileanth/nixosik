@@ -22,6 +22,8 @@
 			discord
 			spotify
 
+      libreoffice-qt6
+
 			tailscale
 			sqlite
       ansible
