@@ -17,7 +17,7 @@ config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       pgcli
     ];
-    config.services.postgresql = {
+    services.postgresql = {
       enable = true;
       # ensureDatabases = [ "mydatabase" ];
       authentication = pkgs.lib.mkOverride 10 ''
