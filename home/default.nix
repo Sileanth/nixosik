@@ -17,6 +17,9 @@
 
 
 		home.packages = (with pkgs; [
+      fd
+      ripgrep
+
       chromium
 			obsidian
 			discord
