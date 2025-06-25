@@ -11,7 +11,8 @@ return {
     vim.lsp.enable('clangd')
     -- vim.lsp.enable('nil_ls')
     vim.lsp.enable('nixd')
-		vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
+		vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, {desc= 'diagnostisc'})
+		vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, {desc= 'code action'})
 
 
 	end
