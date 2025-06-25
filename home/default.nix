@@ -17,6 +17,9 @@
 
 
 		home.packages = (with pkgs; [
+      
+
+
       fd
       ripgrep
 
@@ -35,7 +38,11 @@
       helix
       zed-editor
       vscode
+
       windsurf
+      claude-code
+      warp-terminal
+      code-cursor
 
       nh
       nil
