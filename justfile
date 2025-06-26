@@ -4,7 +4,7 @@ default:
 	just --list
 
 update:
-	nix flake update
+	nix flake update --commit-lock-file
 
 build:
 	sudo nixos-rebuild switch --flake .#
