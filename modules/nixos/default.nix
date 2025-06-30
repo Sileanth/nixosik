@@ -11,7 +11,9 @@ let
   gaming = import ./gaming.nix;
   virt = import ./virt.nix;
   postgres = import ./postgres.nix;
+  cosmic = import ./cosmic.nix;
 in {
+  inherit cosmic;
   inherit kdeconnect;
   inherit virt;
 	inherit keyboard;
@@ -25,6 +27,7 @@ in {
   inherit gaming;
   inherit postgres;
 	all = [
+    cosmic
     virt
     postgres
     gaming

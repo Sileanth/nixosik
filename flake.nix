@@ -55,6 +55,7 @@
 				./hosts/helios/configuration.nix
 				{
 					mc = {
+            cosmic.enable = true;
 						disko_default = {
 							enable = true;
 							efi_size = "1024";
