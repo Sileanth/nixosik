@@ -45,6 +45,7 @@
       oterm
       code-cursor
       gemini-cli
+      code-cursor
 
       nh
       nil
