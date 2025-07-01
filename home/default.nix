@@ -43,6 +43,7 @@
       claude-code
       warp-terminal
       code-cursor
+      gemini-cli
 
       nh
       nil
@@ -66,7 +67,6 @@
 			typescript-language-server
 			nodejs_24
       svelte-language-server
-			eslint
 
       elan
 
