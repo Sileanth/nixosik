@@ -75,6 +75,9 @@
       gcc
 
 
+			godot_4_4_mono
+
+
 			efibootmgr
 			
 
