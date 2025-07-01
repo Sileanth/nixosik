@@ -12,6 +12,7 @@ let
   virt = import ./virt.nix;
   postgres = import ./postgres.nix;
   cosmic = import ./cosmic.nix;
+  ollama = import ./ollama.nix;
 in {
   inherit cosmic;
   inherit kdeconnect;
@@ -26,7 +27,9 @@ in {
   inherit bootloader;
   inherit gaming;
   inherit postgres;
+  inherit ollama;
 	all = [
+    ollama
     cosmic
     virt
     postgres
