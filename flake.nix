@@ -54,7 +54,10 @@
 				./hosts/helios/configuration.nix
 				{
 					mc = {
-            ollama.enable = true;
+            ollama = {
+                enable = true;
+                enableWebUI = true;
+            };
             cosmic.enable = true;
 						disko_default = {
 							enable = true;

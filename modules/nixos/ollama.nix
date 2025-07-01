@@ -8,6 +8,12 @@ imports = [
 options = {
 	mc.ollama = {
 		enable = lib.mkEnableOption "enable ollama";
+		enableWebUI = lib.mkEnableOption "enable Ollama web UI";
+		webUIPort = lib.mkOption {
+			type = lib.types.port;
+			default = 3000;
+			description = "Port for the Ollama web UI";
+		};
 	};
 
 
@@ -23,6 +29,13 @@ config = lib.mkIf cfg.enable {
         "qwen3:1.7b"
       ];
     };
+
+    services.nextjs-ollama-llm-ui = lib.mkIf cfg.enableWebUI {
+      enable = true;
+      port = cfg.webUIPort;
+    };
+
+    networking.firewall.allowedTCPPorts = lib.mkIf cfg.enableWebUI [ cfg.webUIPort ];
 };
 }
 
