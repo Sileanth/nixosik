@@ -15,6 +15,7 @@ options = {
 config = lib.mkIf cfg.enable {
     services.ollama = {
       enable = true;
+      acceleration = "cuda";
       # Optional: preload models, see https://ollama.com/library
       loadModels = [ 
         "llama3.2:3b" 
