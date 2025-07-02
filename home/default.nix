@@ -76,14 +76,14 @@
       gcc
 
 
-			godot_4_4_mono
+			godot-mono
 
 
 			efibootmgr
 			
 
 		]) ++ (with pkgs-unstable; [
-              # code-cursor
+
     ]) ++ [
   (pkgs.writeShellScriptBin "epower" ''
 CHOICE=$(${pkgs.gum}/bin/gum choose \
