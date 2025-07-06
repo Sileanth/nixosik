@@ -43,19 +43,20 @@ config =
       boot.loader.grub.theme = "${hollow-grub}/grub/themes/hollow-grub";
       boot.loader.grub.efiSupport = true;
       boot.loader.grub.efiInstallAsRemovable = true;
-        boot.loader.grub.device = "nodev";
+      boot.loader.grub.device = "nodev";
+      boot.loader.grub.useOSProber = true;
       boot.loader.grub.extraEntries =
+          # ''
+          #   menuentry "Windows" {
+          #     insmod part_gpt
+          #     insmod fat
+          #     insmod search_fs_uuid
+          #     insmod chain
+          #     search --fs-uuid --set=root 7C30-1BC2
+          #     chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+          #   }
+          # '' + 
           ''
-            menuentry "Windows" {
-              insmod part_gpt
-              insmod fat
-              insmod search_fs_uuid
-              insmod chain
-              search --fs-uuid --set=root 7C30-1BC2
-              chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-            }
-          '' 
-          + ''
              menuentry "Reboot" {
                 reboot
             }
