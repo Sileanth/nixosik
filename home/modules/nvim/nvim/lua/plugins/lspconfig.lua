@@ -8,6 +8,7 @@ return {
 		vim.lsp.enable('ts_ls')
 		vim.lsp.enable('csharp_ls')
     vim.lsp.enable('svelte')
+    vim.lsp.enable('astro')
     vim.lsp.enable('clangd')
     -- vim.lsp.enable('nil_ls')
     vim.lsp.enable('nixd')
