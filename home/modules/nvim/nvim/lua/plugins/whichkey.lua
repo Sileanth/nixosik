@@ -12,6 +12,9 @@ return {
     {
       "<leader>l", group = "lsp" ,
     },
+    {
+      "<leader>t", group = "tailwind" ,
+    },
     })
   end,
   keys = {
