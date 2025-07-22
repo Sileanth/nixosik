@@ -44,7 +44,7 @@
       warp-terminal
       oterm
       code-cursor
-      gemini-cli
+      # gemini-cli
       code-cursor
 
       nh

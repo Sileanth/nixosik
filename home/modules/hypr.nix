@@ -82,11 +82,11 @@ settings = {
 
 	];
 	monitor = [
-		"eDP-1, 1920x1080@144, 0x0, 1"
-		"HDMI-A-1, 1920x1200@60, 0x0, 1, transform, 1"
-		"DP-1, 1920x1080@60, 1200x0, 1"
-		", preferred, auto, 1, mirror, eDP-1"
-		# ",preffered,auto,auto"
+		# "eDP-1, 1920x1080@144, 0x0, 1"
+		# "HDMI-A-1, 1920x1200@60, 0x0, 1, transform, 1"
+		# "DP-1, 1920x1080@60, 1200x0, 1"
+		# ", preferred, auto, 1, mirror, eDP-1"
+		",preffered,auto,auto"
 	];
 	
 	env = [
