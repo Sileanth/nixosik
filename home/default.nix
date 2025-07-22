@@ -17,7 +17,7 @@
 
 
 		home.packages = (with pkgs; [
-      
+      android-studo 
       
 
       fd
