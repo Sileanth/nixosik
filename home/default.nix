@@ -73,7 +73,8 @@
 			typescript-language-server
 			nodejs_24
       svelte-language-server
-      eslint
+      oxlint 
+      gemini-cli
 
       elan
 
