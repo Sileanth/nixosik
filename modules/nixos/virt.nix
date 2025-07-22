@@ -16,10 +16,17 @@ config = lib.mkIf cfg.enable {
     virtualisation.docker = {
       enable = true;
     };
-    users.users.sileanth.extraGroups = [ "docker" ];
+    
+    virtualisation.libvirtd.enable = true;
+    users.users.sileanth.extraGroups = [ "docker" "libvirtd" "kvm" "adbusers" ];
     environment.systemPackages = with pkgs; [
       docker-compose
+      qemu
+      android-studio
     ];
+
+
+    programs.adb.enable = true;
 };
 }
 

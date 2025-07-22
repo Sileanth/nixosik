@@ -17,7 +17,11 @@
 
 
 		home.packages = (with pkgs; [
-      android-studo 
+      jetbrains.clion
+      jetbrains.rider
+      jetbrains.webstorm
+      jetbrains.idea-ultimate
+      jetbrains.pycharm-professional
       
 
       fd
