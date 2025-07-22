@@ -18,7 +18,7 @@
 
 		home.packages = (with pkgs; [
       
-
+      
 
       fd
       ripgrep
@@ -27,6 +27,10 @@
 			obsidian
 			discord
 			spotify
+
+      lowfi
+
+      proton-pass
 
       libreoffice-qt6
 
