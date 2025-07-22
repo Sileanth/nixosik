@@ -10,6 +10,7 @@ return {
     vim.lsp.enable('svelte')
     vim.lsp.enable('astro')
     vim.lsp.enable('clangd')
+    -- vim.lsp.enable('tailwindcss') -- using tailwindcss plugin
 
     vim.lsp.config('astro', {
       cmd = {"npx", "astro-ls", "--stdio" }
