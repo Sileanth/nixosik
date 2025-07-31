@@ -25,6 +25,8 @@
 
       opencode
       
+      jujutsu
+      lazyjj
 
       fd
       ripgrep
