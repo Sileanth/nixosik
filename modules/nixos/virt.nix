@@ -23,6 +23,8 @@ config = lib.mkIf cfg.enable {
       docker-compose
       qemu
       android-studio
+      distrobox
+      distrobox-tui
     ];
 
 

@@ -17,6 +17,7 @@
 
 
 		home.packages = (with pkgs; [
+      lutris
       jetbrains.clion
       jetbrains.rider
       jetbrains.webstorm
@@ -71,6 +72,7 @@
 			lazygit
 			bat
 			unrar
+      unzip
       tldr
 
 			swi-prolog
