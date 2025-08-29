@@ -20,7 +20,7 @@ options = {
 };
 config = lib.mkIf cfg.enable {
     services.ollama = {
-      package = pkgs-unstable.ollama;
+      # package = pkgs-unstable.ollama;
       enable = true;
       acceleration = "cuda";
       # Optional: preload models, see https://ollama.com/library
