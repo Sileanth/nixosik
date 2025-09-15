@@ -1,4 +1,4 @@
-{configs, pkgs, pkgs-unstable, ...}:
+{config, pkgs, pkgs-unstable, neovim, ...}:
 {
 home-manager.users.sileanth = {
 	home.packages = with pkgs; [
@@ -7,7 +7,7 @@ home-manager.users.sileanth = {
 
 
 	programs.neovim= {
-		package = pkgs-unstable.neovim-unwrapped;
+		package = neovim.${pkgs.system}.default;
 		enable = true;
 		defaultEditor = true;
 	};

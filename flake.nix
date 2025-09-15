@@ -2,6 +2,7 @@
   description = "nixos config";
 
   inputs = {
+    neovim.url = "github:nix-community/neovim-nightly-overlay";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     
@@ -17,7 +18,7 @@
       };
   };
 
-  outputs = { self, nixpkgs, home-manager, disko, nixpkgs-unstable, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, disko, nixpkgs-unstable, neovim, ... }@inputs: let
 
 	inherit (self) outputs;
   in {
