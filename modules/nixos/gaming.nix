@@ -13,6 +13,11 @@ options = {
 
 };
 config = lib.mkIf cfg.enable {
+    hardware.graphics.enable32Bit = true;
+    environment.systemPackages = with pkgs; [
+      lutris
+
+    ];
     programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
