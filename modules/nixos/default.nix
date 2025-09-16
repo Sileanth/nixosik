@@ -13,8 +13,10 @@ let
   postgres = import ./postgres.nix;
   cosmic = import ./cosmic.nix;
   ollama = import ./ollama.nix;
+  flatpak = import ./flatpak.nix;
 in
 {
+  inherit flatpak;
   inherit cosmic;
   inherit kdeconnect;
   inherit virt;
@@ -30,6 +32,7 @@ in
   inherit postgres;
   inherit ollama;
   all = [
+    flatpak
     ollama
     cosmic
     virt

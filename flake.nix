@@ -73,6 +73,7 @@
                     enable = true;
                     enableWebUI = true;
                   };
+                  flatpak.enable = true;
                   cosmic.enable = true;
                   disko_default = {
                     enable = true;
