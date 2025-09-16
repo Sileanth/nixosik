@@ -2,10 +2,12 @@
 {
 home-manager.users.sileanth = {
 
+  programs.zoxide = {
+      enable = true;
+
+  };
   programs.direnv = {
       enable = true;
-      enableFishIntegration = true;
-      enableZshIntegration = true;
       nix-direnv = {
         enable = true;
 
