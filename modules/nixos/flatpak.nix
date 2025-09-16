@@ -21,6 +21,13 @@ in
 
   };
   config = lib.mkIf cfg.enable {
+
+    environment.systemPackages = with pkgs; [
+      discover
+
+
+
+    ];
     services.flatpak.enable = true;
     systemd.services.flatpak-repo = {
       wantedBy = [ "multi-user.target" ];
