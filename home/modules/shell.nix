@@ -1,6 +1,18 @@
 {configs, pkgs, ...}:
 {
 home-manager.users.sileanth = {
+
+  programs.direnv = {
+      enable = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      nix-direnv = {
+        enable = true;
+
+      };
+    };
+
+
 	home.packages = with pkgs; [
 		lsd
 	];
