@@ -1,24 +1,35 @@
-{lib, config, pkgs, ...}: let
-	cfg = config.mc.virt;
-in {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.mc.virt;
+in
+{
 
-imports = [
-];
+  imports = [
+  ];
 
-options = {
-	mc.virt = {
-		enable = lib.mkEnableOption "enable virt";
-	};
+  options = {
+    mc.virt = {
+      enable = lib.mkEnableOption "enable virt";
+    };
 
-
-};
-config = lib.mkIf cfg.enable {
+  };
+  config = lib.mkIf cfg.enable {
     virtualisation.docker = {
       enable = true;
     };
-    
+
     virtualisation.libvirtd.enable = true;
-    users.users.sileanth.extraGroups = [ "docker" "libvirtd" "kvm" "adbusers" ];
+    users.users.sileanth.extraGroups = [
+      "docker"
+      "libvirtd"
+      "kvm"
+      "adbusers"
+    ];
     environment.systemPackages = with pkgs; [
       docker-compose
       qemu
@@ -27,8 +38,6 @@ config = lib.mkIf cfg.enable {
       distrobox-tui
     ];
 
-
     programs.adb.enable = true;
-};
+  };
 }
-

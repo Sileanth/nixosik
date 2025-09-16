@@ -1,31 +1,38 @@
-{lib, config, pkgs, pkgs-unstable, ...}: let
-	cfg = config.mc.ollama;
-in {
+{
+  lib,
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
+let
+  cfg = config.mc.ollama;
+in
+{
 
-imports = [
-];
+  imports = [
+  ];
 
-options = {
-	mc.ollama = {
-		enable = lib.mkEnableOption "enable ollama";
-		enableWebUI = lib.mkEnableOption "enable Ollama web UI";
-		webUIPort = lib.mkOption {
-			type = lib.types.port;
-			default = 3000;
-			description = "Port for the Ollama web UI";
-		};
-	};
+  options = {
+    mc.ollama = {
+      enable = lib.mkEnableOption "enable ollama";
+      enableWebUI = lib.mkEnableOption "enable Ollama web UI";
+      webUIPort = lib.mkOption {
+        type = lib.types.port;
+        default = 3000;
+        description = "Port for the Ollama web UI";
+      };
+    };
 
-
-};
-config = lib.mkIf cfg.enable {
+  };
+  config = lib.mkIf cfg.enable {
     services.ollama = {
       # package = pkgs-unstable.ollama;
       enable = true;
       acceleration = "cuda";
       # Optional: preload models, see https://ollama.com/library
-      loadModels = [ 
-        "llama3.2:3b" 
+      loadModels = [
+        "llama3.2:3b"
         "deepseek-r1:3b"
         "qwen3:1.7b"
       ];
@@ -37,6 +44,5 @@ config = lib.mkIf cfg.enable {
     };
 
     networking.firewall.allowedTCPPorts = lib.mkIf cfg.enableWebUI [ cfg.webUIPort ];
-};
+  };
 }
-

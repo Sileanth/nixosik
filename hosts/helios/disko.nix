@@ -1,10 +1,11 @@
-let 
-	cfg = {
-		disk = "/dev/nvme0n1";
-		swap_size = "16";
-		efi_size = "1024";
-	};
-in {
+let
+  cfg = {
+    disk = "/dev/nvme0n1";
+    swap_size = "16";
+    efi_size = "1024";
+  };
+in
+{
   fileSystems."/persist".neededForBoot = true;
   fileSystems."/secret".neededForBoot = true;
   disko.devices = {
@@ -39,12 +40,12 @@ in {
                 content = {
                   type = "btrfs";
                   extraArgs = [ "-f" ];
-		  postCreateHook = ''
-			MNTPOINT=$(mktemp -d)
-			mount -o subvol=/ /dev/mapper/crypted "$MNTPOINT"
-			trap 'umount $MNTPOINT; rm -rf $MNTPOINT' EXIT
-			btrfs subvolume snapshot -r $MNTPOINT/root $MNTPOINT/root-blank
-		  '';
+                  postCreateHook = ''
+                    			MNTPOINT=$(mktemp -d)
+                    			mount -o subvol=/ /dev/mapper/crypted "$MNTPOINT"
+                    			trap 'umount $MNTPOINT; rm -rf $MNTPOINT' EXIT
+                    			btrfs subvolume snapshot -r $MNTPOINT/root $MNTPOINT/root-blank
+                    		  '';
                   subvolumes = {
                     "/root" = {
                       mountpoint = "/";
@@ -95,5 +96,3 @@ in {
     };
   };
 }
-
-

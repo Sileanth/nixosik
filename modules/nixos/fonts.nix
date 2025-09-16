@@ -1,21 +1,26 @@
-{lib, config, pkgs, ...}: let
-	cfg = config.mc.fonts;
-in {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.mc.fonts;
+in
+{
 
-imports = [
-];
+  imports = [
+  ];
 
-options = {
-	mc.fonts = {
-		enable = lib.mkEnableOption "enable fonts";
-	};
+  options = {
+    mc.fonts = {
+      enable = lib.mkEnableOption "enable fonts";
+    };
 
-
-};
-config = lib.mkIf cfg.enable {
-	fonts.packages = with pkgs; [
-		nerd-fonts.symbols-only
-	];
-};
+  };
+  config = lib.mkIf cfg.enable {
+    fonts.packages = with pkgs; [
+      nerd-fonts.symbols-only
+    ];
+  };
 }
-

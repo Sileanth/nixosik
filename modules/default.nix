@@ -1,8 +1,7 @@
 {
 
-	home-modules = import ./home-manager;
+  home-modules = import ./home-manager;
 
-	nixos-modules = import ./nixos;
-
+  nixos-modules = import ./nixos;
 
 }

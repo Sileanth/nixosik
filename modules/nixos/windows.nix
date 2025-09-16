@@ -1,19 +1,24 @@
-{lib, config, pkgs, ...}: let
-	cfg = config.mc.windows;
-in {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.mc.windows;
+in
+{
 
-imports = [
-];
+  imports = [
+  ];
 
-options = {
-	mc.windows = {
-		enable = lib.mkEnableOption "enable windows";
-	};
+  options = {
+    mc.windows = {
+      enable = lib.mkEnableOption "enable windows";
+    };
 
-
-};
-config = lib.mkIf cfg.enable {
-  boot.supportedFilesystems = [ "ntfs" ];
-};
+  };
+  config = lib.mkIf cfg.enable {
+    boot.supportedFilesystems = [ "ntfs" ];
+  };
 }
-

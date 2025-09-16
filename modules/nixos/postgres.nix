@@ -1,18 +1,24 @@
-{lib, config, pkgs, ...}: let
-	cfg = config.mc.postgres;
-in {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.mc.postgres;
+in
+{
 
-imports = [
-];
+  imports = [
+  ];
 
-options = {
-	mc.postgres = {
-		enable = lib.mkEnableOption "enable postgres";
-	};
+  options = {
+    mc.postgres = {
+      enable = lib.mkEnableOption "enable postgres";
+    };
 
-
-};
-config = lib.mkIf cfg.enable {
+  };
+  config = lib.mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
       pgcli
@@ -25,6 +31,5 @@ config = lib.mkIf cfg.enable {
         local all       all     trust
       '';
     };
-};
+  };
 }
-

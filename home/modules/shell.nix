@@ -1,12 +1,12 @@
-{configs, pkgs, ...}:
+{ configs, pkgs, ... }:
 {
-home-manager.users.sileanth = {
+  home-manager.users.sileanth = {
 
-  programs.zoxide = {
+    programs.zoxide = {
       enable = true;
 
-  };
-  programs.direnv = {
+    };
+    programs.direnv = {
       enable = true;
       nix-direnv = {
         enable = true;
@@ -14,71 +14,66 @@ home-manager.users.sileanth = {
       };
     };
 
-
-	home.packages = with pkgs; [
-		lsd
-	];
-	home.shellAliases = {
+    home.packages = with pkgs; [
+      lsd
+    ];
+    home.shellAliases = {
       lg = "lazygit";
-	};
+    };
 
+    programs.fish = {
+      enable = true;
+    };
 
-	programs.fish = {
-		enable = true;
-	};
+    programs.zsh = {
+      enable = true;
+      autocd = true;
+      autosuggestion = {
+        enable = true;
+      };
+      dotDir = ".config/zsh";
+    };
 
-	programs.zsh = {
-		enable = true;
-		autocd = true;
-		autosuggestion = {
-			enable = true;
-		};
-		dotDir = ".config/zsh";
-	};
-
-	programs.lsd = {
-		enable = true;
-		enableBashIntegration = false;
-		enableZshIntegration = true;
-		enableFishIntegration = true;
-    icons = {
-      filetype = {
-        "justfile" = "";
+    programs.lsd = {
+      enable = true;
+      enableBashIntegration = false;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+      icons = {
+        filetype = {
+          "justfile" = "";
+        };
       };
     };
-	};
 
-	programs.yazi = {
-		enable = true;
-		enableBashIntegration = false;
-		enableZshIntegration = true;
-		enableFishIntegration = true;
-		shellWrapperName = "yy";
+    programs.yazi = {
+      enable = true;
+      enableBashIntegration = false;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+      shellWrapperName = "yy";
 
-	};
+    };
 
-	programs.starship = {
-		enableBashIntegration = false;
-		enableZshIntegration = true;
-		enableFishIntegration = true;
-		enable = true;
-	};
+    programs.starship = {
+      enableBashIntegration = false;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+      enable = true;
+    };
 
+    programs.kitty = {
+      enable = true;
+      settings = {
+        shell = "zsh";
+      };
+      themeFile = "tokyo_night_night";
+      shellIntegration = {
+        enableFishIntegration = true;
+        enableZshIntegration = true;
+      };
+    };
 
-	programs.kitty = {
-		enable = true;
-		settings = {
-			shell = "zsh";
-		};
-		themeFile = "tokyo_night_night";
-		shellIntegration = {
-			enableFishIntegration = true;
-			enableZshIntegration = true;
-		};
-	};
-
-
-
-	programs.neovim.defaultEditor = true;
-};
+    programs.neovim.defaultEditor = true;
+  };
 }
