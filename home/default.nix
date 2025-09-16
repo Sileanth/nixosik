@@ -1,4 +1,4 @@
-{pkgs, pkgs-unstable, ...}: {
+{pkgs, pkgs-unstable, neovim, ...}: {
 	home-manager.useGlobalPkgs = true;
 	home-manager.useUserPackages = true;
 

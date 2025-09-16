@@ -18,7 +18,7 @@
       };
   };
 
-  outputs = { self, nixpkgs, home-manager, disko, nixpkgs-unstable, neovim, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, disko, nixpkgs-unstable,  ... }@inputs: let
 
 	inherit (self) outputs;
   in {
