@@ -70,7 +70,7 @@
               {
                 mc = {
                   ollama = {
-                    enable = true;
+                    enable = false;
                     enableWebUI = true;
                   };
                   flatpak.enable = true;
