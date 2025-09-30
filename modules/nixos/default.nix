@@ -14,8 +14,10 @@ let
   cosmic = import ./cosmic.nix;
   ollama = import ./ollama.nix;
   flatpak = import ./flatpak.nix;
+  helium = import ./helium.nix;
 in
 {
+  inherit helium;
   inherit flatpak;
   inherit cosmic;
   inherit kdeconnect;
@@ -32,6 +34,7 @@ in
   inherit postgres;
   inherit ollama;
   all = [
+    helium
     flatpak
     ollama
     cosmic
