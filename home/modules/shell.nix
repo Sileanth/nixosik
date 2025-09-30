@@ -66,6 +66,7 @@
       enable = true;
       settings = {
         shell = "zsh";
+        background_opacity = 1.0;
       };
       themeFile = "tokyo_night_night";
       shellIntegration = {
