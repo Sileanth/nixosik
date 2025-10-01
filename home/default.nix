@@ -29,6 +29,7 @@
         jetbrains.pycharm-professional
 
         opencode
+        minikube
 
         jujutsu
         lazyjj
