@@ -30,6 +30,8 @@
 
         opencode
         minikube
+        kubectl
+        lazydocker
 
         jujutsu
         lazyjj

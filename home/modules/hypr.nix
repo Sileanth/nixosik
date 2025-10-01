@@ -218,6 +218,7 @@
           "$mod, B, exec, uwsm-app -- $browser"
           "$mod, R, exec, uwsm-app -- $menu"
           "$mod, E, exec, uwsm-app -- $fileManager"
+          "$mod, O, exec, uwsm-app -- obsidian"
 
           "$mod, C, killactive"
           "$mod, M, exec, uwsm stop"
