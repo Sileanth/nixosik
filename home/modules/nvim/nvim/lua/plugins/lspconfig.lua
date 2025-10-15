@@ -7,6 +7,8 @@ return {
 		vim.lsp.enable('prolog_ls')
 		vim.lsp.enable('ts_ls')
 		vim.lsp.enable('csharp_ls')
+		vim.lsp.enable('gopls')
+
     vim.lsp.enable('svelte')
     vim.lsp.enable('astro')
     vim.lsp.enable('clangd')
