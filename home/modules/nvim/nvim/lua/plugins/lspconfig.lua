@@ -11,6 +11,7 @@ return {
     vim.lsp.enable('rust_analyzer')
 
     vim.lsp.enable('svelte')
+    vim.lsp.enable('ocamllsp')
     vim.lsp.enable('astro')
     vim.lsp.enable('clangd')
     -- vim.lsp.enable('tailwindcss') -- using tailwindcss plugin
