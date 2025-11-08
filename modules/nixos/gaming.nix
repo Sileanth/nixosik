@@ -21,7 +21,7 @@ in
   config = lib.mkIf cfg.enable {
     hardware.graphics.enable32Bit = true;
     environment.systemPackages = with pkgs; [
-      lutris
+      # lutris
       bottles
       wine
 
