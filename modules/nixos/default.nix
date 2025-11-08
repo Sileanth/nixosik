@@ -2,6 +2,7 @@ let
   disko_default = import ./disko_default.nix;
   keyboard = import ./keyboard.nix;
   hyprland = import ./hyprland.nix;
+  niri = import ./niri.nix;
   fonts = import ./fonts.nix;
   tailscale = import ./tailscale.nix;
   uwsm_display_manager = import ./uwsm_display_manager.nix;
@@ -33,7 +34,9 @@ in
   inherit gaming;
   inherit postgres;
   inherit ollama;
+  inherit niri;
   all = [
+    niri
     helium
     flatpak
     ollama

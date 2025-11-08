@@ -70,6 +70,9 @@
               ./hosts/helios/configuration.nix
               {
                 mc = {
+                  niri = {
+                    enable = true;
+                  };
                   ollama = {
                     enable = false;
                     enableWebUI = true;
