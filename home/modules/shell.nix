@@ -72,6 +72,7 @@
       shellIntegration = {
         enableFishIntegration = true;
         enableZshIntegration = true;
+        enableBashIntegration = true;
       };
     };
 

@@ -42,6 +42,7 @@
         chromium
         obsidian
         discord
+        blueman
         spotify
 
         lowfi
@@ -52,8 +53,15 @@
 
         tailscale
         sqlite
+
+
+        # zig
+        # zls
+
         ansible
+        ansible-language-server
         python3
+        basedpyright
 
         helix
         zed-editor
@@ -99,6 +107,8 @@
         godot-mono
 
         efibootmgr
+
+        chezmoi
 
       ])
       ++ (with pkgs-unstable; [

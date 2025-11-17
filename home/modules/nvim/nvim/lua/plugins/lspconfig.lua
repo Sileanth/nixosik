@@ -9,10 +9,13 @@ return {
 		vim.lsp.enable('csharp_ls')
 		vim.lsp.enable('gopls')
     vim.lsp.enable('rust_analyzer')
+    vim.lsp.enable('ansiblels')
+    vim.lsp.enable('basedpyright')
 
     vim.lsp.enable('svelte')
     vim.lsp.enable('ocamllsp')
     vim.lsp.enable('astro')
+    vim.lsp.enable('zls')
     vim.lsp.enable('clangd')
     -- vim.lsp.enable('tailwindcss') -- using tailwindcss plugin
 

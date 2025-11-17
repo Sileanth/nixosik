@@ -69,6 +69,7 @@
             modules = default_modules ++ [
               ./hosts/helios/configuration.nix
               {
+                services.displayManager.cosmic-greeter.enable = true;
                 mc = {
                   niri = {
                     enable = true;
@@ -98,7 +99,7 @@
                   kdeconnect.enable = true;
                   gaming.enable = true;
                   uwsm_display_manager = {
-                    enable = true;
+                    enable = false;
                     skip_choice = false;
                     auto_login = {
                       enable = true;
