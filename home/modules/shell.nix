@@ -25,6 +25,10 @@
       enable = true;
     };
 
+    programs.bash = {
+      enable = true;
+    };
+
     programs.zsh = {
       enable = true;
       autocd = true;
@@ -55,11 +59,15 @@
 
     };
 
-    programs.starship = {
+    programs.starship = let
+      configFile = builtins.readFile ./starship-cattpuccin.toml;
+      configToml = builtins.fromTOML configFile;
+      in {
       enableBashIntegration = false;
       enableZshIntegration = true;
       enableFishIntegration = true;
       enable = true;
+      settings = configToml;
     };
 
     programs.kitty = {
