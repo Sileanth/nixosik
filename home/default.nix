@@ -59,7 +59,6 @@
         # zls
 
         ansible
-        ansible-language-server
         python3
         basedpyright
 
@@ -70,7 +69,6 @@
         windsurf
         claude-code
         warp-terminal
-        oterm
         code-cursor
         # gemini-cli
         code-cursor

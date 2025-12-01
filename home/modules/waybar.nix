@@ -7,7 +7,7 @@
     ];
 
     programs.waybar = {
-      enable = true;
+      enable = false;
 
       style =
         let

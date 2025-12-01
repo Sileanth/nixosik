@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home-manager.users.sileanth = {
 
@@ -35,7 +35,8 @@
       autosuggestion = {
         enable = true;
       };
-      dotDir = ".config/zsh";
+      # dotDir = ".config/zsh";
+      # dotDir = config.xdg.configHome;
     };
 
     programs.lsd = {
@@ -60,7 +61,7 @@
     };
 
     programs.starship = let
-      configFile = builtins.readFile ./starship-cattpuccin.toml;
+      configFile = builtins.readFile ./no-runtime-versions.toml;
       configToml = builtins.fromTOML configFile;
       in {
       enableBashIntegration = false;

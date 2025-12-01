@@ -202,10 +202,10 @@
         };
 
         # https://wiki.hyprland.org/Configuring/Variables/#gestures
-        gestures = {
-          workspace_swipe = true;
-        };
+        gesture = [
+          "3, horizontal, workspace"
 
+        ];
         "$terminal" = "kitty";
         "$fileManager" = "dolphin";
         "$browser" = "firefox";

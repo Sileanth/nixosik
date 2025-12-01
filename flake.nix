@@ -3,8 +3,10 @@
 
   inputs = {
     neovim.url = "github:nix-community/neovim-nightly-overlay";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+   
 
     disko = {
       url = "github:nix-community/disko/latest";
@@ -13,8 +15,18 @@
     };
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
-      # url = "github:nix-community/home-manager";  # this selects the unstable-branch and needs to match Nixpkgs
-      url = "github:nix-community/home-manager/release-25.05"; # this selects the release-branch and needs to match Nixpkgs
+      url = "github:nix-community/home-manager";  # this selects the unstable-branch and needs to match Nixpkgs
+      # url = "github:nix-community/home-manager/release-25.05"; # this selects the release-branch and needs to match Nixpkgs
+    };
+   dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.dgop.follows = "dgop";
     };
   };
 
@@ -69,7 +81,16 @@
             modules = default_modules ++ [
               ./hosts/helios/configuration.nix
               {
-                services.displayManager.cosmic-greeter.enable = true;
+                services.displayManager.cosmic-greeter.enable = true; 
+                home-manager.users.sileanth = { imports = [
+                  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                ];
+
+                  programs.dankMaterialShell = {
+                    enable = true;
+                    systemd.enable = true;
+                  };
+                };
                 mc = {
                   niri = {
                     enable = true;

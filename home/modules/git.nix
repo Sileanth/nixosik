@@ -4,13 +4,14 @@
   home-manager.users.sileanth = {
     programs.git = {
       enable = true;
-      userEmail = "lukasz.magnuszewski@gmail.com";
-      userName = "sileanth";
+      settings = {
+        user = {
+          name = "sileanth";
+          email = "sileanth@sileanth.pl";
+        };
 
-      # TODO
-      # signing = {
-      #
-      # };
+      };
+
 
     };
 
