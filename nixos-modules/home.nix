@@ -25,9 +25,12 @@ in
 		jetbrains.webstorm
 		jetbrains.pycharm
 		jetbrains.idea
-
+		vscode
+		zed-editor
+		lazygit
 
 		just
+		obsidian
 	  ];
     home-manager = {
         useGlobalPkgs = true;
