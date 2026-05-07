@@ -19,13 +19,19 @@ in
   };
   config = lib.mkIf cfg.enable {
     home-manager.users.sileanth = {
-        programs.kitty = {
-            enable = true;
-            shellIntegration = {
-                enableFishIntegration = true;
-                enableZshIntegration = true;
-            };
+      programs.kitty = {
+        enable = true;
+        shellIntegration = {
+          enableFishIntegration = true;
+          enableZshIntegration = true;
         };
+        settings = {
+          shell = "zsh";
+          map = "f1 new_window_with_cwd";
+          enable_audio_bell = "no";
+
+        };
+      };
     };
   };
 }

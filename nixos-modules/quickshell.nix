@@ -2,10 +2,11 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }:
 let
-  cfg = config.mc.niri;
+  cfg = config.mc.quickshell;
 in
 {
 
@@ -13,18 +14,15 @@ in
   ];
 
   options = {
-    mc.niri = {
-      enable = lib.mkEnableOption "enable niri";
+    mc.quickshell = {
+      enable = lib.mkEnableOption "enable quickshell";
     };
 
   };
   config = lib.mkIf cfg.enable {
-    programs.niri = {
-      enable = true;
 
-    };
     environment.systemPackages = with pkgs; [
-      xwayland-satellite # xwayland support
+      quickshell
     ];
   };
 }

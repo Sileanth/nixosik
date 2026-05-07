@@ -18,13 +18,13 @@ in
 
   };
   config = lib.mkIf cfg.enable {
-	hardware.graphics.enable = true;
-	services.xserver.videoDrivers = [ "nvidia" ];
-	hardware.nvidia = {
-		open = true; 
-		nvidiaSettings = true;
-		powerManagement.finegrained = false;
-		modesetting.enable = true;
-	};
+    hardware.graphics.enable = true;
+    services.xserver.videoDrivers = [ "nvidia" ];
+    hardware.nvidia = {
+      open = true;
+      nvidiaSettings = true;
+      powerManagement.finegrained = false;
+      modesetting.enable = true;
+    };
   };
 }

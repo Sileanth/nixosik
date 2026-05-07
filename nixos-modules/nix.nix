@@ -18,14 +18,18 @@ in
 
   };
   config = lib.mkIf cfg.enable {
-	nix.settings.experimental-features = [ "nix-command" "flakes" "pipe-operators" ];
+    nix.settings.experimental-features = [
+      "nix-command"
+      "flakes"
+      "pipe-operators"
+    ];
 
- 	nixpkgs.config.allowUnfree = true;
-	nix.settings.auto-optimise-store = true;
-	nix.gc = {
-	  automatic = true;
-	  dates = "weekly";
-	  options = "--delete-older-than 10d";
-	};
+    nixpkgs.config.allowUnfree = true;
+    nix.settings.auto-optimise-store = true;
+    nix.gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 10d";
+    };
   };
 }

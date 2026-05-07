@@ -28,10 +28,10 @@ in
     programs.uwsm.enable = true;
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
     security.pam.services.hyprlock = { };
-    environment.systemPackages = with pkgs; [ 
-    	wl-clipboard
-	wl-clip-persist
-	cliphist
+    environment.systemPackages = with pkgs; [
+      wl-clipboard
+      wl-clip-persist
+      cliphist
     ];
   };
 }

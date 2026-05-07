@@ -20,16 +20,16 @@ in
   };
   config = lib.mkIf cfg.enable {
     home-manager.users.sileanth = {
-        # import the home manager module
-        imports = [
+      # import the home manager module
+      imports = [
         inputs.noctalia.homeModules.default
-        ];
+      ];
 
-        # configure options
-        programs.noctalia-shell = {
+      # configure options
+      programs.noctalia-shell = {
         enable = true;
         #settings = {};
-        };
-  };
+      };
+    };
   };
 }

@@ -19,25 +19,40 @@ in
 
   };
   config = lib.mkIf cfg.enable {
-	  environment.systemPackages = with pkgs; [ 
-		jetbrains.clion
-		jetbrains.rider
-		jetbrains.webstorm
-		jetbrains.pycharm
-		jetbrains.idea
-		vscode
-		zed-editor
-		lazygit
+    environment.systemPackages = with pkgs; [
+      jetbrains.clion
+      jetbrains.rider
+      jetbrains.webstorm
+      jetbrains.pycharm
+      jetbrains.idea
+      jetbrains.goland
+      vscode
+      zed-editor
+      lazygit
 
-		just
-		obsidian
-	  ];
+      elan
+      go
+      gopls
+
+
+      ansible
+
+      gemini-cli
+      codex
+
+      just
+      obsidian
+      ghostty
+      ente-auth
+      bitwarden-cli
+      bitwarden-desktop
+    ];
     home-manager = {
-        useGlobalPkgs = true;
-        useUserPackages = true;
-        users.sileanth = {
-            home.stateVersion = "25.11";
-        };
+      useGlobalPkgs = true;
+      useUserPackages = true;
+      users.sileanth = {
+        home.stateVersion = "26.05";
+      };
     };
   };
 }
