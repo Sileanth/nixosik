@@ -26,6 +26,7 @@ in
       jetbrains.pycharm
       jetbrains.idea
       jetbrains.goland
+      wireguard-tools
       vscode
       zed-editor
       lazygit

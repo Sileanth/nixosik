@@ -66,6 +66,7 @@
                   noctulia.enable = true;
                   quickshell.enable = true;
                   android-studio.enable = true;
+                  wireguard.enable = true;
                 };
               }
             ];
