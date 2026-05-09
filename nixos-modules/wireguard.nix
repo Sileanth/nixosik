@@ -1,10 +1,15 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.mc.wireguard;
-  
+
   main_public = "84.235.172.161";
-  main_pubkey = "M8rtUwJJ73SSFVBOk/Ev/UslxRNDpgqI+JCm9/kA60I="; # Replace this
+  main_pubkey = "M8rtUwJJ73SSFVBOk/Ev/UslxRNDpgqI+JCm9/kA60I=";
   helios_vpn = "10.200.0.2";
 in
 {
@@ -13,24 +18,47 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    networking.wg-quick.interfaces.wg0 = {
-      address = [ "${helios_vpn}/24" ];
-      privateKeyFile = "/etc/wireguard/private.key";
+    systemd.network = {
+      enable = true;
 
-      peers = [
-        {
-          publicKey = main_pubkey;
-          allowedIPs = [ "10.200.0.0/24" ];
-          endpoint = "${main_public}:51820";
-          persistentKeepalive = 25;
-        }
-      ];
+      netdevs."50-wg0" = {
+        netdevConfig = {
+          Kind = "wireguard";
+          Name = "wg0";
+          Description = "WireGuard VPN to main";
+        };
+        wireguardConfig = {
+          PrivateKeyFile = "/etc/wireguard/private.key";
+          RouteTable = "main";
+        };
+        wireguardPeers = [
+          {
+            PublicKey = main_pubkey;
+            AllowedIPs = [
+              "10.200.0.0/24"
+              "10.0.0.0/24"
+            ];
+            Endpoint = "${main_public}:51820";
+            PersistentKeepalive = 25;
+          }
+        ];
+      };
+
+      networks."50-wg0" = {
+        matchConfig.Name = "wg0";
+        address = [ "${helios_vpn}/24" ];
+        networkConfig = {
+          DHCP = "no";
+          LinkLocalAddressing = "no";
+        };
+      };
     };
 
-    # Ensure wireguard-tools is available
+    systemd.tmpfiles.rules = [
+      "d /etc/wireguard 0750 root systemd-network - -"
+      "z /etc/wireguard/private.key 0640 root systemd-network - -"
+    ];
+
     environment.systemPackages = [ pkgs.wireguard-tools ];
-    
-    # Open firewall for WireGuard
-    networking.firewall.allowedUDPPorts = [ 51820 ];
   };
 }
