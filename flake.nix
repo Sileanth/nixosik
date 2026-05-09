@@ -53,7 +53,7 @@
               inputs.home-manager.nixosModules.home-manager
               {
                 mc = {
-
+                  ollama.enable = true;
                   niri.enable = true;
                   nvim.enable = true;
                   shell.enable = true;
