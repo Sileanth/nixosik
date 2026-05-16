@@ -30,6 +30,7 @@ in
       vscode
       zed-editor
       lazygit
+      ripgrep
 
       elan
       go
