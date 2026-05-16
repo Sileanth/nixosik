@@ -36,7 +36,6 @@ in
       go
       gopls
 
-
       ansible
 
       gemini-cli

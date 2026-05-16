@@ -34,7 +34,6 @@ in
         tree-sitter
         gcc
 
-
         tldr
         fzf
         bat
