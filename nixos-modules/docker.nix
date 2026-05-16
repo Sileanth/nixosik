@@ -23,10 +23,10 @@ in
     };
     virtualisation.docker = {
   enable = true;
-};
-users.users.sileanth.extraGroups = [ "docker" ];
   };
+users.users.sileanth.extraGroups = [ "docker" ];
   environment.systemPackages = with pkgs; [
     docker-compose
   ];
+  };
 }
