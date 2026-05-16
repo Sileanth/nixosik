@@ -32,6 +32,7 @@ in
       zed-editor
       lazygit
       ripgrep
+      uv
 
       elan
       go
