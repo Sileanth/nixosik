@@ -20,6 +20,7 @@ in
   };
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
+      chromium
       jetbrains.clion
       jetbrains.rider
       jetbrains.webstorm
