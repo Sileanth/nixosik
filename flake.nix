@@ -54,6 +54,7 @@
               {
                 mc = {
                   ollama.enable = true;
+                  docker.enable = true;
                   kdeconnect.enable = true;
                   niri.enable = true;
                   nvim.enable = true;
