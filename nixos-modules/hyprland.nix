@@ -32,6 +32,7 @@ in
       wl-clipboard
       wl-clip-persist
       cliphist
+      hyprlauncher
     ];
   };
 }
