@@ -53,6 +53,7 @@
               inputs.home-manager.nixosModules.home-manager
               {
                 mc = {
+                  ddc.enable = true;
                   ollama.enable = true;
                   docker.enable = true;
                   kdeconnect.enable = true;

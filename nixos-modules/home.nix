@@ -21,17 +21,20 @@ in
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       chromium
-      # jetbrains.clion
-      # jetbrains.rider
-      # jetbrains.webstorm
-      # jetbrains.pycharm
-      # jetbrains.idea
-      # jetbrains.goland
+      jetbrains.clion
+      jetbrains.rider
+      jetbrains.webstorm
+      jetbrains.pycharm
+      jetbrains.idea
+      jetbrains.goland
+      jetbrains.datagrip
       wireguard-tools
       vscode
       zed-editor
       lazygit
       ripgrep
+      btop
+      fzf
       uv
 
       elan
