@@ -21,13 +21,6 @@ in
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       chromium
-      jetbrains.clion
-      jetbrains.rider
-      jetbrains.webstorm
-      jetbrains.pycharm
-      jetbrains.idea
-      jetbrains.goland
-      jetbrains.datagrip
       wireguard-tools
       vscode
       zed-editor
@@ -36,15 +29,27 @@ in
       btop
       fzf
       uv
+      jetbrains-toolbox
 
       elan
       go
+      dig
       gopls
 
       ansible
+      rustup
+      rust-analyzer
 
       gemini-cli
+      pnpm
+      nodejs
       codex
+      opencode
+      t3code
+      clang
+      clang-tools
+      bear
+
 
       just
       obsidian

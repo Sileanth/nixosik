@@ -54,7 +54,7 @@
               {
                 mc = {
                   ddc.enable = true;
-                  ollama.enable = true;
+                  ollama.enable = false;
                   docker.enable = true;
                   kdeconnect.enable = true;
                   niri.enable = true;

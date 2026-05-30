@@ -2,11 +2,13 @@
 
 
 switch:
-	sudo nixos-rebuild switch --flake .#
+	nh os switch .#
 
 boot:
-	sudo nixos-rebuild boot --install-bootloader --flake .#
+	nh os boot --install-bootloader .#
 
+clean keep="3":
+	nh clean all --keep {{keep}}
 
 update:
-	nix flake update --commit-lock-file
+	nh os switch --update --commit-lock-file .#
