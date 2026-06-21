@@ -55,7 +55,6 @@ in
       ghostty
       ente-auth
       bitwarden-cli
-      bitwarden-desktop
     ];
     home-manager = {
       useGlobalPkgs = true;
