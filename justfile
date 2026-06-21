@@ -1,5 +1,7 @@
+default: help
 
-
+help:
+	@just --list
 
 switch:
 	nh os switch .#

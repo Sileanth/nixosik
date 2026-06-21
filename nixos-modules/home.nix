@@ -29,7 +29,6 @@ in
       btop
       fzf
       uv
-      jetbrains-toolbox
 
       elan
       go
