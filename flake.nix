@@ -70,6 +70,7 @@
                   quickshell.enable = true;
                   android-studio.enable = true;
                   wireguard.enable = true;
+                  flatpak.enable = true;
                 };
               }
             ];
@@ -105,6 +106,7 @@
                   shell.enable = true;
                   steam.enable = true;
                   bluetooth.enable = true;
+                  flatpak.enable = true;
                 };
               }
             ];
