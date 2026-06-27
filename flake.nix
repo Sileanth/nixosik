@@ -70,6 +70,7 @@
                   quickshell.enable = true;
                   android-studio.enable = true;
                   wireguard.enable = true;
+                  flatpak.enable = true;
                 };
               }
             ];
@@ -104,6 +105,7 @@
                   nvim.enable = true;
                   shell.enable = true;
                   steam.enable = true;
+                  flatpak.enable = true;
                 };
               }
             ];
