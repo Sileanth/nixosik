@@ -44,7 +44,6 @@ in
       nodejs
       codex
       opencode
-      t3code
       clang
       clang-tools
       bear

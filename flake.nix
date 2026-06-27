@@ -104,6 +104,7 @@
                   nvim.enable = true;
                   shell.enable = true;
                   steam.enable = true;
+                  bluetooth.enable = true;
                 };
               }
             ];
