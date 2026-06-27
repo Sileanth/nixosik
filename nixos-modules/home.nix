@@ -53,6 +53,7 @@ in
       obsidian
       ghostty
       ente-auth
+      bitwarden-cli
     ];
     home-manager = {
       useGlobalPkgs = true;

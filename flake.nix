@@ -75,6 +75,40 @@
             ];
           };
 
+          feather = nixpkgs.lib.nixosSystem rec {
+            system = "x86_64-linux";
+            specialArgs = {
+              inherit outputs inputs;
+              pkgs-unstable = import inputs.nixpkgs-unstable {
+                config.allowUnfree = true;
+                inherit system;
+              };
+              pkgs-stable = import inputs.nixpkgs-stable {
+                config.allowUnfree = true;
+                inherit system;
+              };
+            };
+            modules = cfg_modules ++ [
+              ./hosts/feather/configuration.nix
+              inputs.home-manager.nixosModules.home-manager
+              {
+                mc = {
+                  docker.enable = true;
+                  home.enable = true;
+                  hyprland.enable = true;
+                  kdeconnect.enable = true;
+                  kitty.enable = true;
+                  niri.enable = true;
+                  nix.enable = true;
+                  noctulia.enable = true;
+                  nvim.enable = true;
+                  shell.enable = true;
+                  steam.enable = true;
+                };
+              }
+            ];
+          };
+
         };
     };
 }
