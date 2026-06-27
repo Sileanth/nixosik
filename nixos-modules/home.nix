@@ -44,7 +44,6 @@ in
       nodejs
       codex
       opencode
-      t3code
       clang
       clang-tools
       bear
@@ -54,8 +53,6 @@ in
       obsidian
       ghostty
       ente-auth
-      bitwarden-cli
-      bitwarden-desktop
     ];
     home-manager = {
       useGlobalPkgs = true;
