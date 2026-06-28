@@ -43,6 +43,9 @@ in
       pnpm
       nodejs
       codex
+      jetbrains.clion
+      jetbrains.rustrover
+      code-cursor
       opencode
       clang
       clang-tools
